@@ -1,0 +1,77 @@
+.navbar {
+  display: flex;
+  position: sticky;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(221, 255, 243);
+  height: 5rem;
+  width: 100vw;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+.navbar > a h3 img {
+  width: 50px;
+}
+
+.title {
+  font-weight: bold;
+  font-size: large;
+  margin-bottom: 0;
+}
+
+button,
+button:hover {
+  border: none !important; /* overriding bootstrap */
+  color: #006856 !important; /* overriding bootstrap */
+  background-color: unset !important; /* overriding bootstrap */
+}
+
+.navbar ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navbar li {
+  list-style-type: none;
+}
+
+.dropdownArrow {
+  display: none;
+}
+
+.navDrop {
+  display: none;
+}
+
+.logout {
+  display: none;
+}
+
+/*DESKTOP SCREENS*/
+@media (min-width: 70rem) {
+  .title {
+    font-size: larger;
+    margin-left: 2rem;
+  }
+
+  .navbar ul {
+    margin-right: 2rem;
+    gap: 3rem;
+  }
+
+  .navDrop {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .dropdown-divider {
+    display: none;
+  }
+
+  .logout {
+    display: block;
+  }
+}

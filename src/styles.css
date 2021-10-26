@@ -1,1 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+/* Global Styles */
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a,
+a:hover,
+a:active,
+a:visited {
+  text-decoration: none !important; /* overriding bootstrap */
+}
+
+body,
+h1,
+h2,
+h3 {
+  font-family: 'Source Code Pro', monospace;
+  color: #006856 !important; /* overriding bootstrap */
+}
