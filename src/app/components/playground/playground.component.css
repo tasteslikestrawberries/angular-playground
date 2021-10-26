@@ -1,6 +1,10 @@
 .playground {
   background-color: aquamarine;
   width: fit-content;
-  padding: 1rem;
+  padding: 2rem;
   margin:auto;
   }
+
+.playground h3 {
+  margin-bottom:2rem;
+}
