@@ -1,0 +1,29 @@
+<div class="api">
+  <h5>Mock Api Service:</h5>
+  <div>
+    <div>
+      <label>Name: </label>
+      <input [(ngModel)]="person.name" />
+      <!--Creates a FormControl instance from a domain model and binds it to a form control element.-->
+    </div>
+    <div>
+      <button (click)="addPerson()">Add</button>
+    </div>
+  </div>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let person of people">
+        <!--A structural directive that renders a template for each item in a collection. The directive is placed on an element, which becomes the parent of the cloned templates.-->
+        <td>{{ person.id }}</td>
+        <td>{{ person.name }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

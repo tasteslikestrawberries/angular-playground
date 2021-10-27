@@ -1,15 +1,20 @@
-<div class="playground">
-  <h3>I'm the Playground component and I'm ready to play!</h3>
+<div class="wrapper">
+  <div class="playground">
+    <h3>Hello World!</h3>
 
     <h5>String Interpolation:</h5>
 
     <p>The count via method is {{ getCount() }}</p>
     <p>The count via variable is {{ count }}</p>
-  <br/>
+
+    <br />
+
     <h5>Event binding:</h5>
     <button (click)="functionOnClick()">
       Click me to see the output in console
     </button>
-  
-</div>
+  </div>
 
+  <app-api-component></app-api-component>
+
+</div>

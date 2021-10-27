@@ -1,0 +1,7 @@
+p{
+  display:flex;
+  justify-content: center;
+  font-weight:bold;
+  padding: 2rem;
+  border: 5px dotted #252525;
+}

@@ -29,7 +29,7 @@
   display:block;
   padding:1rem;
   position:absolute;
-  background-color: rgb(221, 255, 243);
+  background-color: rgb(246, 245, 255);
   z-index:2;
   top:66px;
   height:fit-content;
@@ -39,7 +39,7 @@
 
 .dropdown ul {
   display:flex;
-  gap:1rem;
+  gap:2rem;
   justify-content: center;
   align-items: center;
 }
@@ -62,7 +62,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(221, 255, 243);
     height: 5rem;
     width: 100vw;
     padding: 1rem;

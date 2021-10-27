@@ -1,8 +1,15 @@
+.wrapper {
+  display:flex;
+  gap:2rem;
+  max-width:100vw;
+  padding:1rem;
+  justify-content: center;
+}
 .playground {
-  background-color: aquamarine;
-  width: fit-content;
+  background-color: #a2fff3;
   padding: 2rem;
-  margin:auto;
+  border: 5px dotted #252525;
+  max-width: fit-content;
   }
 
 .playground h3 {
