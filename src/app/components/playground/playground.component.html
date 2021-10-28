@@ -1,28 +1,50 @@
 <div class="wrapper">
   <div class="playground">
-    <h3>Hello World!</h3>
-    
-    <h5>String Interpolation:</h5>
+    <h2>Data Binding</h2>
+    <h4>1. One way data binding:</h4>
+    <b>a) String Interpolation:</b>
     <p>
-    The pokemon via variable is <b>{{ firstPokemon }}</b>
-    <br/>
-    The pokemon via method is <b>{{ getPokemon() }}</b>
-    
-  </p>
+      The pokemon via variable is <b>{{ firstPokemon }}</b>
+      <br />
+      The pokemon via method is <b>{{ getPokemon() }}</b>
+    </p>
 
-    <h5>Event binding with (click):</h5>
-    <p><button (click)="functionOnClick()">
-      Click me to see the output in console
-    </button></p>
+    <b>b) Property binding:</b>
+    <p> <button [disabled]="buttonDisabled" (click)="buttonDisabled=true">Disable me!</button>
+    </p>
 
-    <h5>Event binding with (input):</h5>
-    <p><input
-      type="text"
-      class="form-control"
-      (input)="onUpdateInputName($event)"
-    />
+    <b>c) Event binding with (click):</b>
+    <p>
+      <button (click)="functionOnClick()">
+        Click me to see the output in console
+      </button>
+    </p>
 
-    {{ inputName }}</p>
+    <b>d) Event binding with (input):</b>
+    <p>
+      <input
+        type="text"
+        class="form-control"
+        (input)="onUpdateInputName($event)"
+      />
+
+      {{ inputName }}
+    </p>
+
+    <h4>
+      2. Two-way data binding:
+    </h4>
+    *combined property and event binding with directive
+    @NgModel <br/>
+    *this automatically triggers on the input event and updates the value of variable
+    <!--only works with {FormsModule} import in app.module-->
+    <p>
+      <input type="text" [(ngModel)]="initialName"/>
+      <br/>
+      <button (click)="checkVariableName()">Trigger it!</button>
+
+      The variable value is: <b>{{ initialName }}</b>
+    </p>
   </div>
 
   <app-api-component></app-api-component>

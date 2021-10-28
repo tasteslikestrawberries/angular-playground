@@ -12,8 +12,9 @@
   max-width: fit-content;
   }
 
-.playground h3 {
-  margin-bottom:2rem;
+.playground h2 {
+  margin-bottom: 2rem;
+  text-align: center;
 }
 
 p {

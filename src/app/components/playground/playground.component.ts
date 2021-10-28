@@ -8,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class PlaygroundComponent implements OnInit {
   firstPokemon: string = 'Pikachu';
   secondPokemon: string = 'Jigglypuff';
+  buttonDisabled = false;
   inputName = '';
+  initialName = 'Initial Name';
 
   getPokemon = () => {
     return this.secondPokemon
@@ -23,6 +25,9 @@ export class PlaygroundComponent implements OnInit {
     console.log(event)
   }
 
+  checkVariableName = () => {
+    console.log(this.initialName)
+  }
   constructor() {}
 
   ngOnInit(): void {}
