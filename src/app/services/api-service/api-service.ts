@@ -1,3 +1,5 @@
+//start json server in terminal: json-server --watch db.json
+
 import { HttpClient } from '@angular/common/http';
 import { Person } from './person-model';
 import { Injectable } from '@angular/core';
