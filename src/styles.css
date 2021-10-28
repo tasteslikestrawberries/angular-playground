@@ -13,13 +13,57 @@ a:hover,
 a:active,
 a:visited {
   text-decoration: none !important; /* overriding bootstrap */
+  color:#82ffcb;
 }
 
-body,
-h1,
-h2,
-h3 {
+body {
   font-family: 'Source Code Pro', monospace;
-  color: #1d1c1c !important; /* overriding bootstrap */
+  color: #ffffff !important; /* overriding bootstrap */
+  background-color: #2e2d35;
 }
 
+h3 {
+  margin-bottom:2rem;
+}
+
+.mainContainer {
+  gap:0rem;
+  margin: 1rem !important;
+}
+
+.contentWrapper {
+  border: 3px dotted #82ffcb;
+  padding: 1rem;
+  width:100%;
+  height: fit-content;
+}
+
+table {
+  color:unset !important; /*overriding bootstrap*/
+}
+
+button {
+  background-color: #82ffcb;
+  font-weight:bold;
+  padding:0 1rem;
+}
+
+/*DESKTOP SCREENS*/
+@media (min-width: 70rem) {
+
+  .mainContainer {
+    display:flex;
+    gap:1rem;
+    justify-content: center;
+  }
+
+  .contentWrapper {
+    border: 5px dotted #82ffcb;
+    padding: 5rem;
+    width:60%;
+    height: fit-content;
+    margin:2rem 0;
+    text-align: center;
+  }
+
+}
