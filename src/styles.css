@@ -7,10 +7,6 @@
   padding: 0;
 }
 
-body{
-  background-color: rgb(246, 245, 255);
-  margin:auto;
-}
 
 a,
 a:hover,
@@ -26,3 +22,4 @@ h3 {
   font-family: 'Source Code Pro', monospace;
   color: #1d1c1c !important; /* overriding bootstrap */
 }
+

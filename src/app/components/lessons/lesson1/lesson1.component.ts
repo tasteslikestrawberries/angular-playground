@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-playground',
-  templateUrl: './playground.component.html',
-  styleUrls: ['./playground.component.css'],
+  selector: 'app-lesson1',
+  templateUrl: './lesson1.component.html',
+  styleUrls: ['./lesson1.component.css']
 })
-export class PlaygroundComponent implements OnInit {
+export class Lesson1Component implements OnInit {
   firstPokemon: string = 'Pikachu';
   secondPokemon: string = 'Jigglypuff';
   buttonDisabled = false;

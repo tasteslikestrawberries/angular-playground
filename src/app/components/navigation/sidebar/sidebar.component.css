@@ -1,0 +1,14 @@
+.sidebar {
+  display:none;
+}
+
+li{
+  list-style-type: none;
+}
+
+/*DESKTOP SCREENS*/
+@media (min-width: 70rem) {
+  .sidebar {
+    display: block;
+  }
+}

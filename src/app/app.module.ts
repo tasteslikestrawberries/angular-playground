@@ -1,33 +1,31 @@
-//modules
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-
-//components
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navigation/navbar/navbar.component';
-import { PlaygroundComponent } from './components/playground/playground.component';
+import { SidebarComponent } from './components/navigation/sidebar/sidebar.component';
 import { AboutComponent } from './components/about/about.component';
 import { ApiComponent } from './services/api-service/api/api.component';
-
-//styles and icons modules
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { Lesson1Component } from './components/lessons/lesson1/lesson1.component';
+import { Assignment1Component } from './components/assignments/assignment1/assignment1.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { AssignmentsComponent } from './components/assignments/assignments.component';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    PlaygroundComponent,
     NavbarComponent,
     AboutComponent,
     ApiComponent,
-    AssignmentsComponent,
+    SidebarComponent,
+    Assignment1Component,
+    Lesson1Component,
   ],
-  imports: [BrowserModule, AppRoutingModule, NgbModule, FontAwesomeModule, FormsModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, FontAwesomeModule, FormsModule, HttpClientModule, NgbModule],
   providers: [],
   bootstrap: [AppComponent],
 })

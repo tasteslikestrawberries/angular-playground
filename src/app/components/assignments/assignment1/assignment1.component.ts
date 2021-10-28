@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-assignments',
-  templateUrl: './assignments.component.html',
-  styleUrls: ['./assignments.component.css'],
+  selector: 'app-assignment1',
+  templateUrl: './assignment1.component.html',
+  styleUrls: ['./assignment1.component.css']
 })
-export class AssignmentsComponent implements OnInit {
+export class Assignment1Component implements OnInit {
   username = '';
 
   isButtonDisabled = () => {
@@ -17,7 +17,9 @@ export class AssignmentsComponent implements OnInit {
     return (this.username = '');
   };
 
-  constructor() {}
+  constructor() { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+  }
+
 }

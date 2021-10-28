@@ -1,0 +1,37 @@
+<nav class="sidebar" *ngIf="hasRoute('/about')">
+  <h3>Lessons</h3>
+  
+  <ul>
+    <li>
+      <a
+        routerLink="/"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        ><h5>Lesson 1: Data Binding</h5></a
+      >
+    </li>
+    <li>
+      <a
+        routerLink="/assignment1"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >Assignment 1</a
+      >
+    </li>
+
+    <br/>
+
+    <li>
+      <a
+        routerLink="/api"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        ><h5>Mock Api Service</h5></a
+      >
+    </li>
+   
+     
+    </ul>
+
+</nav>
+
