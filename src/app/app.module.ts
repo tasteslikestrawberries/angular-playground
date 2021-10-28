@@ -12,6 +12,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { Lesson1Component } from './components/lessons/lesson1/lesson1.component';
 import { Assignment1Component } from './components/assignments/assignment1/assignment1.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { Lesson2Component } from './components/lessons/lesson2/lesson2.component';
+import { Assignment2Component } from './components/assignments/assignment2/assignment2.component';
 
 
 
@@ -24,6 +26,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     SidebarComponent,
     Assignment1Component,
     Lesson1Component,
+    Lesson2Component,
+    Assignment2Component,
   ],
   imports: [BrowserModule, AppRoutingModule, FontAwesomeModule, FormsModule, HttpClientModule, NgbModule],
   providers: [],

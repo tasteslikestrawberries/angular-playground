@@ -1,0 +1,16 @@
+<h2>Lession 2: Directives</h2>
+<h4>[ngStyle]</h4>
+Write 'green' to see the change.
+<input type="text" class="form-control" (input)="updateColor($event)" />
+
+<p [ngStyle]="{ backgroundColor: getColor() }">{{ color }}</p>
+
+<h4>*ngIf</h4>
+<p
+  [ngStyle]="{ width: '100px', backgroundColor: 'red', margin: 'auto' }"
+  *ngIf="condition === true"
+>
+  I'm a paragraph
+</p>
+<br />
+<button (click)="changeCondition()">Remove paragraph!</button>
