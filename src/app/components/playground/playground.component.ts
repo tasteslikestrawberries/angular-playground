@@ -13,7 +13,7 @@ export class PlaygroundComponent implements OnInit {
   initialName = 'Initial Name';
 
   getPokemon = () => {
-    return this.secondPokemon
+    return this.secondPokemon;
   };
 
   functionOnClick = () => {
@@ -22,12 +22,12 @@ export class PlaygroundComponent implements OnInit {
 
   onUpdateInputName(event: Event) {
     this.inputName = (<HTMLInputElement>event.target).value;
-    console.log(event)
+    console.log(event);
   }
 
   checkVariableName = () => {
-    console.log(this.initialName)
-  }
+    console.log(this.initialName);
+  };
   constructor() {}
 
   ngOnInit(): void {}

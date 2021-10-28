@@ -15,6 +15,7 @@ import { ApiComponent } from './services/api-service/api/api.component';
 //styles and icons modules
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AssignmentsComponent } from './components/assignments/assignments.component';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     NavbarComponent,
     AboutComponent,
     ApiComponent,
+    AssignmentsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, NgbModule, FontAwesomeModule, FormsModule, HttpClientModule],
   providers: [],

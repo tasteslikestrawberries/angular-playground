@@ -10,7 +10,10 @@
     </p>
 
     <b>b) Property binding:</b>
-    <p> <button [disabled]="buttonDisabled" (click)="buttonDisabled=true">Disable me!</button>
+    <p>
+      <button [disabled]="buttonDisabled" (click)="buttonDisabled = true">
+        Disable me!
+      </button>
     </p>
 
     <b>c) Event binding with (click):</b>
@@ -31,16 +34,14 @@
       {{ inputName }}
     </p>
 
-    <h4>
-      2. Two-way data binding:
-    </h4>
-    *combined property and event binding with directive
-    @NgModel <br/>
-    *this automatically triggers on the input event and updates the value of variable
+    <h4>2. Two-way data binding:</h4>
+    *combined property and event binding with directive @NgModel <br />
+    *this automatically triggers on the input event and updates the value of
+    variable
     <!--only works with {FormsModule} import in app.module-->
     <p>
-      <input type="text" [(ngModel)]="initialName"/>
-      <br/>
+      <input type="text" [(ngModel)]="initialName" />
+      <br />
       <button (click)="checkVariableName()">Trigger it!</button>
 
       The variable value is: <b>{{ initialName }}</b>

@@ -1,0 +1,14 @@
+.wrapper {
+  width:50rem;
+  margin:auto;
+  border: 5px solid;
+  background-color: #a2fff3;
+  padding: 2rem;
+  border: 5px dotted #252525;
+  max-width: fit-content;
+}
+
+.inputWrapper {
+  margin: 2rem 0;
+  text-align: center;
+}

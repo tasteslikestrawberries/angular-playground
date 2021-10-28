@@ -15,6 +15,14 @@
     </li>
     <li>
       <a
+        routerLink="/assignments"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >Assignments</a
+      >
+    </li>
+    <li>
+      <a
         routerLink="/about"
         routerLinkActive="active"
         [routerLinkActiveOptions]="{ exact: true }"
@@ -26,12 +34,20 @@
     </li>
   </ul>
 
-  <button class='hamburger' (click)="toggle()">
-    <fa-icon [icon]="faBars" [ngStyle]="{fontSize:'1.5em', marginRight:'1rem'}" *ngIf="!show"></fa-icon>
-    <fa-icon [icon]="faTimes" *ngIf="show" [ngStyle]="{fontSize:'1.8em', marginRight:'1rem'}"></fa-icon>
+  <button class="hamburger" (click)="toggle()">
+    <fa-icon
+      [icon]="faBars"
+      [ngStyle]="{ fontSize: '1.5em', marginRight: '1rem' }"
+      *ngIf="!show"
+    ></fa-icon>
+    <fa-icon
+      [icon]="faTimes"
+      *ngIf="show"
+      [ngStyle]="{ fontSize: '1.8em', marginRight: '1rem' }"
+    ></fa-icon>
   </button>
 
-  <div *ngIf="show" class='dropdown'>
+  <div *ngIf="show" class="dropdown">
     <ul>
       <li>
         <a
@@ -39,6 +55,14 @@
           routerLinkActive="active"
           [routerLinkActiveOptions]="{ exact: true }"
           >Playground</a
+        >
+      </li>
+      <li>
+        <a
+          routerLink="/assignments"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >Assignments</a
         >
       </li>
       <li>
