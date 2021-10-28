@@ -6,15 +6,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./playground.component.css'],
 })
 export class PlaygroundComponent implements OnInit {
-  count: number = 10;
+  firstPokemon: string = 'Pikachu';
+  secondPokemon: string = 'Jigglypuff';
+  inputName = '';
 
-  getCount = () => {
-    return this.count;
+  getPokemon = () => {
+    return this.secondPokemon
   };
 
   functionOnClick = () => {
     console.log('Button clicked');
   };
+
+  onUpdateInputName(event: Event) {
+    this.inputName = (<HTMLInputElement>event.target).value;
+    console.log(event)
+  }
 
   constructor() {}
 
