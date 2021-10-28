@@ -1,26 +1,30 @@
 .navbar {
-  background-color: #3b3944 ;
+  background-color: #3b3944;
+}
+
+.navbar h3{
+  color:#745dda;
 }
 
 .navbar ul {
-  display:none;
+  display: none;
 }
 
 .navbar button {
-  padding:0.2rem;
-  font-weight:bold;
+  padding: 0.2rem;
+  font-weight: bold;
   border: none;
   background-color: unset;
-  color:unset;
+  color: unset;
 }
 
-.navbar a{
-  font-weight:bold;
+.navbar a {
+  font-weight: bold;
 }
 
 .navbar > a h3 img {
   width: 50px;
-  margin-right:1rem;
+  margin-right: 1rem;
 }
 
 .title {
@@ -30,22 +34,22 @@
 }
 
 .dropdown {
-  display:block;
-  padding:1rem;
-  position:absolute;
-  z-index:2;
-  top:45px;
+  display: block;
+  padding: 1rem;
+  position: absolute;
+  z-index: 2;
+  top: 45px;
   width: 100%;
-  padding:0;
-  font-weight:bold;
+  padding: 0;
+  font-weight: bold;
 }
 
 .dropdown ul {
-  background-color: #3b3944 ;
-  padding:2rem;
-  display:flex;
+  background-color: #3b3944;
+  padding: 2rem;
+  display: flex;
   flex-direction: column;
-  gap:1rem;
+  gap: 1rem;
   justify-content: center;
   align-items: center;
 }
@@ -61,7 +65,7 @@
   }
 
   .dropdown {
-    display:none;
+    display: none;
   }
 
   .navbar {

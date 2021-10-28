@@ -7,13 +7,32 @@
   padding: 0;
 }
 
+/* SCROLLBAR */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #2e2d35;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3b3944;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #aeffdd;
+}
 
 a,
-a:hover,
 a:active,
 a:visited {
   text-decoration: none !important; /* overriding bootstrap */
   color:#82ffcb;
+}
+
+a:hover{
+  color:#745dda;
 }
 
 body {
@@ -53,14 +72,13 @@ button {
 
   .mainContainer {
     display:flex;
-    gap:1rem;
     justify-content: center;
   }
 
   .contentWrapper {
     border: 5px dotted #82ffcb;
     padding: 5rem;
-    width:60%;
+    width:70%;
     height: fit-content;
     margin:2rem 0;
     text-align: center;
