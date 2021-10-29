@@ -10,6 +10,9 @@ export class Lesson2Component implements OnInit {
   isSpecial: boolean = true;
   condition: boolean = true;
 
+  hero:string = "";
+  heroes : string[] = [];
+  
   updateColor(event: Event) {
     this.color = (<HTMLInputElement>event.target).value;
   }
@@ -25,6 +28,13 @@ export class Lesson2Component implements OnInit {
   changeCondition = () => {
     this.condition = !this.condition;
   };
+
+  onSubmit() {
+    this.heroes.push(this.hero)
+    console.log(this.heroes);
+    console.log(this.heroes.length);
+    this.hero = '';
+  }
 
   constructor() {}
 

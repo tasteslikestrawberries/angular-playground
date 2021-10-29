@@ -6,14 +6,12 @@ Write 'green' to see the change.
 
 <p [ngStyle]="{ backgroundColor: getColor() }">{{ color }}</p>
 
-
 <!-- toggle the "special" class on/off with a property -->
 <h4>ngClass</h4>
 <div [ngClass]="isSpecial ? 'special' : ''">I'm a div</div>
 <button (click)="changeClass()">Change Class</button>
 
-<br/><br>
-
+<br /><br />
 
 <!-- add or remove element -->
 <h4>*ngIf</h4>
@@ -23,5 +21,26 @@ Write 'green' to see the change.
 >
   I'm a paragraph
 </p>
-<br />
 <button (click)="changeCondition()">Remove paragraph!</button>
+
+<br /><br />
+
+<!-- dynamically display elements of array -->
+<h4>*ngFor</h4>
+<form (ngSubmit)="onSubmit()" #formName="ngForm">
+  <input [(ngModel)]="hero" name="name" id="name" #name="ngModel" required />
+  <button type="submit" [disabled]="!formName.form.valid">Add Hero</button>
+</form>
+
+<table>
+  <thead>
+    <th>ID</th>
+    <th>Name</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let hero of heroes;let i = index;">
+      <td>{{ i+ 1 }}</td>
+      <td>{{ hero }}</td>
+    </tr>
+  </tbody>
+</table>
