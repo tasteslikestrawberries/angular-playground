@@ -1,1 +1,22 @@
-<p>assignment2 works!</p>
+<div class="wrapper">
+  <h3>Assignment 2: Directives</h3>
+  Add a Button which says 'Display Details'. Add a paragraph with any content of
+  your choice (e.g. 'Secret Password = tuna'). Toggle the displaying of that
+  paragraph with the button created in the first step. Log all button clicks in
+  an array and output that array below the secret paragraph(maybe log a
+  timestamp or simply an incrementing number). Starting at the 5th log item,
+  give all future log items a blue background (via ngStyle) and white color
+  (ngClass).
+
+  <br /><br />
+
+  <button (click)="logger()">Display Details</button>
+  <p *ngIf="show">Secret Password = tuna</p>
+  <div
+    [ngStyle]="{ backgroundColor: element >= 5 ? 'aquamarine' : 'transparent' }"
+    [ngClass]="{ pink: element >= 5 }"
+    *ngFor="let element of logArr"
+  >
+    {{ element }}
+  </div>
+</div>
