@@ -1,3 +1,4 @@
+<!-- change background color based on method -->
 <h2>Lession 2: Directives</h2>
 <h4>[ngStyle]</h4>
 Write 'green' to see the change.
@@ -5,6 +6,16 @@ Write 'green' to see the change.
 
 <p [ngStyle]="{ backgroundColor: getColor() }">{{ color }}</p>
 
+
+<!-- toggle the "special" class on/off with a property -->
+<h4>ngClass</h4>
+<div [ngClass]="isSpecial ? 'special' : ''">I'm a div</div>
+<button (click)="changeClass()">Change Class</button>
+
+<br/><br>
+
+
+<!-- add or remove element -->
 <h4>*ngIf</h4>
 <p
   [ngStyle]="{ width: '100px', backgroundColor: 'red', margin: 'auto' }"

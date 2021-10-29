@@ -1,4 +1,6 @@
     <h2>Lession 1: Data Binding</h2>
+
+    <!-- showcase string interpolation via variable and via method -->
     <h4>1. One way data binding:</h4>
     <b>a) String Interpolation:</b>
     <p>
@@ -7,6 +9,7 @@
       The pokemon via method is <b>{{ getPokemon() }}</b>
     </p>
 
+    <!-- showcase property binding  -->
     <b>b) Property binding:</b>
     <p>
       <button [disabled]="buttonDisabled" (click)="buttonDisabled = true">
@@ -14,6 +17,8 @@
       </button>
     </p>
 
+
+     <!-- showcase event binding with (click) and (input)  -->
     <b>c) Event binding with (click):</b>
     <p>
       <button (click)="functionOnClick()">
@@ -32,11 +37,13 @@
       {{ inputName }}
     </p>
 
+
+    <!-- showcase two-way data binding with [(ngModel)] - only works with {FormsModule} import in app.module -->
     <h4>2. Two-way data binding:</h4>
     *combined property and event binding with directive @NgModel <br />
     *this automatically triggers on the input event and updates the value of
     variable
-    <!--only works with {FormsModule} import in app.module-->
+ 
     <p>
       <input type="text" [(ngModel)]="initialName" />
       <br />

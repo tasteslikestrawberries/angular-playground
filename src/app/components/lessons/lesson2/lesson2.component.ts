@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Lesson2Component implements OnInit {
   color: string = '';
+  isSpecial: boolean = true;
   condition: boolean = true;
 
   updateColor(event: Event) {
@@ -16,6 +17,10 @@ export class Lesson2Component implements OnInit {
   getColor = () => {
     return this.color === 'green' ? 'green' : 'blue';
   };
+
+  changeClass = () => {
+    this.isSpecial = !this.isSpecial;
+  }
 
   changeCondition = () => {
     this.condition = !this.condition;
