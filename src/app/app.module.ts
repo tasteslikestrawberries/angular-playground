@@ -14,6 +14,7 @@ import { Assignment1Component } from './components/assignments/assignment1/assig
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { Lesson2Component } from './components/lessons/lesson2/lesson2.component';
 import { Assignment2Component } from './components/assignments/assignment2/assignment2.component';
+import { PlaygroundComponent } from './components/playground/playground.component';
 
 
 
@@ -28,6 +29,7 @@ import { Assignment2Component } from './components/assignments/assignment2/assig
     Lesson1Component,
     Lesson2Component,
     Assignment2Component,
+    PlaygroundComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FontAwesomeModule, FormsModule, HttpClientModule, NgbModule],
   providers: [],

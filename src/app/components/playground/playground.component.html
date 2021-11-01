@@ -1,0 +1,23 @@
+<!--*ngFor for array of objects-->
+<table class="table">
+  <thead>
+    <th>IDX</th>
+    <th>Type</th>
+    <th>Name</th>
+    <th>Price</th>
+  </thead>
+  <tbody>
+  <tr *ngFor="let element of myArr; let i = index;">
+  <td>{{ i+ 1 }}</td>
+  <td>{{element.type}}</td>
+  <td>{{element.name}}</td>
+  <td>{{element.price}}</td>
+  </tr>
+  </tbody>
+</table>
+
+<button (click)="addElementsToArray()">Add more elements</button>
+
+
+
+
