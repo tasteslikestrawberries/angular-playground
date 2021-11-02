@@ -28,21 +28,20 @@ Parent's name list:
   </tbody>
 </table>
 
-<br/>
-<br/>
+<br />
+<br />
 
 <h3>2. Template Variables and @ViewChild</h3>
 
 <!--view child showcase-->
 
-  <div>
-    Check the console to see the referenced element:
+<div>
+  Check the console to see the referenced element:
   <button type="button" #myButton>My Button</button>
- </div> 
+</div>
 
- <br/>
- <br/>
-
+<br />
+<br />
 
 <h3>Summary</h3>
 <p>
@@ -51,3 +50,15 @@ Parent's name list:
     style="width: 50vw; border: 1px solid white"
   />
 </p>
+
+<!--<ng-content> showcase-->
+
+<h3>3. Ng-content directive</h3>
+The <b>ng-content</b> tag acts as a placeholder for inserting external or dynamic
+content. The Parent component passes the external content to the child
+component. When Angular parses the template, it inserts the external content
+where ng-content appears in the child component’s template.
+
+<app-btn>Parent named this button</app-btn>
+
+

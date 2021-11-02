@@ -17,6 +17,7 @@ import { Assignment2Component } from './components/assignments/assignment2/assig
 import { PlaygroundComponent } from './components/playground/playground.component';
 import { Lesson3Component } from './components/lessons/lesson3/lesson3.component';
 import { HelloComponent } from './components/lessons/lesson3/hello/hello.component';
+import { BtnComponent } from './components/lessons/lesson3/btn/btn.component';
 
 
 
@@ -34,6 +35,7 @@ import { HelloComponent } from './components/lessons/lesson3/hello/hello.compone
     PlaygroundComponent,
     Lesson3Component,
     HelloComponent,
+    BtnComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FontAwesomeModule, FormsModule, HttpClientModule, NgbModule],
   providers: [],
