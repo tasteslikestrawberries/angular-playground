@@ -1,13 +1,17 @@
 <h2>Sharing Data Between Parent and Child Components</h2>
-<p>First of all, the idea of Input and Output is to exchange data between components. 
-  They are a mechanism to send/receive data from one component to another.
-  @Input() and @Output() give a child component a way to communicate with its parent component.
-  @Input() lets a parent component update data in the child component. Conversely, 
-  @Output() lets the child send data to a parent component.
+
+<h3>1. @Input and @Output</h3>
+<p>
+  First of all, the idea of Input and Output is to exchange data between
+  components. They are a mechanism to send/receive data from one component to
+  another. @Input() and @Output() give a child component a way to communicate
+  with its parent component. @Input() lets a parent component update data in the
+  child component. Conversely, @Output() lets the child send data to a parent
+  component.
 </p>
 
 <!--The event binding, (newNameEvent)='addToNames($event)', connects the event in the child, newNameEvent, to the method in the parent, addToNames().-->
-<app-hello [name]='currentName' (newNameEvent)="addToNames($event)"></app-hello>
+<app-hello [name]="currentName" (newNameEvent)="addToNames($event)"></app-hello>
 
 Parent's name list:
 
@@ -17,13 +21,33 @@ Parent's name list:
     <th>Name</th>
   </thead>
   <tbody>
-    <tr *ngFor="let name of names;let i = index;">
-      <td>{{ i+ 1 }}</td>
+    <tr *ngFor="let name of names; let i = index">
+      <td>{{ i + 1 }}</td>
       <td>{{ name }}</td>
     </tr>
   </tbody>
 </table>
 
+<br/>
+<br/>
+
+<h3>2. Template Variables and @ViewChild</h3>
+
+<!--view child showcase-->
+
+  <div>
+    Check the console to see the referenced element:
+  <button type="button" #myButton>My Button</button>
+ </div> 
+
+ <br/>
+ <br/>
 
 
-
+<h3>Summary</h3>
+<p>
+  <img
+    src="assets/img/sharingdata.png"
+    style="width: 50vw; border: 1px solid white"
+  />
+</p>

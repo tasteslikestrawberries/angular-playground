@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
+import { HelloComponent } from './hello/hello.component';
 
 @Component({
   selector: 'app-lesson3',
@@ -7,18 +8,32 @@ import { Component, OnInit } from '@angular/core';
 })
 
 //this is the parent of <app-hello></app-hello> component
-export class Lesson3Component implements OnInit {
+export class Lesson3Component implements AfterViewInit {
+
+  //input showcase
   currentName = 'Wall-e';
 
+  //output showcase
   names: string[] = [];
 
   addToNames(newName: string) {
     this.names.push(newName);
   }
 
+  //Using @ViewChild to inject a reference to a component
+  @ViewChild(HelloComponent)
+  child?: HelloComponent;
+
+  //Using @ViewChild to inject a reference to the DOM element of a component
+  @ViewChild("myButton", { static: false }) myButton?: ElementRef;
+
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  //must use ngAfterViewInit for @ViewChild to work - we must wait for the view to be initialized before we can access @ViewChild
+  ngAfterViewInit() {
+    console.log('Values on ngAfterViewInit():'); //reference to a component
+    console.log("child:", this.child); //reference to a component
+    console.log("The referenced element:", this.myButton?.nativeElement);//reference to the DOM element
+  }  
 
 }
