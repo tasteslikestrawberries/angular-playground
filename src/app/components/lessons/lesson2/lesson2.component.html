@@ -1,4 +1,4 @@
-<!-- change background color based on method -->
+<!-- [ngStyle] showcase1:  change background color based on method -->
 <h2>Lession 2: Directives</h2>
 <h4>[ngStyle]</h4>
 Write 'green' to see the change.
@@ -6,14 +6,14 @@ Write 'green' to see the change.
 
 <p [ngStyle]="{ backgroundColor: getColor() }">{{ color }}</p>
 
-<!-- toggle the "special" class on/off with a property -->
+<!-- [ngStyle] showcase2: toggle the "special" class on/off with a property -->
 <h4>ngClass</h4>
 <div [ngClass]="isSpecial ? 'special' : ''">I'm a div</div>
 <button (click)="changeClass()">Change Class</button>
 
 <br /><br />
 
-<!-- add or remove element -->
+<!-- *ngIf showcase: add or remove element -->
 <h4>*ngIf</h4>
 <p
   [ngStyle]="{ width: '100px', backgroundColor: 'red', margin: 'auto' }"
@@ -25,14 +25,14 @@ Write 'green' to see the change.
 
 <br /><br />
 
-<!-- dynamically display elements of array -->
+<!-- *ngFor showcase: dynamically display elements of array -->
 <h4>*ngFor</h4>
 <form (ngSubmit)="onSubmit()" #formName="ngForm">
   <input [(ngModel)]="hero" name="name" id="name" #name="ngModel" required />
   <button type="submit" [disabled]="!formName.form.valid">Add Hero</button>
 </form>
 
-<br/>
+<br />
 
 <table class="table">
   <thead>
@@ -40,9 +40,29 @@ Write 'green' to see the change.
     <th>Name</th>
   </thead>
   <tbody>
-    <tr *ngFor="let hero of heroes;let i = index;">
-      <td>{{ i+ 1 }}</td>
+    <tr *ngFor="let hero of heroes; let i = index">
+      <td>{{ i + 1 }}</td>
       <td>{{ hero }}</td>
     </tr>
   </tbody>
 </table>
+
+<br/>
+<br/>
+
+<!-- Renderer showcase / custom directives (example.directive.ts)-->
+
+<h4>Custom directives and Renderer2</h4>
+The Renderer2 class is an abstraction provided by Angular in the form of a
+service that allows to manipulate elements of your app without having to touch
+the DOM directly. This is the recommended approach because it then makes it
+easier to develop apps that can be rendered in environments that don’t have DOM
+access, like on the server, in a web worker or on native mobile. You’ll often
+use Renderer2 in custom directives because of how Angular directives are the
+logical building block for modifying elements.
+
+<br/>
+
+<div appExample>
+  I'm a div and my color is changed by a custom directive!
+</div>
