@@ -15,6 +15,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { Lesson2Component } from './components/lessons/lesson2/lesson2.component';
 import { Assignment2Component } from './components/assignments/assignment2/assignment2.component';
 import { PlaygroundComponent } from './components/playground/playground.component';
+import { Lesson3Component } from './components/lessons/lesson3/lesson3.component';
+import { HelloComponent } from './components/lessons/lesson3/hello/hello.component';
 
 
 
@@ -30,6 +32,8 @@ import { PlaygroundComponent } from './components/playground/playground.componen
     Lesson2Component,
     Assignment2Component,
     PlaygroundComponent,
+    Lesson3Component,
+    HelloComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FontAwesomeModule, FormsModule, HttpClientModule, NgbModule],
   providers: [],
