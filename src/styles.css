@@ -93,11 +93,11 @@ button {
 
   .contentWrapper {
     border: 5px dotted #82ffcb;
-    padding: 5rem;
+    padding: 4rem 4rem;
     width:70%;
     height: fit-content;
     margin:2rem 0;
-    text-align: center;
+    text-align: justify;
   }
 
 }

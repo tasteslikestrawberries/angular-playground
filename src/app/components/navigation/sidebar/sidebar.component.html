@@ -19,6 +19,8 @@
       >
     </li>
 
+<br/>
+
     <li>
       <a
         routerLink="/lesson2"
@@ -29,12 +31,22 @@
     </li>
     <li>
       <a
+        routerLink="/customdirectives"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        ><b>2.1. Custom Directives</b></a
+      >
+    </li>
+    <li>
+      <a
         routerLink="/assignment2"
         routerLinkActive="active"
         [routerLinkActiveOptions]="{ exact: true }"
         >Assignment 2</a
       >
     </li>
+
+    <br/>
 
     <li>
       <a

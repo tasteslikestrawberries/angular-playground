@@ -8,11 +8,13 @@ import { Lesson2Component } from './components/lessons/lesson2/lesson2.component
 import { Assignment2Component } from './components/assignments/assignment2/assignment2.component';
 import { PlaygroundComponent } from './components/playground/playground.component';
 import { Lesson3Component } from './components/lessons/lesson3/lesson3.component';
+import { CustomdirectivesComponent } from './components/lessons/lesson2/customdirectives/customdirectives.component';
 
 const routes: Routes = [
   { path: '', component: Lesson1Component },
   { path: 'assignment1', component: Assignment1Component },
   { path: 'lesson2', component: Lesson2Component },
+  { path: 'customdirectives', component: CustomdirectivesComponent },
   { path: 'assignment2', component: Assignment2Component },
   { path: 'playground', component: PlaygroundComponent},
   { path: 'about', component: AboutComponent },

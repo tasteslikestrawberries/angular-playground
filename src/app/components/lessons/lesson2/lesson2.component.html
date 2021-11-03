@@ -15,7 +15,7 @@ Write 'green' to see the change.
 <!-- *ngIf showcase: add or remove element -->
 <h4>*ngIf</h4>
 <p
-  [ngStyle]="{ width: '100px', backgroundColor: 'red', margin: 'auto' }"
+  [ngStyle]="{ width: '100px', backgroundColor: 'red' }"
   *ngIf="condition === true"
 >
   I'm a paragraph
@@ -59,45 +59,4 @@ Write 'green' to see the change.
   </div>
 </div>
 
-<!-- Renderer showcase / custom directives (example.directive.ts)-->
-
-<h4>Custom directives and Renderer2</h4>
-The Renderer2 class is an abstraction provided by Angular in the form of a
-service that allows to manipulate elements of your app without having to touch
-the DOM directly. This is the recommended approach because it then makes it
-easier to develop apps that can be rendered in environments that don’t have DOM
-access, like on the server, in a web worker or on native mobile. You’ll often
-use Renderer2 in custom directives because of how Angular directives are the
-logical building block for modifying elements.
-
-<br />
-<br />
-
-<div appExample class="myDiv">
-  I'm a div and my color is changed by a custom directive!
-</div>
-
-<h4>@HostListener</h4>
-@HostListener is a function decorator that declares a DOM event to listen for,
-and provides a handler method to run when that event occurs.
-
-<button appExample>Check the console for click count</button>
-
-<br />
-<br />
-
-<!--@hostlistener example 2-->
-
-<div appExample2>
-  Hover me!
-  <p style="display: none" class="secretParagraph">
-    <img src="assets/img/yoda.png" style="width: 60px" />
-    {{ punchline }}
-  </p>
-</div>
-
-<h4>@HostBinding</h4>
-*a better approach than using Renderer2 (does the same, but the code is
-cleaner)* @HostBinding binds the property to the host element. If a binding
-changes, @HostBinding will update the host element.
-<div appExample3>I got my color from a directive!</div>
+<br/><br/>

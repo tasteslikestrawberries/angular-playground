@@ -1,15 +1,7 @@
 <div class="api">
-  <h5>Mock Api Service:</h5>
-  <div>
-    <div>
-      <label>Name: </label>
-      <input [(ngModel)]="person.name" />
-      <!--Creates a FormControl instance from a domain model and binds it to a form control element.-->
-    </div>
-    <div>
-      <button (click)="addPerson()">Add</button>
-    </div>
-  </div>
+  <label>Name: </label>
+  <input [(ngModel)]="person.name" />
+  <button (click)="addPerson()">Add</button>
 
   <table class="table">
     <thead>

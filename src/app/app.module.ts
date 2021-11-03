@@ -18,9 +18,10 @@ import { PlaygroundComponent } from './components/playground/playground.componen
 import { Lesson3Component } from './components/lessons/lesson3/lesson3.component';
 import { HelloComponent } from './components/lessons/lesson3/hello/hello.component';
 import { BtnComponent } from './components/lessons/lesson3/btn/btn.component';
-import { ExampleDirective } from './components/lessons/lesson2/example.directive';
-import { Example2Directive } from './components/lessons/lesson2/example2.directive';
-import { Example3Directive } from './components/lessons/lesson2/example3.directive';
+import { ExampleDirective } from './components/lessons/lesson2/customdirectives/example.directive';
+import { Example2Directive } from './components/lessons/lesson2/customdirectives/example2.directive';
+import { Example3Directive } from './components/lessons/lesson2/customdirectives/example3.directive';
+import { CustomdirectivesComponent } from './components/lessons/lesson2/customdirectives/customdirectives.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { Example3Directive } from './components/lessons/lesson2/example3.directi
     ExampleDirective,
     Example2Directive,
     Example3Directive,
+    CustomdirectivesComponent,
    
   ],
   imports: [BrowserModule, AppRoutingModule, FontAwesomeModule, FormsModule, HttpClientModule, NgbModule],

@@ -1,0 +1,55 @@
+<!-- CUSTOM DIRECTIVES -->
+<h2>2.1. Custom Directives</h2>
+@HostBinding and @HostListener are two decorators in Angular that can be really
+useful in custom directives. @HostBinding lets you set properties on the element
+or component that hosts the directive, and @HostListener lets you listen for
+events on the host element or component.
+
+<!--Renderer showcase / custom directives (example.directive.ts)-->
+<p></p>
+<h4>Renderer2</h4>
+The Renderer2 class is an abstraction provided by Angular in the form of a
+service that allows to manipulate elements of your app without having to touch
+the DOM directly. This is the recommended approach because it then makes it
+easier to develop apps that can be rendered in environments that don’t have DOM
+access, like on the server, in a web worker or on native mobile. You’ll often
+use Renderer2 in custom directives because of how Angular directives are the
+logical building block for modifying elements.
+
+<br />
+<br />
+
+<div appExample class="myDiv">
+  I'm a div and my color is changed by a custom directive!
+</div>
+
+<p></p>
+<h4>@HostListener</h4>
+@HostListener is a function decorator that declares a DOM event to listen for,
+and provides a handler method to run when that event occurs.
+
+<!--@hostlistener example 1 click evenet (example.directive.ts)-->
+
+<button appExample>Check the console for click count</button>
+
+<br />
+<br />
+
+<!--@hostlistener example 2 mouseover event (example2.directive.ts)-->
+
+<div appExample2>
+  Hover me!
+  <p style="display: none; text-align: center" class="secretParagraph">
+    <img src="assets/img/yoda.png" style="width: 60px" />
+    {{ punchline }}
+  </p>
+</div>
+
+<!--@HostBinding showcase (example3.directive.ts)-->
+
+<p></p>
+<h4>@HostBinding</h4>
+*a better approach than using Renderer2 (does the same, but the code is
+cleaner)* @HostBinding binds the property to the host element. If a binding
+changes, @HostBinding will update the host element.
+<div appExample3>I got my color from a directive!</div>

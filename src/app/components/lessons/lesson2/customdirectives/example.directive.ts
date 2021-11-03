@@ -17,6 +17,4 @@ export class ExampleDirective {
   onClick(btn: any) {
     console.log('Number of clicks:', this.numberOfClicks++);
   }
-
-
 }
