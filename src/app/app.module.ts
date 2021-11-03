@@ -23,6 +23,7 @@ import { Example2Directive } from './components/lessons/lesson2/customdirectives
 import { Example3Directive } from './components/lessons/lesson2/customdirectives/example3.directive';
 import { CustomdirectivesComponent } from './components/lessons/lesson2/customdirectives/customdirectives.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +42,7 @@ import { CustomdirectivesComponent } from './components/lessons/lesson2/customdi
     ExampleDirective,
     Example2Directive,
     Example3Directive,
-    CustomdirectivesComponent,
+    CustomdirectivesComponent
    
   ],
   imports: [BrowserModule, AppRoutingModule, FontAwesomeModule, FormsModule, HttpClientModule, NgbModule],
