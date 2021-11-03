@@ -47,8 +47,7 @@ Write 'green' to see the change.
   </tbody>
 </table>
 
-<br/>
-<br/>
+<br />
 
 <!-- Renderer showcase / custom directives (example.directive.ts)-->
 
@@ -61,8 +60,26 @@ access, like on the server, in a web worker or on native mobile. You’ll often
 use Renderer2 in custom directives because of how Angular directives are the
 logical building block for modifying elements.
 
-<br/>
+<br />
+<br />
 
-<div appExample>
-  I'm a div and my color is changed by a custom directive!
+<div appExample class="myDiv">I'm a div and my color is changed by a custom directive!</div>
+
+<h4>@HostListener</h4>
+@HostListener is a function decorator that declares a DOM event to listen for,
+and provides a handler method to run when that event occurs.
+
+<button appExample>Check the console for click count</button>
+
+<br />
+<br />
+
+<!--@hostlistener example 2-->
+
+<div appExample2>
+  Hover me!
+  <p style="display: none" class="secretParagraph">
+    <img src="assets/img/yoda.png" style="width: 60px" />
+    {{ punchline }}
+  </p>
 </div>

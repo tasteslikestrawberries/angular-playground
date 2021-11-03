@@ -16,3 +16,16 @@ div {
   background-color: chartreuse;
 
 }
+
+h4 {
+  margin-top:2rem;
+}
+
+.myDiv {
+  background-color: rgb(8, 7, 90);
+}
+
+.secretParagraph {
+  padding:1 rem;
+  background-color: rgb(4, 26, 23);
+}

@@ -12,6 +12,7 @@ export class Lesson2Component implements OnInit {
 
   hero:string = "";
   heroes : string[] = [];
+  punchline = 'Do or do not. There is no try.';
   
   updateColor(event: Event) {
     this.color = (<HTMLInputElement>event.target).value;
