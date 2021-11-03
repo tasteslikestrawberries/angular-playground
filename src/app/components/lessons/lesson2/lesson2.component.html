@@ -11,7 +11,6 @@ Write 'green' to see the change.
 <div [ngClass]="isSpecial ? 'special' : ''">I'm a div</div>
 <button (click)="changeClass()">Change Class</button>
 
-<br /><br />
 
 <!-- *ngIf showcase: add or remove element -->
 <h4>*ngIf</h4>
@@ -23,7 +22,6 @@ Write 'green' to see the change.
 </p>
 <button (click)="changeCondition()">Remove paragraph!</button>
 
-<br /><br />
 
 <!-- *ngFor showcase: dynamically display elements of array -->
 <h4>*ngFor</h4>
@@ -31,8 +29,6 @@ Write 'green' to see the change.
   <input [(ngModel)]="hero" name="name" id="name" #name="ngModel" required />
   <button type="submit" [disabled]="!formName.form.valid">Add Hero</button>
 </form>
-
-<br />
 
 <table class="table">
   <thead>
@@ -47,7 +43,21 @@ Write 'green' to see the change.
   </tbody>
 </table>
 
-<br />
+<!-- [ngSwitch] showcase -->
+<h4>[ngSwitch]</h4>
+
+<div class='switchDiv'>
+  Input string (try numbers 1-5): <input type="text" [(ngModel)]="num" />
+
+  <div [ngSwitch]="num">
+    <div *ngSwitchCase="'1'">One</div>
+    <div *ngSwitchCase="'2'">Two</div>
+    <div *ngSwitchCase="'3'">Three</div>
+    <div *ngSwitchCase="'4'">Four</div>
+    <div *ngSwitchCase="'5'">Five</div>
+    <div *ngSwitchDefault>This is Default</div>
+  </div>
+</div>
 
 <!-- Renderer showcase / custom directives (example.directive.ts)-->
 
@@ -87,7 +97,7 @@ and provides a handler method to run when that event occurs.
 </div>
 
 <h4>@HostBinding</h4>
-*a better approach than using Renderer2 (does the same, but the code is cleaner)*
-@HostBinding binds the property to the host element. If a binding changes,
-@HostBinding will update the host element.
+*a better approach than using Renderer2 (does the same, but the code is
+cleaner)* @HostBinding binds the property to the host element. If a binding
+changes, @HostBinding will update the host element.
 <div appExample3>I got my color from a directive!</div>

@@ -5,6 +5,8 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './lesson2.component.html',
   styleUrls: ['./lesson2.component.css'],
 })
+
+
 export class Lesson2Component implements OnInit {
   color: string = '';
   isSpecial: boolean = true;
@@ -12,7 +14,9 @@ export class Lesson2Component implements OnInit {
 
   hero:string = "";
   heroes : string[] = [];
-  punchline = 'Do or do not. There is no try.';
+  punchline = 'Do or do not. There is no try.'; 
+  
+  num: number= 0;
   
   updateColor(event: Event) {
     this.color = (<HTMLInputElement>event.target).value;
