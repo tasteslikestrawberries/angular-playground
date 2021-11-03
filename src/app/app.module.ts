@@ -20,7 +20,7 @@ import { HelloComponent } from './components/lessons/lesson3/hello/hello.compone
 import { BtnComponent } from './components/lessons/lesson3/btn/btn.component';
 import { ExampleDirective } from './components/lessons/lesson2/example.directive';
 import { Example2Directive } from './components/lessons/lesson2/example2.directive';
-
+import { Example3Directive } from './components/lessons/lesson2/example3.directive';
 
 @NgModule({
   declarations: [
@@ -39,6 +39,8 @@ import { Example2Directive } from './components/lessons/lesson2/example2.directi
     BtnComponent,
     ExampleDirective,
     Example2Directive,
+    Example3Directive,
+   
   ],
   imports: [BrowserModule, AppRoutingModule, FontAwesomeModule, FormsModule, HttpClientModule, NgbModule],
   providers: [],
