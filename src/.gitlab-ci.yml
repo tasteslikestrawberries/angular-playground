@@ -1,0 +1,17 @@
+image: node:14.18.1
+pages:
+  cache:
+    paths:
+    - node_modules/
+  stage: deploy
+  script:
+  - npm install -g @angular/cli@12.2.11
+  - npm install
+  - ng build --prod --base-href /angular-playground/
+  - mkdir -p public
+  - mv dist/angular-playground/* public/
+  artifacts:
+    paths:
+    - public
+  only:
+  - main
