@@ -5,7 +5,7 @@ import { LoggingService } from './logging.service';
   selector: 'app-logging-service',
   templateUrl: './logging-service.component.html',
   styleUrls: ['./logging-service.component.css'],
-  providers: [LoggingService] //providing the logging service to this component
+  providers: [LoggingService] //providing the logging service to this component - not neccessary if service class is marked with @Injectable!
 })
 export class LoggingServiceComponent implements OnInit {
 

@@ -14,7 +14,12 @@
   </li>
   <li>
     providing that service (telling Angular how to create it) in the providers
-    property of the class’ @Component decorator
+    property of the class’ @Component decorator or by using <b>@Injectable</b> with
+    providedIn property on the service class. Always decorating with @Injectable
+    is considered a good practice that improves readability of the code. <br/>
+    Now the only difference between these ways of providing is how many instances will be created by the providers 
+    when a service is added to the component. @Injectable with ProvidedByRoot will create only one instance, and
+    ProvidedByComponent will create a new instance for every component.
   </li>
   <b>Important</b> : The dependency injector is a hierarhical injector: the
   service is always provided in the chosen component class and
