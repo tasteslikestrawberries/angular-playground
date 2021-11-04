@@ -2,6 +2,10 @@
   display:none;
 }
 
+.active {
+  color:#a24cf3;
+}
+
 /*DESKTOP SCREENS*/
 @media (min-width: 70rem) {
   .sidebar {

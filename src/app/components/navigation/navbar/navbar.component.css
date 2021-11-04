@@ -22,6 +22,10 @@
   font-weight: bold;
 }
 
+.active {
+  color:#a24cf3;
+}
+
 .navbar > a h3 img {
   width: 50px;
   margin-right: 1rem;
