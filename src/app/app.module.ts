@@ -23,6 +23,7 @@ import { Example2Directive } from './components/lessons/lesson2/customdirectives
 import { Example3Directive } from './components/lessons/lesson2/customdirectives/example3.directive';
 import { CustomdirectivesComponent } from './components/lessons/lesson2/customdirectives/customdirectives.component';
 import { LoggingServiceComponent } from './services/logging-service/logging-service.component';
+import { Lesson4Component } from './services/lesson4/lesson4.component';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import { LoggingServiceComponent } from './services/logging-service/logging-serv
     Example2Directive,
     Example3Directive,
     CustomdirectivesComponent,
-    LoggingServiceComponent
+    LoggingServiceComponent,
+    Lesson4Component
    
   ],
   imports: [BrowserModule, AppRoutingModule, FontAwesomeModule, FormsModule, HttpClientModule, NgbModule],

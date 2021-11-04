@@ -1,6 +1,6 @@
 <nav class="sidebar" *ngIf="hasRoute('/about')">
   <h3>Lessons</h3>
-  
+
   <ul>
     <li>
       <a
@@ -19,7 +19,7 @@
       >
     </li>
 
-<br/>
+    <br />
 
     <li>
       <a
@@ -46,7 +46,7 @@
       >
     </li>
 
-    <br/>
+    <br />
 
     <li>
       <a
@@ -61,6 +61,17 @@
 
     <li>
       <a
+        routerLink="/lesson4"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        ><b>4. Services</b></a
+      >
+    </li>
+
+    <br />
+
+    <li>
+      <a
         routerLink="/playground"
         routerLinkActive="active"
         [routerLinkActiveOptions]="{ exact: true }"
@@ -68,26 +79,5 @@
       >
     </li>
 
-    <li>
-      <a
-        routerLink="/loggingservice"
-        routerLinkActive="active"
-        [routerLinkActiveOptions]="{ exact: true }"
-        ><b>Logging Service</b></a
-      >
-    </li>
-
-    <li>
-      <a
-        routerLink="/api"
-        routerLinkActive="active"
-        [routerLinkActiveOptions]="{ exact: true }"
-        ><b>Mock Api Service</b></a
-      >
-    </li>
-   
-     
-    </ul>
-
+  </ul>
 </nav>
-

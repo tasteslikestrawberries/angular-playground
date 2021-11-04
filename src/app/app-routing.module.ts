@@ -10,6 +10,7 @@ import { PlaygroundComponent } from './components/playground/playground.componen
 import { Lesson3Component } from './components/lessons/lesson3/lesson3.component';
 import { CustomdirectivesComponent } from './components/lessons/lesson2/customdirectives/customdirectives.component';
 import { LoggingServiceComponent } from './services/logging-service/logging-service.component';
+import { Lesson4Component } from './services/lesson4/lesson4.component';
 
 const routes: Routes = [
   { path: '', component: Lesson1Component },
@@ -21,7 +22,9 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'api', component: ApiComponent },
   { path: 'lesson3', component: Lesson3Component },
-  { path: 'loggingservice', component: LoggingServiceComponent }
+  { path: 'loggingservice', component: LoggingServiceComponent },
+  { path: 'lesson4', component: Lesson4Component }
+
 ];
 
 @NgModule({
