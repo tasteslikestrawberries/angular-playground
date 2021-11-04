@@ -20,7 +20,7 @@ Write 'green' to see the change.
 >
   I'm a paragraph
 </p>
-<button (click)="changeCondition()">Remove paragraph!</button>
+<button (click)="changeCondition()">{{ condition ? "Remove paragraph"  : "Show paragraph" }}</button>
 
 
 <!-- *ngFor showcase: dynamically display elements of array -->
