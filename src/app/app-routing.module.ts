@@ -13,6 +13,7 @@ import { LoggingServiceComponent } from './components/lessons/lesson4/services/l
 import { DataServiceComponent } from './components/lessons/lesson4/services/data-service/data-service.component';
 import { ApiServiceComponent } from './components/lessons/lesson4/services/api-service/api-service.component';
 import { Lesson5Component } from './components/lessons/lesson5/lesson5.component';
+import { MessageServiceComponent } from './components/lessons/lesson4/services/message-service/message-service.component';
 
 
 const routes: Routes = [
@@ -28,7 +29,8 @@ const routes: Routes = [
   { path: 'loggingservice', component: LoggingServiceComponent },
   { path: 'lesson4', component: Lesson4Component },
   { path: 'dataservice', component: DataServiceComponent },
-  { path: 'lesson5', component: Lesson5Component }
+  { path: 'lesson5', component: Lesson5Component },
+  { path: 'messageservice', component: MessageServiceComponent }
 
 ];
 

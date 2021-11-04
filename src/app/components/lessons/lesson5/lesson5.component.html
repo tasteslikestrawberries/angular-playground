@@ -18,10 +18,16 @@
 
 <h4>Subject</h4>
 <li>
-  equivalent to an EventEmitter, and the only way of multicasting a value or
-  event to multiple Observers. It is a special type of Observable that observers
-  can also subscribe to it to receive published values but with one difference:
-  The values are multicasted to many Observers.
+  A Subject is a special type of Observable that can act as both observable & an
+  observer. It is equivalent to an EventEmitter, and the only way of
+  multicasting a value or event to multiple Observers. What does that mean? It
+  means that a subject can emit data, on top of having the capability to be
+  subscribed to. Subjects implement both subscribe() method and next(), error()
+  & complete() methods. Subject can be used in a service to fetch some data, and
+  send the result to all components that subscribed to that Subject. Do not
+  expose the Subject object directly to components. Instead, return an
+  Observable version of it which will make the code much safer and prevent poor
+  coding practices.
 </li>
 <br /><br />
 
@@ -56,4 +62,6 @@
 </li>
 <br /><br />
 
-<b>Check the console to see a custom Observable in action!</b>
+<b>Check the console to see a custom Observable and a Subject in action!</b>
+<br />
+<app-subject-example></app-subject-example>

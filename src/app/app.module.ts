@@ -26,6 +26,10 @@ import { Lesson4Component } from './components/lessons/lesson4/lesson4.component
 import { DataServiceComponent } from './components/lessons/lesson4/services/data-service/data-service.component';
 import { LoggingServiceComponent } from './components/lessons/lesson4/services/logging-service/logging-service.component';
 import { Lesson5Component } from './components/lessons/lesson5/lesson5.component';
+import { SubjectExampleComponent } from './components/lessons/lesson5/subject-example/subject-example.component';
+import { MessageServiceComponent } from './components/lessons/lesson4/services/message-service/message-service.component';
+import { SenderComponent } from './components/lessons/lesson4/services/message-service/sender/sender.component';
+import { ReceiverComponent } from './components/lessons/lesson4/services/message-service/receiver/receiver.component';
 
 
 @NgModule({
@@ -50,7 +54,11 @@ import { Lesson5Component } from './components/lessons/lesson5/lesson5.component
     LoggingServiceComponent,
     Lesson4Component,
     DataServiceComponent,
-    Lesson5Component
+    Lesson5Component,
+    SubjectExampleComponent,
+    MessageServiceComponent,
+    SenderComponent,
+    ReceiverComponent
    
   ],
   imports: [BrowserModule, AppRoutingModule, FontAwesomeModule, FormsModule, HttpClientModule, NgbModule],

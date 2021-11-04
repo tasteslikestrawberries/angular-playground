@@ -77,6 +77,11 @@ button {
   padding:0 1rem;
 }
 
+.codeContainer {
+  padding:2rem;
+  background-color: #2e2d35;
+}
+
 /*DESKTOP SCREENS*/
 @media (min-width: 70rem) {
 
