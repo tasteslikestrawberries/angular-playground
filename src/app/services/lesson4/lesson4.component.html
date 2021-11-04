@@ -40,7 +40,16 @@
 
 <li>
   <a
-    routerLink="/api"
+    routerLink="/dataservice"
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: true }"
+    ><b>Mock Data Service</b></a
+  >
+</li>
+
+<li>
+  <a
+    routerLink="/apiservice"
     routerLinkActive="active"
     [routerLinkActiveOptions]="{ exact: true }"
     ><b>Mock Api Service</b></a

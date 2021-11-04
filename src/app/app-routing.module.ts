@@ -11,6 +11,8 @@ import { Lesson3Component } from './components/lessons/lesson3/lesson3.component
 import { CustomdirectivesComponent } from './components/lessons/lesson2/customdirectives/customdirectives.component';
 import { LoggingServiceComponent } from './services/logging-service/logging-service.component';
 import { Lesson4Component } from './services/lesson4/lesson4.component';
+import { DataServiceComponent
+ } from './services/data-service/data-service.component';
 
 const routes: Routes = [
   { path: '', component: Lesson1Component },
@@ -20,10 +22,11 @@ const routes: Routes = [
   { path: 'assignment2', component: Assignment2Component },
   { path: 'playground', component: PlaygroundComponent},
   { path: 'about', component: AboutComponent },
-  { path: 'api', component: ApiComponent },
+  { path: 'apiservice', component: ApiComponent },
   { path: 'lesson3', component: Lesson3Component },
   { path: 'loggingservice', component: LoggingServiceComponent },
-  { path: 'lesson4', component: Lesson4Component }
+  { path: 'lesson4', component: Lesson4Component },
+  { path: 'dataservice', component: DataServiceComponent }
 
 ];
 
