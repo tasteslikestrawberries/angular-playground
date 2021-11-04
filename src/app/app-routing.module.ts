@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './components/about/about.component';
-import { ApiComponent } from './services/api-service/api/api.component';
 import { Lesson1Component } from './components/lessons/lesson1/lesson1.component';
 import { Assignment1Component } from './components/assignments/assignment1/assignment1.component';
 import { Lesson2Component } from './components/lessons/lesson2/lesson2.component';
@@ -9,10 +8,12 @@ import { Assignment2Component } from './components/assignments/assignment2/assig
 import { PlaygroundComponent } from './components/playground/playground.component';
 import { Lesson3Component } from './components/lessons/lesson3/lesson3.component';
 import { CustomdirectivesComponent } from './components/lessons/lesson2/customdirectives/customdirectives.component';
-import { LoggingServiceComponent } from './services/logging-service/logging-service.component';
-import { Lesson4Component } from './services/lesson4/lesson4.component';
-import { DataServiceComponent
- } from './services/data-service/data-service.component';
+import { Lesson4Component } from './components/lessons/lesson4/lesson4.component';
+import { LoggingServiceComponent } from './components/lessons/lesson4/services/logging-service/logging-service.component';
+import { DataServiceComponent } from './components/lessons/lesson4/services/data-service/data-service.component';
+import { ApiServiceComponent } from './components/lessons/lesson4/services/api-service/api-service.component';
+import { Lesson5Component } from './components/lessons/lesson5/lesson5.component';
+
 
 const routes: Routes = [
   { path: '', component: Lesson1Component },
@@ -22,11 +23,12 @@ const routes: Routes = [
   { path: 'assignment2', component: Assignment2Component },
   { path: 'playground', component: PlaygroundComponent},
   { path: 'about', component: AboutComponent },
-  { path: 'apiservice', component: ApiComponent },
+  { path: 'apiservice', component: ApiServiceComponent },
   { path: 'lesson3', component: Lesson3Component },
   { path: 'loggingservice', component: LoggingServiceComponent },
   { path: 'lesson4', component: Lesson4Component },
-  { path: 'dataservice', component: DataServiceComponent }
+  { path: 'dataservice', component: DataServiceComponent },
+  { path: 'lesson5', component: Lesson5Component }
 
 ];
 

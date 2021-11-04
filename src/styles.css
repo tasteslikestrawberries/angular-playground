@@ -46,6 +46,10 @@ body {
   font-size:small;
 }
 
+h2,h4 {
+  color:#82ffcb;
+}
+
 h3 {
   margin-bottom:2rem;
 }
@@ -60,6 +64,7 @@ h3 {
   padding: 1rem;
   width:100%;
   height: fit-content;
+  text-align: justify;
 }
 
 table {
@@ -101,7 +106,6 @@ button {
     width:70%;
     height: fit-content;
     margin:2rem 0;
-    text-align: justify;
   }
 
 }

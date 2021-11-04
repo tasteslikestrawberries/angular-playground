@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navigation/navbar/navbar.component';
 import { SidebarComponent } from './components/navigation/sidebar/sidebar.component';
 import { AboutComponent } from './components/about/about.component';
-import { ApiComponent } from './services/api-service/api/api.component';
+import { ApiServiceComponent } from './components/lessons/lesson4/services/api-service/api-service.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { Lesson1Component } from './components/lessons/lesson1/lesson1.component';
 import { Assignment1Component } from './components/assignments/assignment1/assignment1.component';
@@ -22,9 +22,10 @@ import { ExampleDirective } from './components/lessons/lesson2/customdirectives/
 import { Example2Directive } from './components/lessons/lesson2/customdirectives/example2.directive';
 import { Example3Directive } from './components/lessons/lesson2/customdirectives/example3.directive';
 import { CustomdirectivesComponent } from './components/lessons/lesson2/customdirectives/customdirectives.component';
-import { LoggingServiceComponent } from './services/logging-service/logging-service.component';
-import { Lesson4Component } from './services/lesson4/lesson4.component';
-import { DataServiceComponent } from './services/data-service/data-service.component';
+import { Lesson4Component } from './components/lessons/lesson4/lesson4.component';
+import { DataServiceComponent } from './components/lessons/lesson4/services/data-service/data-service.component';
+import { LoggingServiceComponent } from './components/lessons/lesson4/services/logging-service/logging-service.component';
+import { Lesson5Component } from './components/lessons/lesson5/lesson5.component';
 
 
 @NgModule({
@@ -32,7 +33,7 @@ import { DataServiceComponent } from './services/data-service/data-service.compo
     AppComponent,
     NavbarComponent,
     AboutComponent,
-    ApiComponent,
+    ApiServiceComponent,
     SidebarComponent,
     Assignment1Component,
     Lesson1Component,
@@ -48,7 +49,8 @@ import { DataServiceComponent } from './services/data-service/data-service.compo
     CustomdirectivesComponent,
     LoggingServiceComponent,
     Lesson4Component,
-    DataServiceComponent
+    DataServiceComponent,
+    Lesson5Component
    
   ],
   imports: [BrowserModule, AppRoutingModule, FontAwesomeModule, FormsModule, HttpClientModule, NgbModule],

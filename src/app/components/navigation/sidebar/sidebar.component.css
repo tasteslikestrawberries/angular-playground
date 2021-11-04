@@ -22,7 +22,8 @@
 
   li{
     list-style-type: none;
-    margin-bottom:1rem;
+    margin-bottom:0.5rem;
+  
   }
 
   ul {

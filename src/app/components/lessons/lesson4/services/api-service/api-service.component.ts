@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from '../api-service';
-import { Person } from '../person-model';
+import { ApiService } from './api-service';
+import { Person } from './person-model';
 
 @Component({
-  selector: 'app-api-component',
-  templateUrl: './api.component.html',
-  styleUrls: ['./api.component.css']
+  selector: 'app-api-service',
+  templateUrl: './api-service.component.html',
+  styleUrls: ['./api-service.component.css']
 })
-export class ApiComponent implements OnInit {
+export class ApiServiceComponent implements OnInit {
 
   people!:Person[];
   person = new Person();

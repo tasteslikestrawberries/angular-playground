@@ -1,0 +1,59 @@
+<h2>Lesson 5: RxJs and Observables</h2>
+<p>
+  The essential concepts in RxJS (Reactive Extensions Library for JavaScript)
+  which solve async event management are:<br /><br />
+</p>
+
+<h4>Observable</h4>
+<li>
+  a function that converts the ordinary stream of data into an observable stream
+  of data. You can think of Observable as a wrapper around the ordinary stream
+  of data. Observable stream or simple Observable emits the value from the
+  stream asynchronously. It emits the complete signals when the stream completes
+  or an error signal if the stream errors out. Observables are declarative. You
+  define an observable function just like any other variable. The observable
+  starts to emit values only when someone subscribes to it.
+</li>
+<br /><br />
+
+<h4>Subject</h4>
+<li>
+  equivalent to an EventEmitter, and the only way of multicasting a value or
+  event to multiple Observers. It is a special type of Observable that observers
+  can also subscribe to it to receive published values but with one difference:
+  The values are multicasted to many Observers.
+</li>
+<br /><br />
+
+<h4>Observers</h4>
+<li>
+  The Observable on its own is useless unless someone consumes the value emitted
+  by the observable. We call them observers or subscribers. The observers
+  communicate with the Observable using callbacks. The observer must subscribe
+  with the observable to receive the value from the observable. While
+  subscribing it optionally passes the three callbacks. <b>next()</b>,
+  <b>error()</b> and <b>complete()</b>. All 3 callbacks are optional!
+  <br /><br />The observable starts emitting the value as soon as the observer
+  or consumer subscribes to it. The observable invokes the next() callback
+  whenever the value arrives in the stream. It passes the value as the argument
+  to the next callback. If the error occurs, then the error() callback is
+  invoked. It invokes the complete() callback when the stream completes.
+</li>
+<br /><br />
+
+<h4>Subscriptions</h4>
+<li>
+  objects that are returned when you subscribe to an Observable. They contain
+  many methods such as the unsubscribe() method that you can call to unsubscribe
+  from receiving published values from the Observable.
+</li>
+<br /><br />
+
+<h4>Operators</h4>
+<li>
+  pure functions that enable a functional programming style of dealing with
+  collections with operations like map, filter, concat, reduce, etc.
+</li>
+<br /><br />
+
+<b>Check the console to see a custom Observable in action!</b>
