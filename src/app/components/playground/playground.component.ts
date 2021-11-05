@@ -6,7 +6,6 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./playground.component.css']
 })
 export class PlaygroundComponent implements OnInit {
-
   myArr = [
     {type:'fruit', name:'apple', price:5 },
     {type:'vegetable', name:'tomato', price:4 },

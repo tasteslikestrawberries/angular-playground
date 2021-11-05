@@ -7,14 +7,15 @@
     <th>Price</th>
   </thead>
   <tbody>
-  <tr *ngFor="let element of myArr; let i = index;">
+  <tr *ngFor="let element of myArr  | sort:'name'; let i = index;"> <!--sort pipe in action-->
   <td>{{ i+ 1 }}</td>
-  <td>{{element.type}}</td>
-  <td>{{element.name}}</td>
+  <td>{{element.type | shorten: 3}}</td> <!--shorten pipe in action-->
+  <td>{{element.name | reverse}}</td> <!--reverse pipe in action-->
   <td>{{element.price}}</td>
   </tr>
   </tbody>
 </table>
+
 
 <button (click)="addElementsToArray()">Add more elements</button>
 

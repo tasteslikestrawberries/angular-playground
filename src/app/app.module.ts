@@ -30,6 +30,9 @@ import { SubjectExampleComponent } from './components/lessons/lesson5/subject-ex
 import { MessageServiceComponent } from './components/lessons/lesson4/services/message-service/message-service.component';
 import { SenderComponent } from './components/lessons/lesson4/services/message-service/sender/sender.component';
 import { ReceiverComponent } from './components/lessons/lesson4/services/message-service/receiver/receiver.component';
+import { ReversePipe } from './components/playground/custom-pipes/reverse.pipe';
+import { SortPipe } from './components/playground/custom-pipes/sort.pipe';
+import { ShortenPipe } from './components/playground/custom-pipes/shorten.pipe';
 
 
 @NgModule({
@@ -58,7 +61,10 @@ import { ReceiverComponent } from './components/lessons/lesson4/services/message
     SubjectExampleComponent,
     MessageServiceComponent,
     SenderComponent,
-    ReceiverComponent
+    ReceiverComponent,
+    ReversePipe,
+    SortPipe,
+    ShortenPipe
    
   ],
   imports: [BrowserModule, AppRoutingModule, FontAwesomeModule, FormsModule, HttpClientModule, NgbModule],
