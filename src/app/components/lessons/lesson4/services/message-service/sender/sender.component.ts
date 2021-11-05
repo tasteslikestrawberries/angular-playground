@@ -16,7 +16,6 @@ export class SenderComponent {
     this.messageService.sendMessage(
       this.message
     );
-    console.log('Sender Component sent: ' + this.message);
   }
 
   clearMessages(): void {
