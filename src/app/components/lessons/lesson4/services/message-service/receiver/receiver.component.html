@@ -1,5 +1,9 @@
-<p>I'm a receiver component and I received:
+<div>
+  I'm a receiver component
+  <button (click)="checkMessages()">Check for messages</button>
+  <br />
+  <br />
   <ol>
-    <li *ngFor="let message of messages"> {{ message }} </li>
- </ol>
-
+    <li *ngFor="let message of messages">{{ message.text }}</li>
+  </ol>
+</div>

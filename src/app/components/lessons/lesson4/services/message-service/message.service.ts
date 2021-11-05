@@ -3,11 +3,13 @@
  any component with the clearMessages() method.*/
 
 import { Injectable } from '@angular/core';
-import { Observable, Subject } from 'rxjs';
+import { Observable, BehaviorSubject } from 'rxjs';
+
+//BehaviorSubject requires an initial value and emits the current value to new subscribers
 
 @Injectable({ providedIn: 'root' })
 export class MessageService {
-  private mySubject = new Subject<any>();
+  private mySubject = new BehaviorSubject<any>('initialValue');
 
   sendMessage(message: any) {
     this.mySubject.next({ text: message });
@@ -17,10 +19,10 @@ export class MessageService {
   by calling this.subject.next() without any arguments, the logic to 
   clear the messages when an empty message is received is in the component*/
   clearMessages() {
-    this.mySubject.next();
+    this.mySubject.next('NextValue');
   }
 
-  onMessage(): Observable<any> {
+  getMessage(): Observable<any> {
     return this.mySubject.asObservable(); //don'texpose the Subject object directly to your components, return Observable version of it
   }
 }

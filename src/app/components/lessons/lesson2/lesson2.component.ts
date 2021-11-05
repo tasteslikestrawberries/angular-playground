@@ -17,6 +17,7 @@ export class Lesson2Component implements OnInit {
   
   num: number= 0;
 
+  constructor() {}
   
   updateColor(event: Event) {
     this.color = (<HTMLInputElement>event.target).value;
@@ -40,8 +41,6 @@ export class Lesson2Component implements OnInit {
     console.log(this.heroes.length);
     this.hero = '';
   }
-
-  constructor() {}
 
   ngOnInit(): void {}
 }

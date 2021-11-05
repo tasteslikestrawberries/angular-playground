@@ -10,23 +10,27 @@ import { MessageService } from '../message.service';
 })
 export class ReceiverComponent implements OnDestroy {
   messages: any[] = [];
-  subscription: Subscription;
+  subscription?: Subscription;
 
-  constructor(private messageService: MessageService) {
-    //subscribe to sender component messages
-    this.subscription = this.messageService.onMessage().subscribe((message) => {
-      if (message) {
-        this.messages.push(message);
-        console.log('Receiver Component: ' + this.messages.values) //TODO 
-      } else {
-        //clear messages when empty message received
-        this.messages = [];
-      }
-    });
+  constructor(private messageService: MessageService) {}
+
+  checkMessages() {
+    //subscribe to messages
+    this.subscription = this.messageService
+      .getMessage()
+      .subscribe((message) => {
+        if (message) {
+          this.messages.push(message);
+          console.log('Receiver component received: ' + message.text);
+        } else {
+          //clear messages when empty message received
+          this.messages = [];
+        }
+      });
   }
 
   ngOnDestroy() {
     //unsubscribe to ensure no memory leaks
-    this.subscription.unsubscribe();
+    this.subscription?.unsubscribe();
   }
 }

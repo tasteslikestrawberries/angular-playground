@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { MessageService } from '../message.service';
 
 @Component({
@@ -7,18 +7,16 @@ import { MessageService } from '../message.service';
   styleUrls: ['./sender.component.css'],
 })
 export class SenderComponent {
-  
-  message: any = 'Message from Sender Component to Receiver Component!';
+  message: string = "";
 
-  constructor(private messageService: MessageService) {
-  }
+  constructor(private messageService: MessageService) {}
 
-  sendMessage(): void {
+  sendMessage = () => {
     // send message to subscribers via observable subject
     this.messageService.sendMessage(
       this.message
     );
-    console.log('Receiver Component: ' + this.message)
+    console.log('Sender Component sent: ' + this.message);
   }
 
   clearMessages(): void {
