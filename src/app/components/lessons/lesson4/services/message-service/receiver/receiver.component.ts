@@ -14,7 +14,7 @@ export class ReceiverComponent implements OnDestroy {
 
   constructor(private messageService: MessageService) {}
 
-  checkMessages() {
+  ngOnInit() {
     //subscribe to messages
     this.subscription = this.messageService
       .getMessage()
