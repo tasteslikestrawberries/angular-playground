@@ -1,0 +1,12 @@
+<div>
+  Component 1
+  <br/>
+  <br/>
+<button (click)="fetchUsers()">Fetch users</button>
+<ul *ngFor="let user of users">
+  <li>
+    <span>{{ user.name }}{{' '}}</span><span>{{ user.lastName }}{{' '}}</span
+    ><img src="{{ user.thumbnail }}" />
+  </li>
+</ul>
+</div>

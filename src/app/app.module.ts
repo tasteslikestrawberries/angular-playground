@@ -33,6 +33,8 @@ import { ReceiverComponent } from './components/lessons/lesson4/services/message
 import { ReversePipe } from './components/playground/custom-pipes/reverse.pipe';
 import { SortPipe } from './components/playground/custom-pipes/sort.pipe';
 import { ShortenPipe } from './components/playground/custom-pipes/shorten.pipe';
+import { Apiservice2Component } from './components/lessons/lesson4/services/apiservice2/apiservice2.component';
+import { AnotherComponent } from './components/lessons/lesson4/services/apiservice2/another/another.component';
 
 
 @NgModule({
@@ -64,7 +66,9 @@ import { ShortenPipe } from './components/playground/custom-pipes/shorten.pipe';
     ReceiverComponent,
     ReversePipe,
     SortPipe,
-    ShortenPipe
+    ShortenPipe,
+    Apiservice2Component,
+    AnotherComponent
    
   ],
   imports: [BrowserModule, AppRoutingModule, FontAwesomeModule, FormsModule, HttpClientModule, NgbModule],
