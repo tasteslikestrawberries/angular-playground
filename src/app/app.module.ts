@@ -35,6 +35,7 @@ import { SortPipe } from './components/playground/custom-pipes/sort.pipe';
 import { ShortenPipe } from './components/playground/custom-pipes/shorten.pipe';
 import { Apiservice2Component } from './components/lessons/lesson4/services/apiservice2/apiservice2.component';
 import { AnotherComponent } from './components/lessons/lesson4/services/apiservice2/another/another.component';
+import { FormsLearningComponent } from './components/playground/forms-learning/forms-learning.component';
 
 
 @NgModule({
@@ -68,7 +69,8 @@ import { AnotherComponent } from './components/lessons/lesson4/services/apiservi
     SortPipe,
     ShortenPipe,
     Apiservice2Component,
-    AnotherComponent
+    AnotherComponent,
+    FormsLearningComponent
    
   ],
   imports: [BrowserModule, AppRoutingModule, FontAwesomeModule, FormsModule, HttpClientModule, NgbModule],
