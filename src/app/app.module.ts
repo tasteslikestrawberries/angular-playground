@@ -35,8 +35,10 @@ import { SortPipe } from './components/playground/custom-pipes/sort.pipe';
 import { ShortenPipe } from './components/playground/custom-pipes/shorten.pipe';
 import { Apiservice2Component } from './components/lessons/lesson4/services/apiservice2/apiservice2.component';
 import { AnotherComponent } from './components/lessons/lesson4/services/apiservice2/another/another.component';
-import { FormsLearningComponent } from './components/playground/forms-learning/forms-learning.component';
-
+import { TemplateApproachComponent } from './components/lessons/lesson6/template-approach/template-approach.component';
+import { ReactiveApproachComponent } from './components/lessons/lesson6/reactive-approach/reactive-approach.component';
+import { FormsComponent } from './components/lessons/lesson6/forms.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -70,10 +72,12 @@ import { FormsLearningComponent } from './components/playground/forms-learning/f
     ShortenPipe,
     Apiservice2Component,
     AnotherComponent,
-    FormsLearningComponent
+    TemplateApproachComponent,
+    ReactiveApproachComponent,
+    FormsComponent
    
   ],
-  imports: [BrowserModule, AppRoutingModule, FontAwesomeModule, FormsModule, HttpClientModule, NgbModule],
+  imports: [BrowserModule, AppRoutingModule, FontAwesomeModule, FormsModule, HttpClientModule, NgbModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

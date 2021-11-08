@@ -2,11 +2,11 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
 @Component({
-  selector: 'app-forms-learning',
-  templateUrl: './forms-learning.component.html',
-  styleUrls: ['./forms-learning.component.css'],
+  selector: 'app-template-approach',
+  templateUrl: './template-approach.component.html',
+  styleUrls: ['./template-approach.component.css']
 })
-export class FormsLearningComponent implements OnInit {
+export class TemplateApproachComponent implements OnInit {
   @ViewChild('f') signupForm?: NgForm;
 
   username = 'Default Username';

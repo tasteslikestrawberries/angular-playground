@@ -14,6 +14,7 @@ import { DataServiceComponent } from './components/lessons/lesson4/services/data
 import { ApiServiceComponent } from './components/lessons/lesson4/services/api-service/api-service.component';
 import { Lesson5Component } from './components/lessons/lesson5/lesson5.component';
 import { MessageServiceComponent } from './components/lessons/lesson4/services/message-service/message-service.component';
+import { FormsComponent } from './components/lessons/lesson6/forms.component';
 
 
 const routes: Routes = [
@@ -30,7 +31,8 @@ const routes: Routes = [
   { path: 'lesson4', component: Lesson4Component },
   { path: 'dataservice', component: DataServiceComponent },
   { path: 'lesson5', component: Lesson5Component },
-  { path: 'messageservice', component: MessageServiceComponent }
+  { path: 'messageservice', component: MessageServiceComponent },
+  { path: 'forms', component: FormsComponent }
 
 ];
 
