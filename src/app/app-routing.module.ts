@@ -15,7 +15,7 @@ import { ApiServiceComponent } from './components/lessons/lesson4/services/api-s
 import { Lesson5Component } from './components/lessons/lesson5/lesson5.component';
 import { MessageServiceComponent } from './components/lessons/lesson4/services/message-service/message-service.component';
 import { FormsComponent } from './components/lessons/lesson6/forms.component';
-
+import { AuthComponent } from './components/auth/auth.component';
 
 const routes: Routes = [
   { path: '', component: Lesson1Component },
@@ -32,7 +32,8 @@ const routes: Routes = [
   { path: 'dataservice', component: DataServiceComponent },
   { path: 'lesson5', component: Lesson5Component },
   { path: 'messageservice', component: MessageServiceComponent },
-  { path: 'forms', component: FormsComponent }
+  { path: 'forms', component: FormsComponent },
+  { path: 'auth', component: AuthComponent }
 
 ];
 

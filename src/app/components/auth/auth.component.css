@@ -1,0 +1,22 @@
+.formWrapper {
+  display:flex;
+  justify-content: center;
+}
+
+input {
+  width:30vw;
+  margin:1rem 0;
+}
+
+.buttonsWrapper {
+  display:flex;
+  justify-content: center;
+}
+
+button {
+  margin:1rem;
+}
+
+p {
+  height:fit-content;
+}

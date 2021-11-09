@@ -14,7 +14,11 @@
       >
     </li>
     <li>
-      <button>Log Out</button>
+      <a
+        routerLink="/auth"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >Log in</a>
     </li>
   </ul>
 
@@ -129,7 +133,11 @@
         >
       </li>
       <li>
-        <button>Log Out</button>
+        <a
+          routerLink="/auth"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >Log in</a>
       </li>
     </ul>
   </div>

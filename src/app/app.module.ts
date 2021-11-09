@@ -39,6 +39,8 @@ import { TemplateApproachComponent } from './components/lessons/lesson6/template
 import { ReactiveApproachComponent } from './components/lessons/lesson6/reactive-approach/reactive-approach.component';
 import { FormsComponent } from './components/lessons/lesson6/forms.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AuthComponent } from './components/auth/auth.component';
+import { LoadingSpinnerComponent } from './components/loading-spinner/loading-spinner.component';
 
 @NgModule({
   declarations: [
@@ -74,7 +76,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     AnotherComponent,
     TemplateApproachComponent,
     ReactiveApproachComponent,
-    FormsComponent
+    FormsComponent,
+    AuthComponent,
+    LoadingSpinnerComponent
    
   ],
   imports: [BrowserModule, AppRoutingModule, FontAwesomeModule, FormsModule, HttpClientModule, NgbModule, ReactiveFormsModule],
