@@ -1,22 +1,36 @@
 .formWrapper {
-  display:flex;
+  display: flex;
   justify-content: center;
 }
 
 input {
-  width:30vw;
-  margin:1rem 0;
+  margin: 1rem 0;
 }
 
 .buttonsWrapper {
-  display:flex;
+  display: flex;
   justify-content: center;
 }
 
 button {
-  margin:1rem;
+  margin: 1rem;
+  padding:0.8rem;
+  font-weight:bold;
+  background-color: #a24cf3;
+  color:white;
+  border:none;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #8f37e0;
 }
 
 p {
-  height:fit-content;
+  height: fit-content;
+}
+
+.alert-danger p {
+  font-family: Arial;
+  text-align: center;
 }
