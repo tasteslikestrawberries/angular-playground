@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { AuthService, IAuthResponseData } from './auth.service';
 
@@ -13,7 +14,7 @@ export class AuthComponent implements OnInit {
   isLoading = false;
   error: any = null;
 
-  constructor(private authService: AuthService) {}
+  constructor(private authService: AuthService, private router: Router) {}
 
   switchMode() {
     this.isLoginMode = !this.isLoginMode;
@@ -43,6 +44,7 @@ export class AuthComponent implements OnInit {
       (resData) => {
         console.log(resData);
         this.isLoading = false;
+        this.router.navigate(['/myprofile']); //making use of programmatical navigation (navigation from inside code)
       },
       (errorMsg) => {
         console.log(errorMsg);

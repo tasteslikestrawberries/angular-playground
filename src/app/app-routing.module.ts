@@ -16,6 +16,7 @@ import { Lesson5Component } from './components/lessons/lesson5/lesson5.component
 import { MessageServiceComponent } from './components/lessons/lesson4/services/message-service/message-service.component';
 import { FormsComponent } from './components/lessons/lesson6/forms.component';
 import { AuthComponent } from './components/auth/auth.component';
+import { MyprofileComponent } from './components/myprofile/myprofile.component';
 
 const routes: Routes = [
   { path: '', component: Lesson1Component },
@@ -23,7 +24,7 @@ const routes: Routes = [
   { path: 'lesson2', component: Lesson2Component },
   { path: 'customdirectives', component: CustomdirectivesComponent },
   { path: 'assignment2', component: Assignment2Component },
-  { path: 'playground', component: PlaygroundComponent},
+  { path: 'playground', component: PlaygroundComponent },
   { path: 'about', component: AboutComponent },
   { path: 'apiservice', component: ApiServiceComponent },
   { path: 'lesson3', component: Lesson3Component },
@@ -33,8 +34,8 @@ const routes: Routes = [
   { path: 'lesson5', component: Lesson5Component },
   { path: 'messageservice', component: MessageServiceComponent },
   { path: 'forms', component: FormsComponent },
-  { path: 'auth', component: AuthComponent }
-
+  { path: 'auth', component: AuthComponent },
+  {path: 'myprofile', component: MyprofileComponent}
 ];
 
 @NgModule({

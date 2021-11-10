@@ -41,6 +41,7 @@ import { FormsComponent } from './components/lessons/lesson6/forms.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AuthComponent } from './components/auth/auth.component';
 import { LoadingSpinnerComponent } from './components/loading-spinner/loading-spinner.component';
+import { MyprofileComponent } from './components/myprofile/myprofile.component';
 
 @NgModule({
   declarations: [
@@ -78,7 +79,8 @@ import { LoadingSpinnerComponent } from './components/loading-spinner/loading-sp
     ReactiveApproachComponent,
     FormsComponent,
     AuthComponent,
-    LoadingSpinnerComponent
+    LoadingSpinnerComponent,
+    MyprofileComponent
    
   ],
   imports: [BrowserModule, AppRoutingModule, FontAwesomeModule, FormsModule, HttpClientModule, NgbModule, ReactiveFormsModule],

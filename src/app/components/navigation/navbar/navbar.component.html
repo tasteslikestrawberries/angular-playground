@@ -5,6 +5,16 @@
     </h3>
   </a>
   <ul>
+    <li *ngIf="isAuthenticated">
+      <a
+        routerLink="/myprofile"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >My Profile</a>
+    </li>
+    <button (click)="onLogout()">
+      {{ !isAuthenticated ? 'Log in' : 'Log out'}}
+    </button>
     <li>
       <a
         routerLink="/about"
@@ -12,13 +22,6 @@
         [routerLinkActiveOptions]="{ exact: true }"
         >About</a
       >
-    </li>
-    <li>
-      <a
-        routerLink="/auth"
-        routerLinkActive="active"
-        [routerLinkActiveOptions]="{ exact: true }"
-        >Log in</a>
     </li>
   </ul>
 
@@ -124,6 +127,16 @@
       </li>
 
       ...............................
+      <li *ngIf="isAuthenticated">
+        <a
+          routerLink="/myprofile"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >My Profile</a>
+      </li>
+      <button (click)="onLogout()">
+        {{ !isAuthenticated ? 'Log in' : 'Log out'}}
+      </button>
       <li>
         <a
           routerLink="/about"
@@ -131,13 +144,6 @@
           [routerLinkActiveOptions]="{ exact: true }"
           >About</a
         >
-      </li>
-      <li>
-        <a
-          routerLink="/auth"
-          routerLinkActive="active"
-          [routerLinkActiveOptions]="{ exact: true }"
-          >Log in</a>
       </li>
     </ul>
   </div>
