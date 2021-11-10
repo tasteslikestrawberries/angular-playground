@@ -1,6 +1,6 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Subject, throwError } from 'rxjs';
+import { BehaviorSubject, Subject, throwError } from 'rxjs';
 import { catchError, tap } from 'rxjs/operators';
 import { User } from './user.model';
 import { Router } from '@angular/router';
@@ -19,7 +19,7 @@ export interface IAuthResponseData {
   providedIn: 'root',
 })
 export class AuthService {
-  user = new Subject<User | null>();
+  user = new BehaviorSubject<User | null>(null);
   private tokenExpirationTimer: any;
 
   constructor(private http: HttpClient, private router: Router) {}
@@ -100,6 +100,7 @@ export class AuthService {
     this.tokenExpirationTimer = null;
   }
 
+  // sets the timer so the current user will be automatically logged out after expirationDuration
   autoLogout(expirationDuration: number) {
     console.log(expirationDuration);
     this.tokenExpirationTimer = setTimeout(() => {
@@ -107,6 +108,7 @@ export class AuthService {
     }, expirationDuration);
   }
 
+  // emits the current user, sets the user data inside local storage and sets autoLogout
   private handleAuth(
     email: string,
     userId: string,

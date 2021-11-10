@@ -17,6 +17,7 @@ import { MessageServiceComponent } from './components/lessons/lesson4/services/m
 import { FormsComponent } from './components/lessons/lesson6/forms.component';
 import { AuthComponent } from './components/auth/auth.component';
 import { MyprofileComponent } from './components/myprofile/myprofile.component';
+import { AuthGuard } from './components/auth/auth.guard';
 
 const routes: Routes = [
   { path: '', component: Lesson1Component },
@@ -35,7 +36,7 @@ const routes: Routes = [
   { path: 'messageservice', component: MessageServiceComponent },
   { path: 'forms', component: FormsComponent },
   { path: 'auth', component: AuthComponent },
-  {path: 'myprofile', component: MyprofileComponent}
+  {path: 'myprofile', component: MyprofileComponent, canActivate: [AuthGuard]}
 ];
 
 @NgModule({
