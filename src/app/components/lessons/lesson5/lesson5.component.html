@@ -4,15 +4,16 @@
   which solve async event management are:<br /><br />
 </p>
 
-<h4>Observable</h4>
+<h4>Observables</h4>
 <li>
-  a function that converts the ordinary stream of data into an observable stream
-  of data. You can think of Observable as a wrapper around the ordinary stream
-  of data. Observable stream or simple Observable emits the value from the
-  stream asynchronously. It emits the complete signals when the stream completes
-  or an error signal if the stream errors out. Observables are declarative. You
-  define an observable function just like any other variable. The observable
-  starts to emit values only when someone subscribes to it.
+  Observables are simply functions that are able to give multiple values over
+  time, either synchronously or asynchronously. They are different from promises
+  because: they are lazy (we have to subscribe to them to get data) while
+  promises execute immediately; observables handle multiple values unlike
+  promises which can only provide a single value; observables are cancelable
+  (you can unsubscribe from them) while promises don't have such a feature and
+  observables provide many useful operators that allow us to transform the way
+  data is handled, transformed or displayed.
 </li>
 <br /><br />
 
@@ -49,16 +50,19 @@
 
 <h4>Subscriptions</h4>
 <li>
-  objects that are returned when you subscribe to an Observable. They contain
-  many methods such as the unsubscribe() method that you can call to unsubscribe
-  from receiving published values from the Observable.
+  Subscriptions are objects that are returned when you subscribe to an
+  Observable. They contain many methods such as the unsubscribe() method that
+  you can call to unsubscribe from receiving published values from the
+  Observable.
 </li>
 <br /><br />
 
 <h4>Operators</h4>
 <li>
-  pure functions that enable a functional programming style of dealing with
-  collections with operations like map, filter, concat, reduce, etc.
+  Operators allow us to transform the way data is handled, transformed or
+  displayed. Operators are pure functions that enable a functional programming
+  style of dealing with collections with operations like map, filter, concat,
+  reduce, etc.
 </li>
 <br /><br />
 
