@@ -31,4 +31,14 @@ Practicing handling http requests using RxJS Subject:
   <app-another></app-another>
 </div>
 
+<br/><br/>
+
+<!--Callbacks vs Promises vs Async/Await vs RxJS Observables-->
+Callbacks vs Promises vs Async/Await vs RxJS Observables (check console after clicking the button, timeout is 2 sec)
+<div class="apiComponentsContainer">
+<button (click)="testCallbacks()" style="background-color:'#d9c4bd';">Test Callbacks</button>
+<button (click)="testPromises()" style="background-color:'#c4c4fc';">Test Promises</button>
+<button (click)="testAsyncAwait()" style="background-color:'	#ff613d';">Test Async/Await (internally Promises)</button>
+<button (click)="testObservables()" style="background-color:'	#ff0087';">Test RxJS Observables</button>
+</div>
 
