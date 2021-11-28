@@ -9,15 +9,16 @@ import { PlaygroundComponent } from './components/playground/playground.componen
 import { Lesson3Component } from './components/lessons/lesson3/lesson3.component';
 import { CustomdirectivesComponent } from './components/lessons/lesson2/customdirectives/customdirectives.component';
 import { Lesson4Component } from './components/lessons/lesson4/lesson4.component';
-import { LoggingServiceComponent } from './components/lessons/lesson4/services/logging-service/logging-service.component';
-import { DataServiceComponent } from './components/lessons/lesson4/services/data-service/data-service.component';
-import { ApiServiceComponent } from './components/lessons/lesson4/services/api-service/api-service.component';
+import { LoggingServiceComponent } from './services/logging-service/logging-service.component';
+import { DataServiceComponent } from './services/data-service/data-service.component';
+import { ApiServiceComponent } from './services/api-service/api-service.component';
 import { Lesson5Component } from './components/lessons/lesson5/lesson5.component';
-import { MessageServiceComponent } from './components/lessons/lesson4/services/message-service/message-service.component';
+import { MessageServiceComponent } from './services/message-service/message-service.component';
 import { FormsComponent } from './components/lessons/lesson6/forms.component';
 import { AuthComponent } from './components/auth/auth.component';
 import { MyprofileComponent } from './components/myprofile/myprofile.component';
 import { AuthGuard } from './components/auth/auth.guard';
+import { TaskServiceComponent } from './services/task-service/task-service.component';
 
 const routes: Routes = [
   { path: '', component: Lesson1Component },
@@ -34,6 +35,7 @@ const routes: Routes = [
   { path: 'dataservice', component: DataServiceComponent },
   { path: 'lesson5', component: Lesson5Component },
   { path: 'messageservice', component: MessageServiceComponent },
+  { path: 'taskservice', component: TaskServiceComponent },
   { path: 'forms', component: FormsComponent },
   { path: 'auth', component: AuthComponent },
   {path: 'myprofile', component: MyprofileComponent, canActivate: [AuthGuard]}

@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navigation/navbar/navbar.component';
 import { SidebarComponent } from './components/navigation/sidebar/sidebar.component';
 import { AboutComponent } from './components/about/about.component';
-import { ApiServiceComponent } from './components/lessons/lesson4/services/api-service/api-service.component';
+import { ApiServiceComponent } from './services/api-service/api-service.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { Lesson1Component } from './components/lessons/lesson1/lesson1.component';
 import { Assignment1Component } from './components/assignments/assignment1/assignment1.component';
@@ -23,18 +23,18 @@ import { Example2Directive } from './components/lessons/lesson2/customdirectives
 import { Example3Directive } from './components/lessons/lesson2/customdirectives/example3.directive';
 import { CustomdirectivesComponent } from './components/lessons/lesson2/customdirectives/customdirectives.component';
 import { Lesson4Component } from './components/lessons/lesson4/lesson4.component';
-import { DataServiceComponent } from './components/lessons/lesson4/services/data-service/data-service.component';
-import { LoggingServiceComponent } from './components/lessons/lesson4/services/logging-service/logging-service.component';
+import { DataServiceComponent } from './services/data-service/data-service.component';
+import { LoggingServiceComponent } from './services/logging-service/logging-service.component';
 import { Lesson5Component } from './components/lessons/lesson5/lesson5.component';
 import { SubjectExampleComponent } from './components/lessons/lesson5/subject-example/subject-example.component';
-import { MessageServiceComponent } from './components/lessons/lesson4/services/message-service/message-service.component';
-import { SenderComponent } from './components/lessons/lesson4/services/message-service/sender/sender.component';
-import { ReceiverComponent } from './components/lessons/lesson4/services/message-service/receiver/receiver.component';
+import { MessageServiceComponent } from './services/message-service/message-service.component';
+import { SenderComponent } from './services/message-service/sender/sender.component';
+import { ReceiverComponent } from './services/message-service/receiver/receiver.component';
 import { ReversePipe } from './components/playground/custom-pipes/reverse.pipe';
 import { SortPipe } from './components/playground/custom-pipes/sort.pipe';
 import { ShortenPipe } from './components/playground/custom-pipes/shorten.pipe';
-import { Apiservice2Component } from './components/lessons/lesson4/services/apiservice2/apiservice2.component';
-import { AnotherComponent } from './components/lessons/lesson4/services/apiservice2/another/another.component';
+import { Apiservice2Component } from './services/apiservice2/apiservice2.component';
+import { AnotherComponent } from './services/apiservice2/another/another.component';
 import { TemplateApproachComponent } from './components/lessons/lesson6/template-approach/template-approach.component';
 import { ReactiveApproachComponent } from './components/lessons/lesson6/reactive-approach/reactive-approach.component';
 import { FormsComponent } from './components/lessons/lesson6/forms.component';
@@ -42,6 +42,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AuthComponent } from './components/auth/auth.component';
 import { LoadingSpinnerComponent } from './components/loading-spinner/loading-spinner.component';
 import { MyprofileComponent } from './components/myprofile/myprofile.component';
+import { TaskServiceComponent } from './services/task-service/task-service.component';
+import { TaskDetailsComponent } from './services/task-service/task-details/task-details.component';
 
 @NgModule({
   declarations: [
@@ -80,7 +82,9 @@ import { MyprofileComponent } from './components/myprofile/myprofile.component';
     FormsComponent,
     AuthComponent,
     LoadingSpinnerComponent,
-    MyprofileComponent
+    MyprofileComponent,
+    TaskServiceComponent,
+    TaskDetailsComponent
    
   ],
   imports: [BrowserModule, AppRoutingModule, FontAwesomeModule, FormsModule, HttpClientModule, NgbModule, ReactiveFormsModule],
