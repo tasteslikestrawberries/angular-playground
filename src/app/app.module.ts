@@ -44,6 +44,7 @@ import { LoadingSpinnerComponent } from './components/loading-spinner/loading-sp
 import { MyprofileComponent } from './components/myprofile/myprofile.component';
 import { TaskServiceComponent } from './services/task-service/task-service.component';
 import { TaskDetailsComponent } from './services/task-service/task-details/task-details.component';
+import { TestComponent } from './components/playground/test/test.component';
 
 @NgModule({
   declarations: [
@@ -84,7 +85,8 @@ import { TaskDetailsComponent } from './services/task-service/task-details/task-
     LoadingSpinnerComponent,
     MyprofileComponent,
     TaskServiceComponent,
-    TaskDetailsComponent
+    TaskDetailsComponent,
+    TestComponent
    
   ],
   imports: [BrowserModule, AppRoutingModule, FontAwesomeModule, FormsModule, HttpClientModule, NgbModule, ReactiveFormsModule],

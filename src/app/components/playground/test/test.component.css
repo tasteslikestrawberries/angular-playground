@@ -1,0 +1,33 @@
+.container {
+  display: block;
+  align-items: center;
+  width: 100%;
+  height: fit-content;
+  background-image: linear-gradient(to left, #c30efa 20%, #cf1afc 70%); 
+  margin: 5rem 0;
+  padding: 3rem 0;
+}
+
+.container-span {
+  margin-left: 1rem;
+  font-size: medium;
+  font-weight: bold;
+  display: flex;
+  visibility: hidden;
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.lazy-container-span {
+ visibility: visible;
+ animation: 2s fadeInLeft;
+}
