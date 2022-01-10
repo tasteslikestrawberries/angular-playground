@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { concat, from, Observable, of, timer } from 'rxjs';
-import { filter, map, pluck, switchMap, take, takeWhile, tap } from 'rxjs/operators';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { concat, from, fromEvent, Observable, of, timer } from 'rxjs';
+import { delay, filter, map, pluck, switchMap, take, takeWhile, tap } from 'rxjs/operators';
 
 interface Person {
   name: string;
@@ -13,10 +13,15 @@ interface Person {
   styleUrls: ['./rxjs-operators.component.css']
 })
 export class RxjsOperatorsComponent implements OnInit {
+  @ViewChild('btn', { static: true }) myButton!: ElementRef;
 
   constructor() { }
 
   ngOnInit(): void {
+
+    const buttonStream$ = fromEvent(this.myButton.nativeElement, 'click');
+    buttonStream$.pipe(delay(500)).subscribe(() => console.log('click'))
+
     const people: Person[] = [
       {
         name: 'Sara',
@@ -40,14 +45,14 @@ export class RxjsOperatorsComponent implements OnInit {
     const people$: Observable<Person[]> = of(people); //of operator
     people$.subscribe({ next: data => console.log(data) });
 
-    
+
     ////////////////////////////////////////
 
     const peoplePromise: Promise<Person[]> = Promise.resolve(people);
     const peoplePromise$: Observable<Person[]> = from(peoplePromise); //from operator
     peoplePromise$.subscribe({ next: data => console.log(data) });
 
-    
+
     ////////////////////////////////////////
     const person$ = of('Laura');
     person$.pipe(
@@ -73,7 +78,7 @@ export class RxjsOperatorsComponent implements OnInit {
       pluck('name')
     ).subscribe(data => console.log(data))
 
-    
+
     ////////////////////////////////////////
 
     const values1 = [1, 2, 3];
