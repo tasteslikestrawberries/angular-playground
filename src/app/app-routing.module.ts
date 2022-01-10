@@ -38,11 +38,12 @@ const routes: Routes = [
   { path: 'taskservice', component: TaskServiceComponent },
   { path: 'forms', component: FormsComponent },
   { path: 'auth', component: AuthComponent },
-  {path: 'myprofile', component: MyprofileComponent, canActivate: [AuthGuard]}
+  { path: 'myprofile', component: MyprofileComponent, canActivate: [AuthGuard] },
+  { path: '**', redirectTo: '' }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

@@ -45,6 +45,7 @@ import { MyprofileComponent } from './components/myprofile/myprofile.component';
 import { TaskServiceComponent } from './services/task-service/task-service.component';
 import { TaskDetailsComponent } from './services/task-service/task-details/task-details.component';
 import { TestComponent } from './components/playground/test/test.component';
+import { RxjsOperatorsComponent } from './components/rxjs-operators/rxjs-operators.component';
 
 @NgModule({
   declarations: [
@@ -86,7 +87,8 @@ import { TestComponent } from './components/playground/test/test.component';
     MyprofileComponent,
     TaskServiceComponent,
     TaskDetailsComponent,
-    TestComponent
+    TestComponent,
+    RxjsOperatorsComponent
    
   ],
   imports: [BrowserModule, AppRoutingModule, FontAwesomeModule, FormsModule, HttpClientModule, NgbModule, ReactiveFormsModule],
