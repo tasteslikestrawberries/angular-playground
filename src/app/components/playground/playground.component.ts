@@ -8,6 +8,7 @@ import { Observable } from 'rxjs';
   styleUrls: ['./playground.component.css'],
 })
 export class PlaygroundComponent implements OnInit {
+  date = new Date;
   myArr = [
     { type: 'fruit', name: 'apple', price: 5 },
     { type: 'vegetable', name: 'tomato', price: 4 },
