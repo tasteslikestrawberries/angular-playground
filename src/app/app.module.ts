@@ -46,6 +46,7 @@ import { TaskServiceComponent } from './services/task-service/task-service.compo
 import { TaskDetailsComponent } from './services/task-service/task-details/task-details.component';
 import { TestComponent } from './components/playground/test/test.component';
 import { RxjsOperatorsComponent } from './components/rxjs-operators/rxjs-operators.component';
+import { ReactiveformNewComponent } from './components/lessons/lesson6/reactive-approach/reactiveform-new/reactiveform-new.component';
 
 @NgModule({
   declarations: [
@@ -88,7 +89,8 @@ import { RxjsOperatorsComponent } from './components/rxjs-operators/rxjs-operato
     TaskServiceComponent,
     TaskDetailsComponent,
     TestComponent,
-    RxjsOperatorsComponent
+    RxjsOperatorsComponent,
+    ReactiveformNewComponent
    
   ],
   imports: [BrowserModule, AppRoutingModule, FontAwesomeModule, FormsModule, HttpClientModule, NgbModule, ReactiveFormsModule],

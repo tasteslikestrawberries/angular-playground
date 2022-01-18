@@ -1,0 +1,22 @@
+<form [formGroup]="coForm" (ngSubmit)="onSubmit()">
+  <label for="name">Name </label>
+  <input class="form-control" type="text" name="name" formControlName="name" />
+  <p class="text-danger" *ngIf="f.name.touched && f.name.errors">
+    Name is required
+  </p>
+
+  <label for="email">E-mail </label>
+  <input
+    class="form-control"
+    type="text"
+    name="email"
+    formControlName="email"
+  />
+  <p class="text-danger" *ngIf="f.email.touched && f.email.errors">
+    Please enter valid e-mail.
+  </p>
+
+  <button type="submit" class="btn btn-success" [disabled]="!coForm.valid">
+    Submit
+  </button>
+</form>
