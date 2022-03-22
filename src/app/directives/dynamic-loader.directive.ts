@@ -1,15 +1,10 @@
-import { Directive, Input, ViewContainerRef } from '@angular/core';
+import { Directive, ViewContainerRef } from '@angular/core';
 
 @Directive({
-  selector: '[appDynamicLoader]'
+  selector: '[dynamicLoader]'
 })
 export class DynamicLoaderDirective {
-  @Input() appDynamicLoader: any;
 
-  constructor(private viewContainerRef: ViewContainerRef) { }
-
-  ngOnInit(): void {
-    this.viewContainerRef.createComponent(this.appDynamicLoader)
-  }
+  constructor(public viewContainerRef: ViewContainerRef) { }
 
 }

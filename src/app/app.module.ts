@@ -49,6 +49,9 @@ import { RxjsOperatorsComponent } from './components/rxjs-operators/rxjs-operato
 import { ReactiveformNewComponent } from './components/lessons/lesson6/reactive-approach/reactiveform-new/reactiveform-new.component';
 import { DynamicComponentsComponent } from './components/dynamic-components/dynamic-components.component';
 import { DynamicLoaderDirective } from './directives/dynamic-loader.directive';
+import { RedComponent } from './components/dynamic-components/red/red.component';
+import { BlueComponent } from './components/dynamic-components/blue/blue.component';
+import { GreenComponent } from './components/dynamic-components/green/green.component';
 
 @NgModule({
   declarations: [
@@ -94,7 +97,10 @@ import { DynamicLoaderDirective } from './directives/dynamic-loader.directive';
     RxjsOperatorsComponent,
     ReactiveformNewComponent,
     DynamicComponentsComponent,
-    DynamicLoaderDirective
+    DynamicLoaderDirective,
+    RedComponent,
+    BlueComponent,
+    GreenComponent
    
   ],
   imports: [BrowserModule, AppRoutingModule, FontAwesomeModule, FormsModule, HttpClientModule, NgbModule, ReactiveFormsModule],
