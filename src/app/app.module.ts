@@ -47,6 +47,8 @@ import { TaskDetailsComponent } from './services/task-service/task-details/task-
 import { TestComponent } from './components/playground/test/test.component';
 import { RxjsOperatorsComponent } from './components/rxjs-operators/rxjs-operators.component';
 import { ReactiveformNewComponent } from './components/lessons/lesson6/reactive-approach/reactiveform-new/reactiveform-new.component';
+import { DynamicComponentsComponent } from './components/dynamic-components/dynamic-components.component';
+import { DynamicLoaderDirective } from './directives/dynamic-loader.directive';
 
 @NgModule({
   declarations: [
@@ -90,7 +92,9 @@ import { ReactiveformNewComponent } from './components/lessons/lesson6/reactive-
     TaskDetailsComponent,
     TestComponent,
     RxjsOperatorsComponent,
-    ReactiveformNewComponent
+    ReactiveformNewComponent,
+    DynamicComponentsComponent,
+    DynamicLoaderDirective
    
   ],
   imports: [BrowserModule, AppRoutingModule, FontAwesomeModule, FormsModule, HttpClientModule, NgbModule, ReactiveFormsModule],

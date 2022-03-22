@@ -19,6 +19,7 @@ import { AuthComponent } from './components/auth/auth.component';
 import { MyprofileComponent } from './components/myprofile/myprofile.component';
 import { AuthGuard } from './components/auth/auth.guard';
 import { TaskServiceComponent } from './services/task-service/task-service.component';
+import { DynamicComponentsComponent } from './components/dynamic-components/dynamic-components.component';
 
 const routes: Routes = [
   { path: '', component: Lesson1Component },
@@ -39,6 +40,7 @@ const routes: Routes = [
   { path: 'forms', component: FormsComponent },
   { path: 'auth', component: AuthComponent },
   { path: 'myprofile', component: MyprofileComponent, canActivate: [AuthGuard] },
+  { path: 'dynamic-components', component: DynamicComponentsComponent },
   { path: '**', redirectTo: '' }
 ];
 
