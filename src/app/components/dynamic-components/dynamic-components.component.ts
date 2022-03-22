@@ -49,6 +49,6 @@ export class DynamicComponentsComponent implements OnInit {
   private rotateMessages(): void {  
     this.interval = window.setInterval(() => {  
       this.loadComponent();  
-    }, 10000);  
+    }, 2000);  
   }  
 }

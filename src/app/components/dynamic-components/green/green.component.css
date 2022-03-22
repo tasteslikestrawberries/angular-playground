@@ -1,4 +1,7 @@
-body {
+p {
   background-color: green;
   color:white;
+  width: 200px;
+  height:150px;
+  padding:1rem;
 }
