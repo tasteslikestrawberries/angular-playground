@@ -5,7 +5,7 @@ import { RedComponent } from './red/red.component';
 import { GreenComponent } from './green/green.component';
 
 interface DynamicComponent {
-type: any;
+  type: any;
 }
 
 @Component({
@@ -13,29 +13,29 @@ type: any;
   templateUrl: './dynamic-components.component.html',
   styleUrls: ['./dynamic-components.component.css'],
 })
-
 export class DynamicComponentsComponent implements OnInit {
-  
-  @ViewChild(DynamicLoaderDirective, { static: true }) dynamicLoader!: DynamicLoaderDirective;
-  private interval: number|undefined;  
-  private currentIndex = 1;  
-  
-  private messages: DynamicComponent[] = [  
-    { type: BlueComponent },  
-    { type: RedComponent },  
-    { type: GreenComponent }  
-  ];  
-  
-  public ngOnInit(): void {  
-    this.loadComponent();  
-    this.rotateMessages();  
-  }  
-  
-  public ngOnDestroy(): void {  
-    clearInterval(this.interval);  
-  }  
-  
-  private loadComponent(): void {  
+  @ViewChild(DynamicLoaderDirective, { static: true })
+  dynamicLoader!: DynamicLoaderDirective;
+  //private interval: number|undefined;
+  private currentIndex = 0;
+
+  private messages: DynamicComponent[] = [
+    { type: BlueComponent },
+    { type: RedComponent },
+    { type: GreenComponent },
+  ];
+
+  public ngOnInit(): void {
+    this.load();
+    /*this.loadComponent();  
+    this.rotateMessages(); */
+  }
+
+  public ngOnDestroy(): void {
+    //clearInterval(this.interval);
+  }
+
+  /*private loadComponent(): void {  
     if (this.messages.length === 0) return;  
     this.currentIndex = (this.currentIndex + 1) % this.messages.length;  
     const message = this.messages[this.currentIndex];  
@@ -50,5 +50,20 @@ export class DynamicComponentsComponent implements OnInit {
     this.interval = window.setInterval(() => {  
       this.loadComponent();  
     }, 2000);  
-  }  
+  }  */
+
+  load() {
+    if (this.messages.length === 0) return;
+
+    this.currentIndex = this.currentIndex + 1;
+    if (this.currentIndex >= this.messages.length) {
+      this.currentIndex = 0;
+    }
+    console.log(this.currentIndex);
+    const message = this.messages[this.currentIndex];
+    const viewContainerRef = this.dynamicLoader.viewContainerRef;
+    viewContainerRef.clear(); //removes the old component, so new one can take its place
+
+    viewContainerRef.createComponent<any>(message.type);
+  }
 }
