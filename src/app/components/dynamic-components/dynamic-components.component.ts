@@ -19,14 +19,14 @@ export class DynamicComponentsComponent implements OnInit {
   //private interval: number|undefined;
   private currentIndex = 0;
 
-  private messages: DynamicComponent[] = [
+  private components: DynamicComponent[] = [
     { type: BlueComponent },
     { type: RedComponent },
     { type: GreenComponent },
   ];
 
   public ngOnInit(): void {
-    this.load();
+    this.loadComponent();
     /*this.loadComponent();  
     this.rotateMessages(); */
   }
@@ -52,19 +52,19 @@ export class DynamicComponentsComponent implements OnInit {
     }, 2000);  
   }  */
 
-  load() {
-    if (this.messages.length === 0) return;
+  loadComponent() {
+    if (this.components.length === 0) return;
 
     this.currentIndex = this.currentIndex + 1;
-    if (this.currentIndex >= this.messages.length) {
+    if (this.currentIndex >= this.components.length) {
       this.currentIndex = 0;
     }
     console.log(this.currentIndex);
-    const message = this.messages[this.currentIndex];
+    const component = this.components[this.currentIndex];
     const viewContainerRef = this.dynamicLoader.viewContainerRef;
     //removes the previous component view, so new one can take its place, not neccessary if all components should be displayed
     viewContainerRef.clear(); 
 
-    viewContainerRef.createComponent<DynamicComponent>(message.type);
+    viewContainerRef.createComponent<DynamicComponent>(component.type);
   }
 }
