@@ -62,8 +62,9 @@ export class DynamicComponentsComponent implements OnInit {
     console.log(this.currentIndex);
     const message = this.messages[this.currentIndex];
     const viewContainerRef = this.dynamicLoader.viewContainerRef;
-    viewContainerRef.clear(); //removes the old component, so new one can take its place
+    //removes the previous component view, so new one can take its place, not neccessary if all components should be displayed
+    viewContainerRef.clear(); 
 
-    viewContainerRef.createComponent<any>(message.type);
+    viewContainerRef.createComponent<DynamicComponent>(message.type);
   }
 }
