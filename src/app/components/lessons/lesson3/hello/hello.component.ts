@@ -1,5 +1,11 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
+export interface IChildProps {
+  date?: string;
+  year?: string;
+  season?: string;
+}
+
 @Component({
   selector: 'app-hello',
   templateUrl: './hello.component.html',
@@ -10,7 +16,8 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class HelloComponent implements OnInit {
   //input showcase
   //The @Input() decorator in a child component or directive signifies that the property can receive its value from its parent component.
-  @Input() name = ''
+  @Input() name = '';
+  @Input() props?: IChildProps;
   
   //output showcase
   //The child component uses the @Output() property to raise an event to notify the parent of the change. 
@@ -25,6 +32,7 @@ export class HelloComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.props?.date, this.props?.year, this.props?.season)
   }
 
 }

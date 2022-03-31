@@ -11,7 +11,7 @@
 </p>
 
 <!--The event binding, (newNameEvent)='addToNames($event)', connects the event in the child, newNameEvent, to the method in the parent, addToNames().-->
-<app-hello [name]="currentName" (newNameEvent)="addToNames($event)"></app-hello>
+<app-hello [name]="currentName" [props]="childProps" (newNameEvent)="addToNames($event)" ></app-hello>
 
 Parent's name list:
 

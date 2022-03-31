@@ -1,6 +1,6 @@
 import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 import { HelloComponent } from './hello/hello.component';
-
+import { IChildProps } from './hello/hello.component';
 @Component({
   selector: 'app-lesson3',
   templateUrl: './lesson3.component.html',
@@ -12,6 +12,13 @@ export class Lesson3Component implements AfterViewInit {
 
   //input showcase
   currentName = 'Wall-e';
+
+  //multiple inputs with interface showcase
+  childProps: IChildProps = {
+    date: '31.3.2022',
+    year: '2022',
+    season: 'spring'
+  };
 
   //output showcase
   names: string[] = [];
