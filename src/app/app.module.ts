@@ -52,6 +52,10 @@ import { DynamicLoaderDirective } from './directives/dynamic-loader.directive';
 import { RedComponent } from './components/dynamic-components/red/red.component';
 import { BlueComponent } from './components/dynamic-components/blue/blue.component';
 import { GreenComponent } from './components/dynamic-components/green/green.component';
+import { DynamicHeaderComponent } from './components/dynamic-header/dynamic-header.component';
+import { FirstComponent } from './components/dynamic-header/first/first.component';
+import { SecondComponent } from './components/dynamic-header/second/second.component';
+import { HeaderReusableComponent } from './components/dynamic-header/header-reusable/header-reusable.component';
 
 @NgModule({
   declarations: [
@@ -100,7 +104,11 @@ import { GreenComponent } from './components/dynamic-components/green/green.comp
     DynamicLoaderDirective,
     RedComponent,
     BlueComponent,
-    GreenComponent
+    GreenComponent,
+    DynamicHeaderComponent,
+    FirstComponent,
+    SecondComponent,
+    HeaderReusableComponent
    
   ],
   imports: [BrowserModule, AppRoutingModule, FontAwesomeModule, FormsModule, HttpClientModule, NgbModule, ReactiveFormsModule],
