@@ -5,6 +5,7 @@ interface IHeader {
   mainTitle?: string;
   title?: string;
   subtitle?: string;
+  isBeta?: boolean;
 }
 
 @Injectable({
@@ -15,6 +16,7 @@ export class HeaderService {
     mainTitle: '',
     title: '',
     subtitle: '',
+    isBeta: false
   });
 
   header$ = this.subject.asObservable();
