@@ -1,0 +1,12 @@
+{
+  "component1": {
+    "mainTitle": "Glavni Naslov1",
+    "title": "Naslov1",
+    "subtitle": "Podnaslov1"
+  },
+  "component2": {
+    "mainTitle": "Glavni Naslov2",
+    "title": "Naslov2",
+    "subtitle": "Podnaslov2"
+  }
+}

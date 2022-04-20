@@ -56,6 +56,7 @@ import { DynamicHeaderComponent } from './components/dynamic-header/dynamic-head
 import { FirstComponent } from './components/dynamic-header/first/first.component';
 import { SecondComponent } from './components/dynamic-header/second/second.component';
 import { HeaderReusableComponent } from './components/dynamic-header/header-reusable/header-reusable.component';
+import { TranslocoRootModule } from './transloco-root.module';
 
 @NgModule({
   declarations: [
@@ -111,7 +112,7 @@ import { HeaderReusableComponent } from './components/dynamic-header/header-reus
     HeaderReusableComponent
    
   ],
-  imports: [BrowserModule, AppRoutingModule, FontAwesomeModule, FormsModule, HttpClientModule, NgbModule, ReactiveFormsModule],
+  imports: [BrowserModule, AppRoutingModule, FontAwesomeModule, FormsModule, HttpClientModule, NgbModule, ReactiveFormsModule, TranslocoRootModule],
   providers: [],
   bootstrap: [AppComponent],
 })
