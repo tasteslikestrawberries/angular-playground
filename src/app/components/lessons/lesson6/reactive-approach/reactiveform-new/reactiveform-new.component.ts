@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { UntypedFormBuilder, Validators } from '@angular/forms';
 import { ApiService, ICompany } from '../api.service';
 import { Subscription } from 'rxjs';
 
@@ -18,7 +18,7 @@ export class ReactiveformNewComponent implements OnInit, OnDestroy {
     email: ['', [Validators.required, Validators.email]],
   });
 
-  constructor(private formBuilder: FormBuilder, private apiService: ApiService) { }
+  constructor(private formBuilder: UntypedFormBuilder, private apiService: ApiService) { }
 
   get f() { return this.coForm.controls; }
 
