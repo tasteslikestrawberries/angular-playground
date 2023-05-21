@@ -22,6 +22,7 @@ import { TaskServiceComponent } from './services/task-service/task-service.compo
 import { DynamicComponentsComponent } from './components/dynamic-components/dynamic-components.component';
 import { DynamicHeaderComponent } from './components/dynamic-header/dynamic-header.component';
 import { ZodTestComponent } from './components/zod-test/zod-test.component';
+import { SignalsComponent } from './components/signals/signals.component';
 
 const routes: Routes = [
   { path: '', component: Lesson1Component },
@@ -45,6 +46,7 @@ const routes: Routes = [
   { path: 'dynamic-components', component: DynamicComponentsComponent },
   { path: 'dynamic-header', component: DynamicHeaderComponent },
   { path: 'zod-test', component: ZodTestComponent },
+  { path: 'signals', component: SignalsComponent },
   { path: '**', redirectTo: '' }
 ];
 
