@@ -56,7 +56,8 @@ import { DynamicHeaderComponent } from './components/dynamic-header/dynamic-head
 import { FirstComponent } from './components/dynamic-header/first/first.component';
 import { SecondComponent } from './components/dynamic-header/second/second.component';
 import { HeaderReusableComponent } from './components/dynamic-header/header-reusable/header-reusable.component';
-import { TranslocoRootModule } from './transloco-root.module';
+//import { TranslocoRootModule } from './transloco-root.module';
+import { ZodTestComponent } from './components/zod-test/zod-test.component';
 
 @NgModule({
   declarations: [
@@ -109,10 +110,11 @@ import { TranslocoRootModule } from './transloco-root.module';
     DynamicHeaderComponent,
     FirstComponent,
     SecondComponent,
-    HeaderReusableComponent
+    HeaderReusableComponent,
+    ZodTestComponent
    
   ],
-  imports: [BrowserModule, AppRoutingModule, FontAwesomeModule, FormsModule, HttpClientModule, NgbModule, ReactiveFormsModule, TranslocoRootModule],
+  imports: [BrowserModule, AppRoutingModule, FontAwesomeModule, FormsModule, HttpClientModule, NgbModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

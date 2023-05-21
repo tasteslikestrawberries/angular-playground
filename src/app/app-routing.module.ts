@@ -21,6 +21,7 @@ import { AuthGuard } from './components/auth/auth.guard';
 import { TaskServiceComponent } from './services/task-service/task-service.component';
 import { DynamicComponentsComponent } from './components/dynamic-components/dynamic-components.component';
 import { DynamicHeaderComponent } from './components/dynamic-header/dynamic-header.component';
+import { ZodTestComponent } from './components/zod-test/zod-test.component';
 
 const routes: Routes = [
   { path: '', component: Lesson1Component },
@@ -43,6 +44,7 @@ const routes: Routes = [
   { path: 'myprofile', component: MyprofileComponent, canActivate: [AuthGuard] },
   { path: 'dynamic-components', component: DynamicComponentsComponent },
   { path: 'dynamic-header', component: DynamicHeaderComponent },
+  { path: 'zod-test', component: ZodTestComponent },
   { path: '**', redirectTo: '' }
 ];
 
