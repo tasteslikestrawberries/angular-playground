@@ -1,1 +1,20 @@
-<p>signals works!</p>
+<table class="table">
+    <thead>
+        <th>Users</th>
+        <th>Active</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users()">
+            <td> {{user.firstName}}</td>
+            <td>{{user.active}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<p>Number of users: {{users().length}}</p>
+
+
+<p *ngIf="isCounterEven()"> Counter is even: {{counter()}}</p>
+<p>{{counter()}}</p>
+<button (click)="increaseCount()">Increase Count</button>
+
