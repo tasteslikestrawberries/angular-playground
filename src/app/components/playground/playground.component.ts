@@ -1,14 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import {
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  Validators,
+} from '@angular/forms';
 
 @Component({
   selector: 'app-playground',
   templateUrl: './playground.component.html',
   styleUrls: ['./playground.component.css'],
 })
-export class PlaygroundComponent implements OnInit {
-  date = new Date;
+export class PlaygroundComponent {
+  date = new Date();
   myArr = [
     { type: 'fruit', name: 'apple', price: 5 },
     { type: 'vegetable', name: 'tomato', price: 4 },
@@ -17,7 +23,14 @@ export class PlaygroundComponent implements OnInit {
 
   //data: any = [];
 
-  constructor(private http: HttpClient) {}
+  private formBuilder = inject(FormBuilder);
+  cvaTestForm: FormGroup;
+
+  constructor(private http: HttpClient) {
+    this.cvaTestForm = this.formBuilder.group({
+      name: ['initialValue', Validators.required],
+    });
+  }
 
   addElementsToArray = () => {
     this.myArr.push({ type: 'fruit', name: 'apple', price: 10 });
@@ -99,6 +112,4 @@ export class PlaygroundComponent implements OnInit {
       console.log(data);
     });
   }
-
-  ngOnInit(): void {}
 }

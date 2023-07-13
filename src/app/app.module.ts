@@ -59,7 +59,7 @@ import { HeaderReusableComponent } from './components/dynamic-header/header-reus
 //import { TranslocoRootModule } from './transloco-root.module';
 import { ZodTestComponent } from './components/zod-test/zod-test.component';
 import { SignalsComponent } from './components/signals/signals.component';
-import { StandaloneComponent } from './components/standalone/standalone.component';
+import { CustomInputComponent } from './components/custom-input/custom-input.component';
 
 @NgModule({
   declarations: [
@@ -115,7 +115,7 @@ import { StandaloneComponent } from './components/standalone/standalone.componen
     HeaderReusableComponent,
     ZodTestComponent,
     SignalsComponent,
-    StandaloneComponent
+    CustomInputComponent
    
   ],
   imports: [BrowserModule, AppRoutingModule, FontAwesomeModule, FormsModule, HttpClientModule, NgbModule, ReactiveFormsModule],

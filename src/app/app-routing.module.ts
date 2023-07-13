@@ -23,6 +23,7 @@ import { DynamicComponentsComponent } from './components/dynamic-components/dyna
 import { DynamicHeaderComponent } from './components/dynamic-header/dynamic-header.component';
 import { ZodTestComponent } from './components/zod-test/zod-test.component';
 import { SignalsComponent } from './components/signals/signals.component';
+import { CustomInputComponent } from './components/custom-input/custom-input.component';
 
 const routes: Routes = [
   { path: '', component: Lesson1Component },
@@ -46,6 +47,7 @@ const routes: Routes = [
   { path: 'dynamic-components', component: DynamicComponentsComponent },
   { path: 'dynamic-header', component: DynamicHeaderComponent },
   { path: 'zod-test', component: ZodTestComponent },
+  { path: 'controlvalueaccessor', component: CustomInputComponent },
   { path: 'signals', component: SignalsComponent },
   { path: '**', redirectTo: '' }
 ];

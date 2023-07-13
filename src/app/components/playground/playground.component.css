@@ -3,3 +3,8 @@
   gap:2rem;
   justify-content:center;
 }
+
+.cvaWrapper {
+  padding: 1 rem;
+  background-color: rgb(67, 108, 230);
+}
