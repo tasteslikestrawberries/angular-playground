@@ -27,7 +27,6 @@
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
     "@ng-bootstrap/ng-bootstrap": "^14.1.1",
     "@popperjs/core": "^2.11.7",
-    "angular-cli-ghpages": "^1.0.7",
     "boostrap": "^2.0.0",
     "font-awesome": "^4.7.0",
     "json-server": "^0.17.3",
