@@ -21,26 +21,27 @@
     "@angular/platform-browser-dynamic": "^16.2.12",
     "@angular/router": "^16.2.12",
     "@fortawesome/angular-fontawesome": "^0.13.0",
-    "@fortawesome/fontawesome-svg-core": "^6.4.0",
-    "@fortawesome/free-brands-svg-icons": "^6.4.0",
-    "@fortawesome/free-regular-svg-icons": "^6.4.0",
-    "@fortawesome/free-solid-svg-icons": "^6.4.0",
-    "@ng-bootstrap/ng-bootstrap": "^14.1.1",
+    "@fortawesome/fontawesome-svg-core": "^6.4.2",
+    "@fortawesome/free-brands-svg-icons": "^6.4.2",
+    "@fortawesome/free-regular-svg-icons": "^6.4.2",
+    "@fortawesome/free-solid-svg-icons": "^6.4.2",
+    "@ng-bootstrap/ng-bootstrap": "^15.1.2",
     "@popperjs/core": "^2.11.7",
     "boostrap": "^2.0.0",
+    "bootstrap": "^5.3.2",
     "font-awesome": "^4.7.0",
-    "json-server": "^0.17.3",
+    "json-server": "^0.17.4",
     "rxjs": "^7.8.1",
-    "tslib": "^2.5.2",
+    "tslib": "^2.6.2",
     "zod": "^3.21.4",
-    "zone.js": "^0.13.0"
+    "zone.js": "^0.14.2"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^16.2.9",
     "@angular/cli": "^16.2.9",
     "@angular/compiler-cli": "^16.2.12",
     "@testing-library/angular": "^14.3.0",
-    "@types/node": "^12.20.55",
-    "typescript": "~4.9.5"
+    "@types/node": "^20.8.10",
+    "typescript": "^5.2.2"
   }
 }
