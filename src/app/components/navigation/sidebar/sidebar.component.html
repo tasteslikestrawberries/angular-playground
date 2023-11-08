@@ -1,122 +1,38 @@
 <nav class="sidebar" *ngIf="hasRoute('/about')">
-  <h3>Lessons</h3>
-
   <ul>
     <li>
       <a
         routerLink="/"
         routerLinkActive="active"
         [routerLinkActiveOptions]="{ exact: true }"
-        ><b>1. Data Binding</b></a
-      >
-    </li>
-    <li>
-      <a
-        routerLink="/assignment1"
-        routerLinkActive="active"
-        [routerLinkActiveOptions]="{ exact: true }"
-        >&nbsp; Assignment 1</a
-      >
-    </li>
-
-    <br />
-
-    <li>
-      <a
-        routerLink="/lesson2"
-        routerLinkActive="active"
-        [routerLinkActiveOptions]="{ exact: true }"
-        ><b>2. Directives</b></a
-      >
-    </li>
-    <li>
-      <a
-        routerLink="/customdirectives"
-        routerLinkActive="active"
-        [routerLinkActiveOptions]="{ exact: true }"
-        ><b>&nbsp; 2.1. Custom Directives</b></a
-      >
-    </li>
-    <li>
-      <a
-        routerLink="/assignment2"
-        routerLinkActive="active"
-        [routerLinkActiveOptions]="{ exact: true }"
-        >&nbsp; Assignment 2</a
-      >
-    </li>
-
-    <br />
-
-    <li>
-      <a
-        routerLink="/lesson3"
-        routerLinkActive="active"
-        [routerLinkActiveOptions]="{ exact: true }"
-        ><b>3. Sharing Data </b></a
-      >
-    </li>
-
-    <br />
-
-    <li>
-      <a
-        routerLink="/lesson4"
-        routerLinkActive="active"
-        [routerLinkActiveOptions]="{ exact: true }"
-        ><b>4. Services</b></a
-      >
-    </li>
-    <li>
-      <a
-        routerLink="/loggingservice"
-        routerLinkActive="active"
-        [routerLinkActiveOptions]="{ exact: true }"
-        >&nbsp; Logging Service</a
-      >
-    </li>
-    <li>
-      <a
-        routerLink="/dataservice"
-        routerLinkActive="active"
-        [routerLinkActiveOptions]="{ exact: true }"
-        >&nbsp; Mock Data Service</a
-      >
-    </li>
-    <li>
-      <a
-        routerLink="/messageservice"
-        routerLinkActive="active"
-        [routerLinkActiveOptions]="{ exact: true }"
-        >&nbsp; Message Service</a
-      >
-    </li>
-    <li>
-      <a
-        routerLink="/apiservice"
-        routerLinkActive="active"
-        [routerLinkActiveOptions]="{ exact: true }"
-        >&nbsp; Mock Api Service</a
+        ><b>Data Binding</b></a
       >
     </li>
 
     <li>
       <a
-        routerLink="/taskservice"
+        routerLink="/custom-directives"
         routerLinkActive="active"
         [routerLinkActiveOptions]="{ exact: true }"
-        >&nbsp; Task Service</a
+        ><b>Custom Directives</b></a
       >
     </li>
 
-    <br />
+    <li>
+      <a
+        routerLink="/sharing-data"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        ><b>Sharing Data </b></a
+      >
+    </li>
 
     <li>
       <a
-        routerLink="/lesson5"
+        routerLink="/services"
         routerLinkActive="active"
         [routerLinkActiveOptions]="{ exact: true }"
-        ><b>5. RxJs and Observables</b></a
+        ><b>Services</b></a
       >
     </li>
 
@@ -125,16 +41,16 @@
         routerLink="/forms"
         routerLinkActive="active"
         [routerLinkActiveOptions]="{ exact: true }"
-        ><b>6. Forms</b></a
+        ><b>Forms</b></a
       >
     </li>
 
     <li>
       <a
-        routerLink="/dynamic-components"
+        routerLink="/view-container-ref"
         routerLinkActive="active"
         [routerLinkActiveOptions]="{ exact: true }"
-        ><b>7. Dynamic Components</b></a
+        ><b>View Container Ref</b></a
       >
     </li>
 
@@ -143,25 +59,7 @@
         routerLink="/dynamic-header"
         routerLinkActive="active"
         [routerLinkActiveOptions]="{ exact: true }"
-        ><b>8. Dynamic Header</b></a
-      >
-    </li>
-
-    <li>
-      <a
-        routerLink="/zod-test"
-        routerLinkActive="active"
-        [routerLinkActiveOptions]="{ exact: true }"
-        ><b>9. Zod Test</b></a
-      >
-    </li>
-
-    <li>
-      <a
-        routerLink="/controlvalueaccessor"
-        routerLinkActive="active"
-        [routerLinkActiveOptions]="{ exact: true }"
-        ><b>11. Control Value Accessor</b></a
+        ><b>Dynamic Header</b></a
       >
     </li>
 
@@ -170,9 +68,10 @@
         routerLink="/signals"
         routerLinkActive="active"
         [routerLinkActiveOptions]="{ exact: true }"
-        ><b>10. Signals</b></a
+        ><b>Signals</b></a
       >
     </li>
+
     <br />
 
     <li>

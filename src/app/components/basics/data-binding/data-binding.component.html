@@ -1,0 +1,55 @@
+    <h2>Data Binding</h2>
+
+    <!-- showcase string interpolation via variable and via method -->
+    <h4>1. One way data binding:</h4>
+    <b> String Interpolation:</b>
+    <p>
+      The pokemon via variable is <b>{{ firstPokemon }}</b>
+      <br />
+      The pokemon via method is <b>{{ getPokemon() }}</b>
+    </p>
+
+    <!-- showcase property binding  -->
+    <b> Property binding:</b>
+    <p>
+      <button [disabled]="buttonDisabled" (click)="buttonDisabled = true">
+        Disable me!
+      </button>
+    </p>
+
+
+     <!-- showcase event binding with (click) and (input)  -->
+    <b>Event binding with (click):</b>
+    <p>
+      <button (click)="functionOnClick()">
+        Click me to see the output in console
+      </button>
+    </p>
+
+    <b>Event binding with (input):</b>
+    <p>
+      <input
+        type="text"
+        class="form-control"
+        (input)="onUpdateInputName($event)"
+      />
+
+      {{ inputName }}
+    </p>
+
+
+    <!-- showcase two-way data binding with [(ngModel)] - only works with {FormsModule} import in app.module -->
+    <h4>2. Two-way data binding:</h4>
+    *combined property and event binding with NgModel directive <br />
+    *this automatically triggers on the input event and updates the value of
+    variable
+ 
+    <p>
+      <input type="text" [(ngModel)]="initialName" />
+      <br />
+      <button (click)="checkVariableName()">Trigger it!</button>
+
+      The variable value is: <b>{{ initialName }}</b>
+    </p>
+ 
+

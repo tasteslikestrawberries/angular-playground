@@ -9,7 +9,7 @@ import { AuthService, IAuthResponseData } from './auth.service';
   templateUrl: './auth.component.html',
   styleUrls: ['./auth.component.css'],
 })
-export class AuthComponent implements OnInit {
+export class AuthComponent {
   isLoginMode = true;
   isLoading = false;
   error: any = null;
@@ -30,9 +30,6 @@ export class AuthComponent implements OnInit {
     let authObs: Observable<IAuthResponseData>;
 
     this.isLoading = true;
-    //after this if statement, certainly at least one of this two observables will be stored in authObs
-    /* we are actually reducing the code here, so we don't have to repeat the exact same code for signup and login subscribing, but rather
-    doing it once below (authObs.subscribe)*/
 
     if (this.isLoginMode) {
       authObs = this.authService.login(email, password);
@@ -44,7 +41,7 @@ export class AuthComponent implements OnInit {
       (resData) => {
         console.log(resData);
         this.isLoading = false;
-        this.router.navigate(['/myprofile']); //making use of programmatical navigation (navigation from inside code)
+        this.router.navigate(['/my-profile']); 
       },
       (errorMsg) => {
         console.log(errorMsg);
@@ -55,6 +52,4 @@ export class AuthComponent implements OnInit {
 
     form.reset();
   }
-
-  ngOnInit(): void {}
 }

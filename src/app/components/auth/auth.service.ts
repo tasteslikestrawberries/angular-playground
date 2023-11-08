@@ -19,7 +19,7 @@ export interface IAuthResponseData {
   providedIn: 'root',
 })
 export class AuthService {
-  user = new BehaviorSubject<User | null>(null);
+  public user = new BehaviorSubject<User | null>(null);
   private tokenExpirationTimer: any;
 
   constructor(private http: HttpClient, private router: Router) {}
@@ -71,7 +71,7 @@ export class AuthService {
       id: string;
       _token: string;
       _tokenExpirationDate: string;
-    } = JSON.parse(localStorage.getItem('userData') || '{}'); //gets the data from the local storage
+    } = JSON.parse(localStorage.getItem('userData') || '{}');
     if (!userData) return;
 
     const currentUser = new User(
@@ -82,7 +82,7 @@ export class AuthService {
     );
 
     if (currentUser.token) {
-      this.user.next(currentUser); //this is our logged in user
+      this.user.next(currentUser); 
       const expirationDuration =
         new Date(userData._tokenExpirationDate).getTime() -
         new Date().getTime();
@@ -91,7 +91,7 @@ export class AuthService {
   }
 
   logout() {
-    this.user.next(null); //setting the user to null (to the initial state)
+    this.user.next(null);
     this.router.navigate(['/auth']);
     localStorage.removeItem('userData');
     if (this.tokenExpirationTimer) {
@@ -123,15 +123,15 @@ export class AuthService {
     localStorage.setItem('userData', JSON.stringify(user)); //store the data in the local storage
   }
 
-  //this method is private because it will be used only inside this service
   private handleError(errorRes: HttpErrorResponse) {
-    let errorMsg = 'An unknown error occured!'; //this will be the default error message
-    //if error response doesn't have an error key or doesn't have an error key on the error key (nested error key)
+    let errorMsg = 'An unknown error occured!'; 
+
     if (!errorRes.error || !errorRes.error.error) {
       return throwError(errorMsg);
     }
     switch (errorRes.error.error.message) {
-      case 'EMAIL_EXISTS': //this is firebase's api common error code(https://firebase.google.com/docs/reference/rest/auth)
+      //this is firebase's api common error code(https://firebase.google.com/docs/reference/rest/auth)
+      case 'EMAIL_EXISTS': 
         errorMsg = 'This email exists already.';
         break;
       case 'EMAIL_NOT_FOUND':

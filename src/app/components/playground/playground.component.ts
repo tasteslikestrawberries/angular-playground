@@ -34,7 +34,6 @@ export class PlaygroundComponent {
 
   addElementsToArray = () => {
     this.myArr.push({ type: 'fruit', name: 'apple', price: 10 });
-    console.log(this.myArr);
   };
 
   /*postData() {

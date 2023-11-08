@@ -7,51 +7,39 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navigation/navbar/navbar.component';
 import { SidebarComponent } from './components/navigation/sidebar/sidebar.component';
 import { AboutComponent } from './components/about/about.component';
-import { ApiServiceComponent } from './services/api-service/api-service.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { Lesson1Component } from './components/lessons/lesson1/lesson1.component';
-import { Assignment1Component } from './components/assignments/assignment1/assignment1.component';
+import { DataBindingComponent } from './components/basics/data-binding/data-binding.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { Lesson2Component } from './components/lessons/lesson2/lesson2.component';
-import { Assignment2Component } from './components/assignments/assignment2/assignment2.component';
 import { PlaygroundComponent } from './components/playground/playground.component';
-import { Lesson3Component } from './components/lessons/lesson3/lesson3.component';
-import { HelloComponent } from './components/lessons/lesson3/hello/hello.component';
-import { BtnComponent } from './components/lessons/lesson3/btn/btn.component';
-import { ExampleDirective } from './components/lessons/lesson2/customdirectives/example.directive';
-import { Example2Directive } from './components/lessons/lesson2/customdirectives/example2.directive';
-import { Example3Directive } from './components/lessons/lesson2/customdirectives/example3.directive';
-import { CustomdirectivesComponent } from './components/lessons/lesson2/customdirectives/customdirectives.component';
-import { Lesson4Component } from './components/lessons/lesson4/lesson4.component';
-import { DataServiceComponent } from './services/data-service/data-service.component';
-import { LoggingServiceComponent } from './services/logging-service/logging-service.component';
-import { Lesson5Component } from './components/lessons/lesson5/lesson5.component';
-import { SubjectExampleComponent } from './components/lessons/lesson5/subject-example/subject-example.component';
-import { MessageServiceComponent } from './services/message-service/message-service.component';
-import { SenderComponent } from './services/message-service/sender/sender.component';
-import { ReceiverComponent } from './services/message-service/receiver/receiver.component';
-import { ReversePipe } from './components/playground/custom-pipes/reverse.pipe';
-import { SortPipe } from './components/playground/custom-pipes/sort.pipe';
-import { ShortenPipe } from './components/playground/custom-pipes/shorten.pipe';
-import { Apiservice2Component } from './services/apiservice2/apiservice2.component';
-import { AnotherComponent } from './services/apiservice2/another/another.component';
-import { TemplateApproachComponent } from './components/lessons/lesson6/template-approach/template-approach.component';
-import { ReactiveApproachComponent } from './components/lessons/lesson6/reactive-approach/reactive-approach.component';
-import { FormsComponent } from './components/lessons/lesson6/forms.component';
+import { ParentComponent } from './components/basics/sharing-data/parent.component';
+import { HelloComponent } from './components/basics/sharing-data/children/hello/hello.component';
+import { BtnComponent } from './components/basics/sharing-data/children/btn/btn.component';
+import { ExampleDirective } from './components/basics/custom-directives/example-directives/example.directive';
+import { Example2Directive } from './components/basics/custom-directives/example-directives/example2.directive';
+import { Example3Directive } from './components/basics/custom-directives/example-directives/example3.directive';
+import { CustomDirectivesComponent } from './components/basics/custom-directives/custom-directives.component';
+import { ServicesComponent } from './components/basics/services/services.component';
+import { DataServiceComponent } from './shared/services/data-service/data-service.component';
+import { LoggingServiceComponent } from './shared/services/logging-service/logging-service.component';
+import { ReversePipe } from './shared/custom-pipes/reverse.pipe';
+import { SortPipe } from './shared/custom-pipes/sort.pipe';
+import { ShortenPipe } from './shared/custom-pipes/shorten.pipe';
+import { TemplateApproachComponent } from './components/basics/forms/template-approach/template-approach.component';
+import { ReactiveApproachComponent } from './components/basics/forms/reactive-approach/reactive-approach.component';
+import { FormsComponent } from './components/basics/forms/forms.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AuthComponent } from './components/auth/auth.component';
 import { LoadingSpinnerComponent } from './components/loading-spinner/loading-spinner.component';
-import { MyprofileComponent } from './components/myprofile/myprofile.component';
-import { TaskServiceComponent } from './services/task-service/task-service.component';
-import { TaskDetailsComponent } from './services/task-service/task-details/task-details.component';
-import { TestComponent } from './components/playground/test/test.component';
-import { RxjsOperatorsComponent } from './components/rxjs-operators/rxjs-operators.component';
-import { ReactiveformNewComponent } from './components/lessons/lesson6/reactive-approach/reactiveform-new/reactiveform-new.component';
-import { DynamicComponentsComponent } from './components/dynamic-components/dynamic-components.component';
-import { DynamicLoaderDirective } from './directives/dynamic-loader.directive';
-import { RedComponent } from './components/dynamic-components/red/red.component';
-import { BlueComponent } from './components/dynamic-components/blue/blue.component';
-import { GreenComponent } from './components/dynamic-components/green/green.component';
+import { MyProfileComponent } from './components/my-profile/my-profile.component';
+import { TaskServiceComponent } from './shared/services/task-service/task-service.component';
+import { TaskDetailsComponent } from './shared/services/task-service/task-details/task-details.component';
+import { IntersectionObserverComponent } from './components/playground/intersection-observer/intersection-observer.component';
+import { ReactiveformNewComponent } from './components/basics/forms/reactive-approach/reactiveform-new/reactiveform-new.component';
+import { ViewContainerRefComponent } from './components/view-container-ref/view-container-ref.component';
+import { DynamicLoaderDirective } from './shared/directives/dynamic-loader.directive';
+import { RedComponent } from './components/view-container-ref/red/red.component';
+import { BlueComponent } from './components/view-container-ref/blue/blue.component';
+import { GreenComponent } from './components/view-container-ref/green/green.component';
 import { DynamicHeaderComponent } from './components/dynamic-header/dynamic-header.component';
 import { FirstComponent } from './components/dynamic-header/first/first.component';
 import { SecondComponent } from './components/dynamic-header/second/second.component';
@@ -59,52 +47,39 @@ import { HeaderReusableComponent } from './components/dynamic-header/header-reus
 //import { TranslocoRootModule } from './transloco-root.module';
 import { ZodTestComponent } from './components/zod-test/zod-test.component';
 import { SignalsComponent } from './components/signals/signals.component';
-import { CustomInputComponent } from './components/custom-input/custom-input.component';
+import { ControlValueAccessorComponent } from './components/control-value-accessor/control-value-accessor.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     AboutComponent,
-    ApiServiceComponent,
     SidebarComponent,
-    Assignment1Component,
-    Lesson1Component,
-    Lesson2Component,
-    Assignment2Component,
+    DataBindingComponent,
     PlaygroundComponent,
-    Lesson3Component,
+    ParentComponent,
     HelloComponent,
     BtnComponent,
     ExampleDirective,
     Example2Directive,
     Example3Directive,
-    CustomdirectivesComponent,
+    CustomDirectivesComponent,
     LoggingServiceComponent,
-    Lesson4Component,
+    ServicesComponent,
     DataServiceComponent,
-    Lesson5Component,
-    SubjectExampleComponent,
-    MessageServiceComponent,
-    SenderComponent,
-    ReceiverComponent,
     ReversePipe,
     SortPipe,
     ShortenPipe,
-    Apiservice2Component,
-    AnotherComponent,
     TemplateApproachComponent,
     ReactiveApproachComponent,
     FormsComponent,
     AuthComponent,
     LoadingSpinnerComponent,
-    MyprofileComponent,
+    MyProfileComponent,
     TaskServiceComponent,
     TaskDetailsComponent,
-    TestComponent,
-    RxjsOperatorsComponent,
+    IntersectionObserverComponent,
     ReactiveformNewComponent,
-    DynamicComponentsComponent,
     DynamicLoaderDirective,
     RedComponent,
     BlueComponent,
@@ -115,10 +90,18 @@ import { CustomInputComponent } from './components/custom-input/custom-input.com
     HeaderReusableComponent,
     ZodTestComponent,
     SignalsComponent,
-    CustomInputComponent
-   
+    ControlValueAccessorComponent,
+    ViewContainerRefComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FontAwesomeModule, FormsModule, HttpClientModule, NgbModule, ReactiveFormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FontAwesomeModule,
+    FormsModule,
+    HttpClientModule,
+    NgbModule,
+    ReactiveFormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

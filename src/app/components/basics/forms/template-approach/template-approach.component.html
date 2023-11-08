@@ -1,0 +1,68 @@
+<!--#f is a local reference that gives us access to the form element so we can console log it and see the form object-->
+<form (ngSubmit)="onSubmit()" #f="ngForm">
+  <div class="form-group">
+    <label>Username</label>
+    <input
+      type="text"
+      class="form-control"
+      [(ngModel)]="username"
+      name="username"
+    />
+  </div>
+
+  <!--here we use ngModel with property binding/ as ngModel, no parentheses-->
+  <div class="form-group">
+    <label>Email</label>
+    <!--required and email are angular directives here that make this field obligatory / check if the email is valid-->
+    <input
+      type="email"
+      class="form-control"
+      ngModel
+      name="email"
+      required
+      email
+      #email="ngModel"
+    />
+    <span *ngIf="!email.valid && email.touched" class="help-block"
+      >Please enter a valid email</span
+    >
+  </div>
+
+  <!--here we use ngModel with one-way binding/ as [ngModel]-->
+  <div class="form-group">
+    <label for="secret">Secret Questions</label>
+    <select
+      id="secret"
+      class="form-control"
+      [ngModel]="defaultQuestion"
+      name="secretQuestion"
+    >
+      <option value="pet">Your first pet?</option>
+      <option value="teacher">Your first teacher?</option>
+    </select>
+  </div>
+
+  <!--here we use ngModel with two-way binding/ as [(ngModel)]-->
+  <div class="form-group">
+    <textarea class="form-control" name="answer" rows="3" [(ngModel)]="answer">
+    </textarea>
+    <p>Your reply: {{ answer }}</p>
+  </div>
+
+  <div class="form-group">
+    <button [disabled]="!f.valid" type="submit">Submit</button>
+  </div>
+</form>
+
+<hr />
+<div class="row" *ngIf="submitted">
+  <div class="col-xs-12">
+    <h4>Your Data:</h4>
+    <p><b>Username:</b> {{ user.username }}</p>
+    <p><b>Email:</b> {{ user.email }}</p>
+    <p><b>Secret Question:</b> {{ user.secretQuestion }}</p>
+    <p><b>Your answer:</b> {{ user.answer }}</p>
+    <p><b>Gender:</b> {{ user.gender }}</p>
+  </div>
+</div>
+

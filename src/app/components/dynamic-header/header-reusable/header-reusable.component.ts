@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MediaQueryService } from 'src/app/services/mediaquery-service/mediaquery.service';
+import { MediaQueryService } from 'src/app/shared/services/mediaquery-service/mediaquery.service';
 import { HeaderService } from '../header.service';
 
 @Component({
