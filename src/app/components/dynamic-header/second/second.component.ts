@@ -4,7 +4,7 @@ import { HeaderService } from '../header.service';
 @Component({
   selector: 'app-second',
   templateUrl: './second.component.html',
-  styleUrls: ['./second.component.css'],
+  styleUrls: ['./second.component.scss'],
 })
 export class SecondComponent implements OnInit {
   constructor(private headerService: HeaderService) {}

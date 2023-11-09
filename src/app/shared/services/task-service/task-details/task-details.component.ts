@@ -6,7 +6,7 @@ import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-task-details',
   templateUrl: './task-details.component.html',
-  styleUrls: ['./task-details.component.css'],
+  styleUrls: ['./task-details.component.scss'],
 })
 export class TaskDetailsComponent implements OnInit {
   currentTask: Task = {

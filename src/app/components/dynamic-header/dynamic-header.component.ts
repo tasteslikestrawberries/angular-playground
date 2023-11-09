@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-dynamic-header',
   templateUrl: './dynamic-header.component.html',
-  styleUrls: ['./dynamic-header.component.css'],
+  styleUrls: ['./dynamic-header.component.scss'],
 })
 export class DynamicHeaderComponent implements OnInit {
   first = true;

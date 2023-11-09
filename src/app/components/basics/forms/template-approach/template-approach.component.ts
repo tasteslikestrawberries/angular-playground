@@ -4,7 +4,7 @@ import { NgForm } from '@angular/forms';
 @Component({
   selector: 'app-template-approach',
   templateUrl: './template-approach.component.html',
-  styleUrls: ['./template-approach.component.css'],
+  styleUrls: ['./template-approach.component.scss'],
 })
 export class TemplateApproachComponent implements OnInit {
   @ViewChild('f') signupForm?: NgForm;

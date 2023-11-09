@@ -11,7 +11,7 @@ interface DynamicComponent {
 @Component({
   selector: 'app-view-container-ref',
   templateUrl: './view-container-ref.component.html',
-  styleUrls: ['./view-container-ref.component.css'],
+  styleUrls: ['./view-container-ref.component.scss'],
 })
 export class ViewContainerRefComponent implements OnInit {
   @ViewChild(DynamicLoaderDirective, { static: true })

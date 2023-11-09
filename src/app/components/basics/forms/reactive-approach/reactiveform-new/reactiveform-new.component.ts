@@ -6,7 +6,7 @@ import { Subscription } from 'rxjs';
 @Component({
   selector: 'app-reactiveform-new',
   templateUrl: './reactiveform-new.component.html',
-  styleUrls: ['./reactiveform-new.component.css'],
+  styleUrls: ['./reactiveform-new.component.scss'],
 })
 export class ReactiveformNewComponent implements OnInit, OnDestroy {
   company!: ICompany;

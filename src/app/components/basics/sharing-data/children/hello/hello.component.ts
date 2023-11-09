@@ -9,7 +9,7 @@ export interface IChildProps {
 @Component({
   selector: 'app-hello',
   templateUrl: './hello.component.html',
-  styleUrls: ['./hello.component.css'],
+  styleUrls: ['./hello.component.scss'],
 })
 export class HelloComponent {
   //input showcase

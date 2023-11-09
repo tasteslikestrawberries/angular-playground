@@ -10,7 +10,7 @@ import {
 @Component({
   selector: 'app-signals',
   templateUrl: './signals.component.html',
-  styleUrls: ['./signals.component.css'],
+  styleUrls: ['./signals.component.scss'],
 })
 export class SignalsComponent implements OnInit {
   users = signal([

@@ -13,7 +13,7 @@ import { take } from 'rxjs/operators';
 @Component({
   selector: 'app-intersection-observer',
   templateUrl: './intersection-observer.component.html',
-  styleUrls: ['./intersection-observer.component.css'],
+  styleUrls: ['./intersection-observer.component.scss'],
 })
 export class IntersectionObserverComponent implements OnInit, OnDestroy {
   subscription = new Subscription();

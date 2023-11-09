@@ -5,7 +5,7 @@ import { HeaderService } from '../header.service';
 @Component({
   selector: 'app-header-reusable',
   templateUrl: './header-reusable.component.html',
-  styleUrls: ['./header-reusable.component.css'],
+  styleUrls: ['./header-reusable.component.scss'],
 })
 export class HeaderReusableComponent implements OnInit {
   mainTitle?: string;

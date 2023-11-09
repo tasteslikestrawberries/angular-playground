@@ -16,7 +16,7 @@ const personSchema: ZodSchema<{}> = z.object({
 @Component({
   selector: 'app-zod-test',
   templateUrl: './zod-test.component.html',
-  styleUrls: ['./zod-test.component.css'],
+  styleUrls: ['./zod-test.component.scss'],
 })
 export class ZodTestComponent implements OnInit {
   constructor(private http: HttpClient) {}

@@ -9,7 +9,7 @@ import {
 @Component({
   selector: 'app-reactive-approach',
   templateUrl: './reactive-approach.component.html',
-  styleUrls: ['./reactive-approach.component.css'],
+  styleUrls: ['./reactive-approach.component.scss'],
 })
 export class ReactiveApproachComponent implements OnInit {
   signupForm!: UntypedFormGroup; //form is just a group of controls in Angular

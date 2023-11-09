@@ -4,7 +4,7 @@ import { IChildProps } from './children/hello/hello.component';
 @Component({
   selector: 'app-parent',
   templateUrl: './parent.component.html',
-  styleUrls: ['./parent.component.css'],
+  styleUrls: ['./parent.component.scss'],
 })
 
 //this is the parent of <app-hello></app-hello> component
