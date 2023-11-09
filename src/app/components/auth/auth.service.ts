@@ -1,5 +1,5 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { BehaviorSubject, Subject, throwError } from 'rxjs';
 import { catchError, tap } from 'rxjs/operators';
 import { User } from './user.model';
@@ -21,12 +21,9 @@ export interface IAuthResponseData {
 export class AuthService {
   public user = new BehaviorSubject<User | null>(null);
   private tokenExpirationTimer: any;
-
-  constructor(
-    private http: HttpClient,
-    private router: Router
-  ) {}
-
+  private router = inject(Router);
+  private http = inject(HttpClient);
+  
   signup(email: string, password: string) {
     return this.http
       .post<IAuthResponseData>(

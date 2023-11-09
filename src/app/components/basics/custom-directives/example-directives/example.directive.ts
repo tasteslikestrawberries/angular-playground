@@ -1,18 +1,27 @@
-import { Directive, Renderer2, ElementRef, HostListener } from '@angular/core';
+import {
+  Directive,
+  ElementRef,
+  HostListener,
+  Renderer2,
+  inject,
+} from '@angular/core';
 
 @Directive({
-    selector: '[appExample]',
-    standalone: true,
+  selector: '[appExample]',
+  standalone: true,
 })
 export class ExampleDirective {
   numberOfClicks = 0;
 
-  //renderer showcase
-  constructor(
-    private elementRef: ElementRef,
-    private renderer: Renderer2
-  ) {
-    renderer.setStyle(elementRef.nativeElement, 'backgroundColor', '#ff00e0');
+  private renderer = inject(Renderer2);
+  private elementRef = inject(ElementRef);
+
+  ngOnInit() {
+    this.renderer.setStyle(
+      this.elementRef.nativeElement,
+      'backgroundColor',
+      '#ff00e0',
+    );
   }
 
   //@Hostlistener (listening to events on element; click is the event here) showcase 1

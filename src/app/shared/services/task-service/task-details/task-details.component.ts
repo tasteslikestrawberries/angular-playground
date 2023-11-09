@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { Task } from '../task-model';
@@ -12,17 +12,15 @@ import { TaskService } from '../task.service';
   imports: [FormsModule],
 })
 export class TaskDetailsComponent implements OnInit {
+  private taskService = inject(TaskService);
+  private route = inject(ActivatedRoute);
+  isAuthenticated = false;
   currentTask: Task = {
     name: '',
     description: '',
   };
 
   message = '';
-
-  constructor(
-    private taskService: TaskService,
-    private route: ActivatedRoute,
-  ) {}
 
   ngOnInit(): void {
     this.message = '';

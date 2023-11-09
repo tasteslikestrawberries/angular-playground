@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { ZodSchema, ZodObject, z } from 'zod';
 import { HttpClient } from '@angular/common/http';
+import { Component, OnInit, inject } from '@angular/core';
+import { ZodSchema, z } from 'zod';
 
 const ZodString = z.string();
 const ZodStringEmail = z.string().email();
@@ -14,13 +14,13 @@ const personSchema: ZodSchema<{}> = z.object({
   age: z.number().positive(),
 });
 @Component({
-    selector: 'app-zod-test',
-    templateUrl: './zod-test.component.html',
-    styleUrls: ['./zod-test.component.scss'],
-    standalone: true,
+  selector: 'app-zod-test',
+  templateUrl: './zod-test.component.html',
+  styleUrls: ['./zod-test.component.scss'],
+  standalone: true,
 })
 export class ZodTestComponent implements OnInit {
-  constructor(private http: HttpClient) {}
+  private http = inject(HttpClient);
 
   ngOnInit(): void {
     this.testValidation();

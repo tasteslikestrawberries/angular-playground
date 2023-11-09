@@ -1,20 +1,20 @@
 import {
   Component,
-  OnInit,
-  ViewChild,
   ElementRef,
   OnDestroy,
+  OnInit,
+  ViewChild,
   ViewChildren,
 } from '@angular/core';
-import { IntersectionUtility } from './intersection-utility';
-import { interval, Subscription } from 'rxjs';
+import { Subscription, interval } from 'rxjs';
 import { take } from 'rxjs/operators';
+import { IntersectionUtility } from './intersection-utility';
 
 @Component({
-    selector: 'app-intersection-observer',
-    templateUrl: './intersection-observer.component.html',
-    styleUrls: ['./intersection-observer.component.scss'],
-    standalone: true,
+  selector: 'app-intersection-observer',
+  templateUrl: './intersection-observer.component.html',
+  styleUrls: ['./intersection-observer.component.scss'],
+  standalone: true,
 })
 export class IntersectionObserverComponent implements OnInit, OnDestroy {
   subscription = new Subscription();
@@ -26,8 +26,6 @@ export class IntersectionObserverComponent implements OnInit, OnDestroy {
   @ViewChildren('lazyquotes')
   lazy2?: ElementRef<HTMLDivElement>[];
 
-  constructor() {}
-
   ngOnInit(): void {
     this.startStats();
   }
@@ -35,7 +33,7 @@ export class IntersectionObserverComponent implements OnInit, OnDestroy {
   //count up to number animation with rxjs interval
   startStats = () => {
     const interval$ = interval(1000).pipe(take(this.time));
-    this.subscription = interval$.subscribe(value => (this.stat = value));
+    this.subscription = interval$.subscribe((value) => (this.stat = value));
   };
 
   //intersection observer

@@ -1,21 +1,21 @@
-import { Component, OnInit } from '@angular/core';
-import { DataService } from './data.service';
 import { JsonPipe } from '@angular/common';
+import { Component, OnInit, inject } from '@angular/core';
+import { DataService } from './data.service';
 
 @Component({
-    selector: 'app-data-service',
-    templateUrl: './data-service.component.html',
-    styleUrls: ['./data-service.component.scss'],
-    standalone: true,
-    imports: [JsonPipe],
+  selector: 'app-data-service',
+  templateUrl: './data-service.component.html',
+  styleUrls: ['./data-service.component.scss'],
+  standalone: true,
+  imports: [JsonPipe],
 })
 export class DataServiceComponent implements OnInit {
   peopleArr: any;
 
-  constructor(private dataService: DataService) {}
+  private dataService = inject(DataService);
 
   getPeople = () => {
-    this.dataService.getData().subscribe(people => {
+    this.dataService.getData().subscribe((people) => {
       this.peopleArr = people;
     });
   };

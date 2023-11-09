@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 
 @Component({
@@ -8,7 +8,7 @@ import { FormsModule, NgForm } from '@angular/forms';
   standalone: true,
   imports: [FormsModule],
 })
-export class TemplateApproachComponent implements OnInit {
+export class TemplateApproachComponent {
   @ViewChild('f') signupForm?: NgForm;
 
   username = 'Default Username';
@@ -23,8 +23,6 @@ export class TemplateApproachComponent implements OnInit {
   };
   submitted = false;
 
-  constructor() {}
-
   onSubmit() {
     this.submitted = true;
     this.user.username = this.signupForm?.value.username;
@@ -36,6 +34,4 @@ export class TemplateApproachComponent implements OnInit {
     //resets the form and its properties and state (like touched,dirty etc.)
     this.signupForm?.reset();
   }
-
-  ngOnInit(): void {}
 }

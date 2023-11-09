@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { HeaderService } from '../header.service';
 import { HeaderReusableComponent } from '../header-reusable/header-reusable.component';
 @Component({
@@ -9,7 +9,7 @@ import { HeaderReusableComponent } from '../header-reusable/header-reusable.comp
     imports: [HeaderReusableComponent],
 })
 export class FirstComponent implements OnInit {
-  constructor(private headerService: HeaderService) {}
+  private headerService = inject(HeaderService);
 
   ngOnInit(): void {
     this.headerService.setHeader({

@@ -1,29 +1,24 @@
-import { Component, OnInit } from '@angular/core';
-import { NgForm, FormsModule } from '@angular/forms';
+import { Component, inject } from '@angular/core';
+import { FormsModule, NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
-import { AuthService, IAuthResponseData } from './auth.service';
 import { LoadingSpinnerComponent } from '../loading-spinner/loading-spinner.component';
+import { AuthService, IAuthResponseData } from './auth.service';
 
 @Component({
-    selector: 'app-auth',
-    templateUrl: './auth.component.html',
-    styleUrls: ['./auth.component.scss'],
-    standalone: true,
-    imports: [
-        LoadingSpinnerComponent,
-        FormsModule,
-    ],
+  selector: 'app-auth',
+  templateUrl: './auth.component.html',
+  styleUrls: ['./auth.component.scss'],
+  standalone: true,
+  imports: [LoadingSpinnerComponent, FormsModule],
 })
 export class AuthComponent {
   isLoginMode = true;
   isLoading = false;
   error: any = null;
 
-  constructor(
-    private authService: AuthService,
-    private router: Router
-  ) {}
+  private authService = inject(AuthService);
+  private router = inject(Router);
 
   switchMode() {
     this.isLoginMode = !this.isLoginMode;
@@ -47,16 +42,16 @@ export class AuthComponent {
     }
 
     authObs.subscribe(
-      resData => {
+      (resData) => {
         console.log(resData);
         this.isLoading = false;
         this.router.navigate(['/my-profile']);
       },
-      errorMsg => {
+      (errorMsg) => {
         console.log(errorMsg);
         this.error = errorMsg;
         this.isLoading = false;
-      }
+      },
     );
 
     form.reset();

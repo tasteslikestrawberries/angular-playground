@@ -1,10 +1,10 @@
-import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
+import { Injectable, inject } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 import { tap } from 'rxjs/operators';
 
 export interface ICompany {
-  id: string;
+  id?: string;
   name: string;
   email: string;
 }
@@ -18,7 +18,7 @@ export class ApiService {
   private url =
     'https://nmondo-9533b-default-rtdb.europe-west1.firebasedatabase.app/companies.json';
 
-  constructor(private http: HttpClient) {}
+  private http = inject(HttpClient);
 
   refresh() {
     this.subject$.next(this.companies); // informs subscribers that new data has arrived and passes it to them
@@ -27,7 +27,7 @@ export class ApiService {
   //GET REQ
   getCompanies() {
     this.http.get<ICompany>(this.url).subscribe({
-      next: data => {
+      next: (data) => {
         if (!data) return;
         const companies: ICompany[] = Object.entries(data).map(
           ([id, company]) => {
@@ -35,13 +35,13 @@ export class ApiService {
               id: id,
               ...company,
             };
-          }
+          },
         );
         this.companies = companies;
         console.log(this.companies);
         this.refresh();
       },
-      error: err => console.log(err),
+      error: (err) => console.log(err),
     });
   }
 
@@ -49,7 +49,7 @@ export class ApiService {
   addCompany(company: ICompany) {
     return this.http.post<ICompany>(this.url, company).pipe(
       //TODO -ne radi- tap((company) => this.companies.push(company)),
-      tap(() => this.getCompanies()) //gets the updated list of companies (with just submitted)
+      tap(() => this.getCompanies()), //gets the updated list of companies (with just submitted)
     );
   }
 

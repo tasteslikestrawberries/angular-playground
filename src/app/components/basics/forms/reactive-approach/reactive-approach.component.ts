@@ -18,8 +18,6 @@ import {
 export class ReactiveApproachComponent implements OnInit {
   signupForm!: UntypedFormGroup; //form is just a group of controls in Angular
 
-  constructor() {}
-
   //form should be initialized here, before the template is rendered
   ngOnInit(): void {
     this.signupForm = new UntypedFormGroup({

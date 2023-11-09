@@ -1,5 +1,5 @@
 import { NgStyle } from '@angular/common';
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit, inject } from '@angular/core';
 import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
@@ -14,18 +14,14 @@ import { AuthService } from '../../auth/auth.service';
   imports: [RouterLink, RouterLinkActive, FontAwesomeModule, NgStyle],
 })
 export class NavbarComponent implements OnInit, OnDestroy {
-  isAuthenticated = false;
   private userSub?: Subscription;
+  private authService = inject(AuthService);
+  private router = inject(Router);
 
+  isAuthenticated = false;
   show = false;
   faBars = faBars;
   faTimes = faTimes;
-
-  constructor(
-    private authService: AuthService,
-    private router: Router,
-  ) {}
-
   toggle = () => {
     this.show = !this.show;
   };

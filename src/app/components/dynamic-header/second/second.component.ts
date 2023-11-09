@@ -1,16 +1,16 @@
-import { Component, OnInit } from '@angular/core';
-import { HeaderService } from '../header.service';
+import { Component, OnInit, inject } from '@angular/core';
 import { HeaderReusableComponent } from '../header-reusable/header-reusable.component';
+import { HeaderService } from '../header.service';
 
 @Component({
-    selector: 'app-second',
-    templateUrl: './second.component.html',
-    styleUrls: ['./second.component.scss'],
-    standalone: true,
-    imports: [HeaderReusableComponent],
+  selector: 'app-second',
+  templateUrl: './second.component.html',
+  styleUrls: ['./second.component.scss'],
+  standalone: true,
+  imports: [HeaderReusableComponent],
 })
 export class SecondComponent implements OnInit {
-  constructor(private headerService: HeaderService) {}
+  private headerService = inject(HeaderService);
 
   ngOnInit(): void {
     this.headerService.setHeader({

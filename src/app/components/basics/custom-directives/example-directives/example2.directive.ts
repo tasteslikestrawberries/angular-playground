@@ -1,14 +1,12 @@
-import { Directive, Renderer2, ElementRef, HostListener } from '@angular/core';
+import { Directive, ElementRef, HostListener, Renderer2, inject } from '@angular/core';
 
 @Directive({
-    selector: '[appExample2]',
-    standalone: true,
+  selector: '[appExample2]',
+  standalone: true,
 })
 export class Example2Directive {
-  constructor(
-    private elementRef: ElementRef,
-    private renderer: Renderer2
-  ) {}
+  private renderer = inject(Renderer2);
+  private elementRef = inject(ElementRef);
 
   //@Hostlistener example 2 (div element)
   @HostListener('mouseover') onMouseOver() {

@@ -21,8 +21,6 @@ export class HeaderService {
 
   header$ = this.subject.asObservable();
 
-  constructor() {}
-
   setHeader = (header: IHeader) => {
     this.subject.next(header);
   };

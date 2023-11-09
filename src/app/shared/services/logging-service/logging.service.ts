@@ -13,6 +13,4 @@ export class LoggingService {
   warn(msg: any) {
     console.warn('Logging Service: ' + msg);
   }
-
-  constructor() {}
 }

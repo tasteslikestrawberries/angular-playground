@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FirstComponent } from './first/first.component';
 import { SecondComponent } from './second/second.component';
 
@@ -9,13 +9,9 @@ import { SecondComponent } from './second/second.component';
   standalone: true,
   imports: [FirstComponent, SecondComponent],
 })
-export class DynamicHeaderComponent implements OnInit {
+export class DynamicHeaderComponent {
   first = true;
   second = false;
-
-  constructor() {}
-
-  ngOnInit(): void {}
 
   changeComponent() {
     this.first = !this.first;

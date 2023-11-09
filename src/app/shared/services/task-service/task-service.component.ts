@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { TaskDetailsComponent } from './task-details/task-details.component';
@@ -13,6 +13,8 @@ import { TaskService } from './task.service';
   imports: [FormsModule, RouterLink, TaskDetailsComponent],
 })
 export class TaskServiceComponent implements OnInit {
+  private taskService = inject(TaskService);
+  
   task: Task = {
     name: '',
     description: '',
@@ -24,8 +26,6 @@ export class TaskServiceComponent implements OnInit {
   currentTask: Task = {};
   currentIndex = -1;
   name = '';
-
-  constructor(private taskService: TaskService) {}
 
   ngOnInit(): void {
     this.getTasks();

@@ -5,8 +5,6 @@ import { Observable, of } from 'rxjs'; // the service will return an observable 
   providedIn: 'root',
 })
 export class DataService {
-  constructor() {}
-
   getData(): Observable<any> {
     const peopleArr = [
       {
