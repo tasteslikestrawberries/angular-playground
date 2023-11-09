@@ -7,7 +7,8 @@
     <th>Price</th>
   </thead>
   <tbody>
-    <tr *ngFor="let element of myArr | sort: 'name'; let i = index">
+    @for (element of myArr | sort: 'name'; let i = $index; track element) {
+    <tr>
       <!--sort pipe in action-->
       <td>{{ i + 1 }}</td>
       <td>{{ element.type | shorten: 3 }}</td>
@@ -16,6 +17,7 @@
       <!--reverse pipe in action-->
       <td>{{ element.price }}</td>
     </tr>
+    }
   </tbody>
 </table>
 

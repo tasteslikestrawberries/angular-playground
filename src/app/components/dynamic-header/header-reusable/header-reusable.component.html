@@ -1,8 +1,14 @@
-<div *ngIf="headerService.header$ | async as header" class="headerWrapper">
+@if (headerService.header$ | async; as header) {
+<div class="headerWrapper">
   <p style="color: #000; font-weight: 400">I'm the header</p>
   <h1>{{ header.mainTitle }}</h1>
-  <div *ngIf="mediaQueryService.smallDown">mobile version</div>
+  @if (mediaQueryService.smallDown) {
+  <div>mobile version</div>
+  }
   <h2>{{ header.title }}</h2>
   <h3>{{ header.subtitle }}</h3>
-  <div class="beta" *ngIf="header.isBeta">BETA</div>
+  @if (header.isBeta) {
+  <div class="beta">BETA</div>
+  }
 </div>
+}

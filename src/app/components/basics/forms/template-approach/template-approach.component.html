@@ -21,9 +21,11 @@
       required
       email
       #email="ngModel" />
-    <span *ngIf="!email.valid && email.touched" class="help-block"
+    @if (!email.valid && email.touched) {
+<span class="help-block"
       >Please enter a valid email</span
     >
+}
   </div>
 
   <!--here we use ngModel with one-way binding/ as [ngModel]-->
@@ -52,7 +54,8 @@
 </form>
 
 <hr />
-<div class="row" *ngIf="submitted">
+@if (submitted) {
+<div class="row">
   <div class="col-xs-12">
     <h4>Your Data:</h4>
     <p><b>Username:</b> {{ user.username }}</p>
@@ -62,3 +65,4 @@
     <p><b>Gender:</b> {{ user.gender }}</p>
   </div>
 </div>
+}

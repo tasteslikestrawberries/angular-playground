@@ -1,6 +1,7 @@
 <div>
   <div class="submit-form">
-    <div *ngIf="!submitted">
+    @if (!submitted) {
+    <div>
       <div class="form-group">
         <label for="name">Name</label>
         <input
@@ -24,11 +25,12 @@
 
       <button (click)="onSubmit()" class="btn btn-success">Submit</button>
     </div>
-
-    <div *ngIf="submitted">
+    } @if (submitted) {
+    <div>
       <h4>Task was submitted successfully!</h4>
       <button class="btn btn-success" (click)="newTask()">Add</button>
     </div>
+    }
   </div>
 </div>
 
@@ -57,13 +59,14 @@
   <div class="col-md-6">
     <h4>Tasks List</h4>
     <ul class="list-group">
+      @for (task of tasks; track task; let i = $index) {
       <li
         class="list-group-item"
-        *ngFor="let task of tasks; let i = index"
         [class.active]="i === currentIndex"
         (click)="setActiveTask(task, i)">
         {{ task.name }}
       </li>
+      }
     </ul>
 
     <button class="m-3 btn btn-sm btn-danger" (click)="removeAllTasks()">
@@ -71,7 +74,8 @@
     </button>
   </div>
   <div class="col-md-6">
-    <div *ngIf="currentTask.id">
+    @if (currentTask.id) {
+    <div>
       <h4>Task</h4>
       <div><strong>Name:</strong>{{ currentTask.name }}</div>
       <div>
@@ -83,11 +87,12 @@
         Edit
       </a>
     </div>
-
-    <div *ngIf="!currentTask">
+    } @if (!currentTask) {
+    <div>
       <br />
       <p>Please click on a Task...</p>
     </div>
+    }
   </div>
 </div>
 

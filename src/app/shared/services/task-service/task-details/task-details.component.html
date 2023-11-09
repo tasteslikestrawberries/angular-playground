@@ -1,5 +1,6 @@
 <div>
-  <div *ngIf="currentTask.id" class="edit-form">
+  @if (currentTask.id) {
+<div class="edit-form">
     <h4>Task</h4>
     <form>
       <div class="form-group">
@@ -34,9 +35,12 @@
     </button>
     <p>{{ message }}</p>
   </div>
+}
 
-  <div *ngIf="!currentTask.id">
+  @if (!currentTask.id) {
+<div>
     <br />
     <p>Cannot access this Task...</p>
   </div>
+}
 </div>

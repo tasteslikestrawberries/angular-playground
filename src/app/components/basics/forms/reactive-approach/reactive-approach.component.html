@@ -12,14 +12,10 @@
               class="form-control"
               formControlName="username" />
             <!-- the get method of FormGroup instance can give us access to the form controls (in this case, to username) -->
-            <span
-              *ngIf="
-                !signupForm.get('userData.username')?.valid &&
-                signupForm.get('userData.username')?.touched
-              "
-              class="help-block"
-              >Please enter a valid username</span
-            >
+            @if ( !signupForm.get('userData.username')?.valid &&
+            signupForm.get('userData.username')?.touched ) {
+            <span class="help-block">Please enter a valid username</span>
+            }
           </div>
           <div class="form-group">
             <label for="email">Email</label>
@@ -28,29 +24,25 @@
               id="email"
               class="form-control"
               formControlName="email" />
-            <span
-              *ngIf="
-                !signupForm.get('userData.email')?.valid &&
-                signupForm.get('userData.email')?.touched
-              "
-              class="help-block"
-              >Please enter a valid email</span
-            >
+            @if ( !signupForm.get('userData.email')?.valid &&
+            signupForm.get('userData.email')?.touched ) {
+            <span class="help-block">Please enter a valid email</span>
+            }
           </div>
         </div>
         <div formArrayName="hobbies">
           <!-- this structure (formArrayName) is needed to mirror the form object structure in .ts file-->
           Your Hobbies
           <button (click)="onAddHobby()" type="button">Add Hobby</button>
-          <div
-            class="form-group"
-            *ngFor="let hobbyControl of getControls(); let i = index">
+          @for (hobbyControl of getControls(); track hobbyControl; let i = $index) {
+          <div class="form-group">
             <input type="text" class="form-control" [formControlName]="i" />
           </div>
+          }
         </div>
-        <span *ngIf="!signupForm.valid && signupForm.touched" class="help-block"
-          >Please enter valid data!</span
-        >
+        @if (!signupForm.valid && signupForm.touched) {
+        <span class="help-block">Please enter valid data!</span>
+        }
         <button class="btn btn-primary" type="submit">Submit</button>
       </form>
     </div>

@@ -1,4 +1,5 @@
-<nav class="sidebar" *ngIf="hasRoute('/about')">
+@if (hasRoute('/about')) {
+<nav class="sidebar">
   <ul>
     <li>
       <a
@@ -84,3 +85,4 @@
     </li>
   </ul>
 </nav>
+}

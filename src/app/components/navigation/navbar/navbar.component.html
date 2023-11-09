@@ -5,7 +5,8 @@
     </h3>
   </a>
   <ul>
-    <li *ngIf="isAuthenticated">
+    @if (isAuthenticated) {
+    <li>
       <a
         routerLink="/my-profile"
         routerLinkActive="active"
@@ -13,6 +14,7 @@
         >My Profile</a
       >
     </li>
+    }
     <button (click)="onLogout()">
       {{ !isAuthenticated ? 'Log in' : 'Log out' }}
     </button>
@@ -27,17 +29,19 @@
   </ul>
 
   <button class="hamburger" (click)="toggle()">
+    @if (!show) {
     <fa-icon
       [icon]="faBars"
-      [ngStyle]="{ fontSize: '1.5em', marginRight: '1rem' }"
-      *ngIf="!show"></fa-icon>
+      [ngStyle]="{ fontSize: '1.5em', marginRight: '1rem' }"></fa-icon>
+    } @if (show) {
     <fa-icon
       [icon]="faTimes"
-      *ngIf="show"
       [ngStyle]="{ fontSize: '1.8em', marginRight: '1rem' }"></fa-icon>
+    }
   </button>
 
-  <div *ngIf="show" class="dropdown" (click)="show = false">
+  @if (show) {
+  <div class="dropdown" (click)="show = false">
     <ul>
       <li>
         <a
@@ -119,8 +123,8 @@
         >
       </li>
 
-      ...............................
-      <li *ngIf="isAuthenticated">
+      ............................... @if (isAuthenticated) {
+      <li>
         <a
           routerLink="/my-profile"
           routerLinkActive="active"
@@ -128,6 +132,7 @@
           >My Profile</a
         >
       </li>
+      }
       <button (click)="onLogout()">
         {{ !isAuthenticated ? 'Log in' : 'Log out' }}
       </button>
@@ -141,4 +146,5 @@
       </li>
     </ul>
   </div>
+  }
 </nav>

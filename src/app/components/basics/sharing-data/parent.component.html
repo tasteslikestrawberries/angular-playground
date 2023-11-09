@@ -13,7 +13,8 @@
 <app-hello
   [name]="currentName"
   [props]="childProps"
-  (newNameEvent)="addToNames($event)"></app-hello>
+  (newNameEvent)="addToNames($event)"
+></app-hello>
 
 Parent's name list:
 
@@ -23,10 +24,12 @@ Parent's name list:
     <th>Name</th>
   </thead>
   <tbody>
-    <tr *ngFor="let name of names; let i = index">
+    @for (name of names; track name; let i = $index) {
+    <tr>
       <td>{{ i + 1 }}</td>
       <td>{{ name }}</td>
     </tr>
+    }
   </tbody>
 </table>
 
@@ -49,7 +52,8 @@ Parent's name list:
 <p>
   <img
     src="assets/img/sharingdata.png"
-    style="width: 50vw; border: 1px solid white" />
+    style="width: 50vw; border: 1px solid white"
+  />
 </p>
 
 <!--<ng-content> showcase-->

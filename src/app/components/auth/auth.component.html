@@ -1,11 +1,15 @@
-<div class="alert alert-danger" *ngIf="error">
+@if (error) {
+<div class="alert alert-danger">
   <p>{{ error }}</p>
 </div>
+}
 <div class="formWrapper">
-  <div *ngIf="isLoading">
+  @if (isLoading) {
+  <div>
     <app-loading-spinner></app-loading-spinner>
   </div>
-  <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)" *ngIf="!isLoading">
+  } @if (!isLoading) {
+  <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)">
     <div class="form-group">
       <label for="email">E-Mail</label>
       <input
@@ -39,4 +43,5 @@
       </div>
     </div>
   </form>
+  }
 </div>
