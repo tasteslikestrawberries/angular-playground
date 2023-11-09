@@ -29,9 +29,6 @@ export class SignalsComponent implements OnInit {
     this.users.update(val => [
       { firstName: val[0].firstName + 'Test', active: false },
     ]);
-    this.users.mutate(val => {
-      val.push({ firstName: 'Theo', active: true });
-    });
 
     this.animals.set([{ species: 'bird' }]);
   }
