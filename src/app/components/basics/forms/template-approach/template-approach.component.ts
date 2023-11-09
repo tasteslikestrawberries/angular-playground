@@ -1,13 +1,12 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { NgForm, FormsModule } from '@angular/forms';
-import { NgIf } from '@angular/common';
+import { FormsModule, NgForm } from '@angular/forms';
 
 @Component({
-    selector: 'app-template-approach',
-    templateUrl: './template-approach.component.html',
-    styleUrls: ['./template-approach.component.scss'],
-    standalone: true,
-    imports: [FormsModule, NgIf],
+  selector: 'app-template-approach',
+  templateUrl: './template-approach.component.html',
+  styleUrls: ['./template-approach.component.scss'],
+  standalone: true,
+  imports: [FormsModule],
 })
 export class TemplateApproachComponent implements OnInit {
   @ViewChild('f') signupForm?: NgForm;

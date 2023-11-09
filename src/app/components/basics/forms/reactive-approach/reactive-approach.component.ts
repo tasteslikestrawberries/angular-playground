@@ -1,18 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-import { UntypedFormArray, UntypedFormControl, UntypedFormGroup, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { NgIf, NgFor } from '@angular/common';
+import {
+  FormsModule,
+  ReactiveFormsModule,
+  UntypedFormArray,
+  UntypedFormControl,
+  UntypedFormGroup,
+  Validators,
+} from '@angular/forms';
 
 @Component({
-    selector: 'app-reactive-approach',
-    templateUrl: './reactive-approach.component.html',
-    styleUrls: ['./reactive-approach.component.scss'],
-    standalone: true,
-    imports: [
-        FormsModule,
-        ReactiveFormsModule,
-        NgIf,
-        NgFor,
-    ],
+  selector: 'app-reactive-approach',
+  templateUrl: './reactive-approach.component.html',
+  styleUrls: ['./reactive-approach.component.scss'],
+  standalone: true,
+  imports: [FormsModule, ReactiveFormsModule],
 })
 export class ReactiveApproachComponent implements OnInit {
   signupForm!: UntypedFormGroup; //form is just a group of controls in Angular

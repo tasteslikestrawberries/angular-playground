@@ -6,14 +6,12 @@ import {
   signal,
   untracked,
 } from '@angular/core';
-import { NgFor, NgIf } from '@angular/common';
 
 @Component({
-    selector: 'app-signals',
-    templateUrl: './signals.component.html',
-    styleUrls: ['./signals.component.scss'],
-    standalone: true,
-    imports: [NgFor, NgIf],
+  selector: 'app-signals',
+  templateUrl: './signals.component.html',
+  styleUrls: ['./signals.component.scss'],
+  standalone: true,
 })
 export class SignalsComponent implements OnInit {
   users = signal([
@@ -29,7 +27,7 @@ export class SignalsComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.users.update(val => [
+    this.users.update((val) => [
       { firstName: val[0].firstName + 'Test', active: false },
     ]);
 
@@ -37,6 +35,6 @@ export class SignalsComponent implements OnInit {
   }
 
   increaseCount() {
-    this.counter.update(count => count + 1);
+    this.counter.update((count) => count + 1);
   }
 }

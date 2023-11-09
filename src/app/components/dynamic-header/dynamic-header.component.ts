@@ -1,18 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { SecondComponent } from './second/second.component';
 import { FirstComponent } from './first/first.component';
-import { NgIf } from '@angular/common';
+import { SecondComponent } from './second/second.component';
 
 @Component({
-    selector: 'app-dynamic-header',
-    templateUrl: './dynamic-header.component.html',
-    styleUrls: ['./dynamic-header.component.scss'],
-    standalone: true,
-    imports: [
-        NgIf,
-        FirstComponent,
-        SecondComponent,
-    ],
+  selector: 'app-dynamic-header',
+  templateUrl: './dynamic-header.component.html',
+  styleUrls: ['./dynamic-header.component.scss'],
+  standalone: true,
+  imports: [FirstComponent, SecondComponent],
 })
 export class DynamicHeaderComponent implements OnInit {
   first = true;

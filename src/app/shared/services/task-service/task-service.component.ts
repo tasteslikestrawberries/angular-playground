@@ -1,23 +1,16 @@
 import { Component, OnInit } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { RouterLink } from '@angular/router';
+import { TaskDetailsComponent } from './task-details/task-details.component';
 import { Task } from './task-model';
 import { TaskService } from './task.service';
-import { TaskDetailsComponent } from './task-details/task-details.component';
-import { RouterLink } from '@angular/router';
-import { FormsModule } from '@angular/forms';
-import { NgIf, NgFor } from '@angular/common';
 
 @Component({
-    selector: 'app-task-service',
-    templateUrl: './task-service.component.html',
-    styleUrls: ['./task-service.component.scss'],
-    standalone: true,
-    imports: [
-        NgIf,
-        FormsModule,
-        NgFor,
-        RouterLink,
-        TaskDetailsComponent,
-    ],
+  selector: 'app-task-service',
+  templateUrl: './task-service.component.html',
+  styleUrls: ['./task-service.component.scss'],
+  standalone: true,
+  imports: [FormsModule, RouterLink, TaskDetailsComponent],
 })
 export class TaskServiceComponent implements OnInit {
   task: Task = {

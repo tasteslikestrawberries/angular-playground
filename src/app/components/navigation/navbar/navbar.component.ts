@@ -1,23 +1,17 @@
+import { NgStyle } from '@angular/common';
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Router, RouterLink, RouterLinkActive } from '@angular/router';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { Subscription } from 'rxjs';
 import { AuthService } from '../../auth/auth.service';
-import { Router, RouterLink, RouterLinkActive } from '@angular/router';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { NgIf, NgStyle } from '@angular/common';
 
 @Component({
-    selector: 'app-navbar',
-    templateUrl: './navbar.component.html',
-    styleUrls: ['./navbar.component.scss'],
-    standalone: true,
-    imports: [
-        RouterLink,
-        NgIf,
-        RouterLinkActive,
-        FontAwesomeModule,
-        NgStyle,
-    ],
+  selector: 'app-navbar',
+  templateUrl: './navbar.component.html',
+  styleUrls: ['./navbar.component.scss'],
+  standalone: true,
+  imports: [RouterLink, RouterLinkActive, FontAwesomeModule, NgStyle],
 })
 export class NavbarComponent implements OnInit, OnDestroy {
   isAuthenticated = false;
@@ -29,7 +23,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
 
   constructor(
     private authService: AuthService,
-    private router: Router
+    private router: Router,
   ) {}
 
   toggle = () => {
@@ -42,7 +36,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    this.userSub = this.authService.user.subscribe(user => {
+    this.userSub = this.authService.user.subscribe((user) => {
       this.isAuthenticated = !user ? false : true; //we can shorten this to !!user
     });
   }

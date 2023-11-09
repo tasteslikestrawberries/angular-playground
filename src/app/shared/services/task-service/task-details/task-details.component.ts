@@ -1,16 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { TaskService } from '../task.service';
-import { Task } from '../task-model';
-import { ActivatedRoute } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-import { NgIf } from '@angular/common';
+import { ActivatedRoute } from '@angular/router';
+import { Task } from '../task-model';
+import { TaskService } from '../task.service';
 
 @Component({
-    selector: 'app-task-details',
-    templateUrl: './task-details.component.html',
-    styleUrls: ['./task-details.component.scss'],
-    standalone: true,
-    imports: [NgIf, FormsModule],
+  selector: 'app-task-details',
+  templateUrl: './task-details.component.html',
+  styleUrls: ['./task-details.component.scss'],
+  standalone: true,
+  imports: [FormsModule],
 })
 export class TaskDetailsComponent implements OnInit {
   currentTask: Task = {
@@ -22,7 +21,7 @@ export class TaskDetailsComponent implements OnInit {
 
   constructor(
     private taskService: TaskService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
   ) {}
 
   ngOnInit(): void {
@@ -32,13 +31,13 @@ export class TaskDetailsComponent implements OnInit {
 
   getTask(id: string): void {
     this.taskService.get(id).subscribe(
-      data => {
+      (data) => {
         this.currentTask = data;
         console.log(data);
       },
-      error => {
+      (error) => {
         console.log(error);
-      }
+      },
     );
   }
 
@@ -46,26 +45,26 @@ export class TaskDetailsComponent implements OnInit {
     this.message = '';
 
     this.taskService.update(this.currentTask.id, this.currentTask).subscribe(
-      response => {
+      (response) => {
         console.log(response);
         this.message = response.message
           ? response.message
           : 'This task was updated successfully!';
       },
-      error => {
+      (error) => {
         console.log(error);
-      }
+      },
     );
   }
 
   deleteTask(): void {
     this.taskService.delete(this.currentTask.id).subscribe(
-      response => {
+      (response) => {
         console.log(response);
       },
-      error => {
+      (error) => {
         console.log(error);
-      }
+      },
     );
   }
 }

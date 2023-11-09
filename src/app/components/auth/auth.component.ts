@@ -4,7 +4,6 @@ import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { AuthService, IAuthResponseData } from './auth.service';
 import { LoadingSpinnerComponent } from '../loading-spinner/loading-spinner.component';
-import { NgIf } from '@angular/common';
 
 @Component({
     selector: 'app-auth',
@@ -12,7 +11,6 @@ import { NgIf } from '@angular/common';
     styleUrls: ['./auth.component.scss'],
     standalone: true,
     imports: [
-        NgIf,
         LoadingSpinnerComponent,
         FormsModule,
     ],
