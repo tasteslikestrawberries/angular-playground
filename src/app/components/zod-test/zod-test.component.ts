@@ -14,9 +14,10 @@ const personSchema: ZodSchema<{}> = z.object({
   age: z.number().positive(),
 });
 @Component({
-  selector: 'app-zod-test',
-  templateUrl: './zod-test.component.html',
-  styleUrls: ['./zod-test.component.scss'],
+    selector: 'app-zod-test',
+    templateUrl: './zod-test.component.html',
+    styleUrls: ['./zod-test.component.scss'],
+    standalone: true,
 })
 export class ZodTestComponent implements OnInit {
   constructor(private http: HttpClient) {}

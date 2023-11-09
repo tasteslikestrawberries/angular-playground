@@ -1,12 +1,28 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Observable } from 'rxjs';
+import { ShortenPipe } from '../../shared/custom-pipes/shorten.pipe';
+import { SortPipe } from '../../shared/custom-pipes/sort.pipe';
+import { ReversePipe } from '../../shared/custom-pipes/reverse.pipe';
+import { IntersectionObserverComponent } from './intersection-observer/intersection-observer.component';
+import { NgFor, DatePipe } from '@angular/common';
 
 @Component({
-  selector: 'app-playground',
-  templateUrl: './playground.component.html',
-  styleUrls: ['./playground.component.scss'],
+    selector: 'app-playground',
+    templateUrl: './playground.component.html',
+    styleUrls: ['./playground.component.scss'],
+    standalone: true,
+    imports: [
+        NgFor,
+        IntersectionObserverComponent,
+        FormsModule,
+        ReactiveFormsModule,
+        DatePipe,
+        ReversePipe,
+        SortPipe,
+        ShortenPipe,
+    ],
 })
 export class PlaygroundComponent {
   date = new Date();

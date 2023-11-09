@@ -1,12 +1,19 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { UntypedFormBuilder, Validators } from '@angular/forms';
+import { UntypedFormBuilder, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ApiService, ICompany } from '../api.service';
 import { Subscription } from 'rxjs';
+import { NgIf } from '@angular/common';
 
 @Component({
-  selector: 'app-reactiveform-new',
-  templateUrl: './reactiveform-new.component.html',
-  styleUrls: ['./reactiveform-new.component.scss'],
+    selector: 'app-reactiveform-new',
+    templateUrl: './reactiveform-new.component.html',
+    styleUrls: ['./reactiveform-new.component.scss'],
+    standalone: true,
+    imports: [
+        FormsModule,
+        ReactiveFormsModule,
+        NgIf,
+    ],
 })
 export class ReactiveformNewComponent implements OnInit, OnDestroy {
   company!: ICompany;

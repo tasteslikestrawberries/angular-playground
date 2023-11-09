@@ -1,7 +1,8 @@
 import { Directive, HostBinding } from '@angular/core';
 
 @Directive({
-  selector: '[appExample3]',
+    selector: '[appExample3]',
+    standalone: true,
 })
 export class Example3Directive {
   //@HostBinding showcase

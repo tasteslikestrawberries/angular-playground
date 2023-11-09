@@ -1,7 +1,8 @@
 import { Directive, Renderer2, ElementRef, HostListener } from '@angular/core';
 
 @Directive({
-  selector: '[appExample]',
+    selector: '[appExample]',
+    standalone: true,
 })
 export class ExampleDirective {
   numberOfClicks = 0;

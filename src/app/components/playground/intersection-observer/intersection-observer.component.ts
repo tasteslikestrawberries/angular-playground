@@ -11,9 +11,10 @@ import { interval, Subscription } from 'rxjs';
 import { take } from 'rxjs/operators';
 
 @Component({
-  selector: 'app-intersection-observer',
-  templateUrl: './intersection-observer.component.html',
-  styleUrls: ['./intersection-observer.component.scss'],
+    selector: 'app-intersection-observer',
+    templateUrl: './intersection-observer.component.html',
+    styleUrls: ['./intersection-observer.component.scss'],
+    standalone: true,
 })
 export class IntersectionObserverComponent implements OnInit, OnDestroy {
   subscription = new Subscription();

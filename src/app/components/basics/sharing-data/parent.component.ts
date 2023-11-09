@@ -1,10 +1,18 @@
 import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 import { HelloComponent } from './children/hello/hello.component';
 import { IChildProps } from './children/hello/hello.component';
+import { BtnComponent } from './children/btn/btn.component';
+import { NgFor } from '@angular/common';
 @Component({
-  selector: 'app-parent',
-  templateUrl: './parent.component.html',
-  styleUrls: ['./parent.component.scss'],
+    selector: 'app-parent',
+    templateUrl: './parent.component.html',
+    styleUrls: ['./parent.component.scss'],
+    standalone: true,
+    imports: [
+        HelloComponent,
+        NgFor,
+        BtnComponent,
+    ],
 })
 
 //this is the parent of <app-hello></app-hello> component

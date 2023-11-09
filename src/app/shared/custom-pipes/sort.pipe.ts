@@ -2,7 +2,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 
 //a custom pipe to sort an array
 @Pipe({
-  name: 'sort',
+    name: 'sort',
+    standalone: true,
 })
 export class SortPipe implements PipeTransform {
   transform(value: any, propName: string): any {

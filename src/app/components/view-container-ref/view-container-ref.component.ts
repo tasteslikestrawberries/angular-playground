@@ -3,15 +3,18 @@ import { DynamicLoaderDirective } from 'src/app/shared/directives/dynamic-loader
 import { BlueComponent } from './blue/blue.component';
 import { RedComponent } from './red/red.component';
 import { GreenComponent } from './green/green.component';
+import { DynamicLoaderDirective as DynamicLoaderDirective_1 } from '../../shared/directives/dynamic-loader.directive';
 
 interface DynamicComponent {
   type: any;
 }
 
 @Component({
-  selector: 'app-view-container-ref',
-  templateUrl: './view-container-ref.component.html',
-  styleUrls: ['./view-container-ref.component.scss'],
+    selector: 'app-view-container-ref',
+    templateUrl: './view-container-ref.component.html',
+    styleUrls: ['./view-container-ref.component.scss'],
+    standalone: true,
+    imports: [DynamicLoaderDirective_1],
 })
 export class ViewContainerRefComponent implements OnInit {
   @ViewChild(DynamicLoaderDirective, { static: true })

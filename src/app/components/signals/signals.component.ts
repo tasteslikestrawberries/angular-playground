@@ -6,11 +6,14 @@ import {
   signal,
   untracked,
 } from '@angular/core';
+import { NgFor, NgIf } from '@angular/common';
 
 @Component({
-  selector: 'app-signals',
-  templateUrl: './signals.component.html',
-  styleUrls: ['./signals.component.scss'],
+    selector: 'app-signals',
+    templateUrl: './signals.component.html',
+    styleUrls: ['./signals.component.scss'],
+    standalone: true,
+    imports: [NgFor, NgIf],
 })
 export class SignalsComponent implements OnInit {
   users = signal([

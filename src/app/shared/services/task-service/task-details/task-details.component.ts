@@ -2,11 +2,15 @@ import { Component, OnInit } from '@angular/core';
 import { TaskService } from '../task.service';
 import { Task } from '../task-model';
 import { ActivatedRoute } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { NgIf } from '@angular/common';
 
 @Component({
-  selector: 'app-task-details',
-  templateUrl: './task-details.component.html',
-  styleUrls: ['./task-details.component.scss'],
+    selector: 'app-task-details',
+    templateUrl: './task-details.component.html',
+    styleUrls: ['./task-details.component.scss'],
+    standalone: true,
+    imports: [NgIf, FormsModule],
 })
 export class TaskDetailsComponent implements OnInit {
   currentTask: Task = {

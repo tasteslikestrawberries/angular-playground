@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-data-binding',
-  templateUrl: './data-binding.component.html',
-  styleUrls: ['./data-binding.component.scss'],
+    selector: 'app-data-binding',
+    templateUrl: './data-binding.component.html',
+    styleUrls: ['./data-binding.component.scss'],
+    standalone: true,
+    imports: [FormsModule],
 })
 export class DataBindingComponent {
   firstPokemon = 'Pikachu';

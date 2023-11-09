@@ -1,7 +1,8 @@
 import { Directive, Renderer2, ElementRef, HostListener } from '@angular/core';
 
 @Directive({
-  selector: '[appExample2]',
+    selector: '[appExample2]',
+    standalone: true,
 })
 export class Example2Directive {
   constructor(

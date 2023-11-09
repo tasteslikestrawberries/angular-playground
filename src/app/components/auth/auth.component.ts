@@ -1,13 +1,21 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { NgForm, FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { AuthService, IAuthResponseData } from './auth.service';
+import { LoadingSpinnerComponent } from '../loading-spinner/loading-spinner.component';
+import { NgIf } from '@angular/common';
 
 @Component({
-  selector: 'app-auth',
-  templateUrl: './auth.component.html',
-  styleUrls: ['./auth.component.scss'],
+    selector: 'app-auth',
+    templateUrl: './auth.component.html',
+    styleUrls: ['./auth.component.scss'],
+    standalone: true,
+    imports: [
+        NgIf,
+        LoadingSpinnerComponent,
+        FormsModule,
+    ],
 })
 export class AuthComponent {
   isLoginMode = true;
