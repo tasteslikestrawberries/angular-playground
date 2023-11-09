@@ -1,29 +1,28 @@
 .sidebar {
-  display:none;
+  display: none;
 }
 
 .active {
-  color:#a24cf3;
+  color: #a24cf3;
 }
 
 /*DESKTOP SCREENS*/
 @media (min-width: 70rem) {
   .sidebar {
     display: block;
-    padding:2rem 0;
-    margin:auto;
-    min-height:80vh;
-    min-width:25vw;
+    padding: 2rem 0;
+    margin: auto;
+    min-height: 80vh;
+    min-width: 25vw;
   }
 
   h3 {
-    margin-left:3rem;
+    margin-left: 3rem;
   }
 
-  li{
+  li {
     list-style-type: none;
-    margin-bottom:0.5rem;
-  
+    margin-bottom: 0.5rem;
   }
 
   ul {

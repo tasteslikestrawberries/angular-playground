@@ -14,7 +14,10 @@ export class AuthComponent {
   isLoading = false;
   error: any = null;
 
-  constructor(private authService: AuthService, private router: Router) {}
+  constructor(
+    private authService: AuthService,
+    private router: Router
+  ) {}
 
   switchMode() {
     this.isLoginMode = !this.isLoginMode;
@@ -38,12 +41,12 @@ export class AuthComponent {
     }
 
     authObs.subscribe(
-      (resData) => {
+      resData => {
         console.log(resData);
         this.isLoading = false;
-        this.router.navigate(['/my-profile']); 
+        this.router.navigate(['/my-profile']);
       },
-      (errorMsg) => {
+      errorMsg => {
         console.log(errorMsg);
         this.error = errorMsg;
         this.isLoading = false;

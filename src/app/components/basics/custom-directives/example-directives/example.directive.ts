@@ -7,7 +7,10 @@ export class ExampleDirective {
   numberOfClicks = 0;
 
   //renderer showcase
-  constructor(private elementRef: ElementRef, private renderer: Renderer2) {
+  constructor(
+    private elementRef: ElementRef,
+    private renderer: Renderer2
+  ) {
     renderer.setStyle(elementRef.nativeElement, 'backgroundColor', '#ff00e0');
   }
 

@@ -3,11 +3,11 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-data-binding',
   templateUrl: './data-binding.component.html',
-  styleUrls: ['./data-binding.component.css']
+  styleUrls: ['./data-binding.component.css'],
 })
 export class DataBindingComponent {
-  firstPokemon: string = 'Pikachu';
-  secondPokemon: string = 'Jigglypuff';
+  firstPokemon = 'Pikachu';
+  secondPokemon = 'Jigglypuff';
   buttonDisabled = false;
   inputName = '';
   initialName = 'Initial Name';
@@ -16,7 +16,7 @@ export class DataBindingComponent {
     return this.secondPokemon;
   };
 
-  functionOnClick = () => {
+  onClick = () => {
     console.log('Button clicked');
   };
 
@@ -28,5 +28,4 @@ export class DataBindingComponent {
   checkVariableName = () => {
     console.log(this.initialName);
   };
-
 }

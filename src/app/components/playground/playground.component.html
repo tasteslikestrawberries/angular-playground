@@ -25,13 +25,21 @@
 <br />
 
 <!--Callbacks vs Promises vs Async/Await vs RxJS Observables-->
-Callbacks vs Promises vs Async/Await vs RxJS Observables (check console after clicking the button, timeout is 2 sec)
+Callbacks vs Promises vs Async/Await vs RxJS Observables (check console after
+clicking the button, timeout is 2 sec)
 <div class="apiComponentsContainer">
-  <button (click)="testCallbacks()" style="background-color:'#d9c4bd';">Test Callbacks</button>
-  <button (click)="testPromises()" style="background-color:'#c4c4fc';">Test Promises</button>
-  <button (click)="testAsyncAwait()" style="background-color:'	#ff613d';">Test Async/Await (internally
-    Promises)</button>
-  <button (click)="testObservables()" style="background-color:'	#ff0087';">Test RxJS Observables</button>
+  <button (click)="testCallbacks()" style="background-color: '#d9c4bd'">
+    Test Callbacks
+  </button>
+  <button (click)="testPromises()" style="background-color: '#c4c4fc'">
+    Test Promises
+  </button>
+  <button (click)="testAsyncAwait()" style="background-color: '	#ff613d'">
+    Test Async/Await (internally Promises)
+  </button>
+  <button (click)="testObservables()" style="background-color: '	#ff0087'">
+    Test RxJS Observables
+  </button>
 </div>
 
 <br /><br />
@@ -43,7 +51,7 @@ Callbacks vs Promises vs Async/Await vs RxJS Observables (check console after cl
 
 <!--trying out Date pipe-->
 <h2>Date Pipe test:</h2>
-{{ date | date:'mediumDate'}}
+{{ date | date: 'mediumDate' }}
 
 <br /><br />
 
@@ -53,10 +61,21 @@ Callbacks vs Promises vs Async/Await vs RxJS Observables (check console after cl
   <form [formGroup]="cvaTestForm">
     <app-custom-input formControlName="name"></app-custom-input>
 
-    <p>Control Value Accessor Test Form Value: {{cvaTestForm.controls.name.value }}</p>
-    <p>Control Value Accessor Test Form Invalid: {{cvaTestForm.controls.name.invalid }}</p>
-    <p>Control Value Accessor Test Form Pristine: {{cvaTestForm.controls.name.pristine }}</p>
-    <p>Control Value Accessor Test Form Touched: {{cvaTestForm.controls.name.touched }}</p>
+    <p>
+      Control Value Accessor Test Form Value:
+      {{ cvaTestForm.controls.name.value }}
+    </p>
+    <p>
+      Control Value Accessor Test Form Invalid:
+      {{ cvaTestForm.controls.name.invalid }}
+    </p>
+    <p>
+      Control Value Accessor Test Form Pristine:
+      {{ cvaTestForm.controls.name.pristine }}
+    </p>
+    <p>
+      Control Value Accessor Test Form Touched:
+      {{ cvaTestForm.controls.name.touched }}
+    </p>
   </form>
-
 </div>

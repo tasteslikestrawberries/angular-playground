@@ -9,17 +9,16 @@ export interface IChildProps {
 @Component({
   selector: 'app-hello',
   templateUrl: './hello.component.html',
-  styleUrls: ['./hello.component.css']
+  styleUrls: ['./hello.component.css'],
 })
-
 export class HelloComponent {
   //input showcase
   //The @Input() decorator in a child component or directive signifies that the property can receive its value from its parent component.
   @Input() name = '';
   @Input() props?: IChildProps;
-  
+
   //output showcase
-  //The child component uses the @Output() property to raise an event to notify the parent of the change. 
+  //The child component uses the @Output() property to raise an event to notify the parent of the change.
   //To raise an event, an @Output() must have the type of EventEmitter, which is a class in @angular/core that you use to emit custom events.
   @Output() newNameEvent = new EventEmitter<string>();
 
@@ -27,5 +26,4 @@ export class HelloComponent {
   addNewName(value: string) {
     this.newNameEvent.emit(value);
   }
-
 }

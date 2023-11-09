@@ -10,10 +10,11 @@
         routerLink="/my-profile"
         routerLinkActive="active"
         [routerLinkActiveOptions]="{ exact: true }"
-        >My Profile</a>
+        >My Profile</a
+      >
     </li>
     <button (click)="onLogout()">
-      {{ !isAuthenticated ? 'Log in' : 'Log out'}}
+      {{ !isAuthenticated ? 'Log in' : 'Log out' }}
     </button>
     <li>
       <a
@@ -29,16 +30,14 @@
     <fa-icon
       [icon]="faBars"
       [ngStyle]="{ fontSize: '1.5em', marginRight: '1rem' }"
-      *ngIf="!show"
-    ></fa-icon>
+      *ngIf="!show"></fa-icon>
     <fa-icon
       [icon]="faTimes"
       *ngIf="show"
-      [ngStyle]="{ fontSize: '1.8em', marginRight: '1rem' }"
-    ></fa-icon>
+      [ngStyle]="{ fontSize: '1.8em', marginRight: '1rem' }"></fa-icon>
   </button>
 
-  <div *ngIf="show" class="dropdown" (click)="show=false">
+  <div *ngIf="show" class="dropdown" (click)="show = false">
     <ul>
       <li>
         <a
@@ -126,10 +125,11 @@
           routerLink="/my-profile"
           routerLinkActive="active"
           [routerLinkActiveOptions]="{ exact: true }"
-          >My Profile</a>
+          >My Profile</a
+        >
       </li>
       <button (click)="onLogout()">
-        {{ !isAuthenticated ? 'Log in' : 'Log out'}}
+        {{ !isAuthenticated ? 'Log in' : 'Log out' }}
       </button>
       <li>
         <a

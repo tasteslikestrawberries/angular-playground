@@ -2,8 +2,8 @@
   background-color: #3b3944;
 }
 
-.navbar h3{
-  color:#a24cf3;
+.navbar h3 {
+  color: #a24cf3;
 }
 
 .navbar ul {
@@ -23,7 +23,7 @@
 }
 
 .active {
-  color:#a24cf3;
+  color: #a24cf3;
 }
 
 .navbar > a h3 img {

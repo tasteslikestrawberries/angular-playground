@@ -6,8 +6,7 @@
       type="text"
       class="form-control"
       [(ngModel)]="username"
-      name="username"
-    />
+      name="username" />
   </div>
 
   <!--here we use ngModel with property binding/ as ngModel, no parentheses-->
@@ -21,8 +20,7 @@
       name="email"
       required
       email
-      #email="ngModel"
-    />
+      #email="ngModel" />
     <span *ngIf="!email.valid && email.touched" class="help-block"
       >Please enter a valid email</span
     >
@@ -35,8 +33,7 @@
       id="secret"
       class="form-control"
       [ngModel]="defaultQuestion"
-      name="secretQuestion"
-    >
+      name="secretQuestion">
       <option value="pet">Your first pet?</option>
       <option value="teacher">Your first teacher?</option>
     </select>
@@ -65,4 +62,3 @@
     <p><b>Gender:</b> {{ user.gender }}</p>
   </div>
 </div>
-

@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { UntypedFormArray, UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
+import {
+  UntypedFormArray,
+  UntypedFormControl,
+  UntypedFormGroup,
+  Validators,
+} from '@angular/forms';
 
 @Component({
   selector: 'app-reactive-approach',
@@ -25,7 +30,10 @@ export class ReactiveApproachComponent implements OnInit {
       userData: new UntypedFormGroup({
         //nesting form-controls in the userData formgroup
         username: new UntypedFormControl(null, Validators.required),
-        email: new UntypedFormControl(null, [Validators.required, Validators.email]),
+        email: new UntypedFormControl(null, [
+          Validators.required,
+          Validators.email,
+        ]),
       }),
       gender: new UntypedFormControl('male'),
       hobbies: new UntypedFormArray([]), //array of form controls

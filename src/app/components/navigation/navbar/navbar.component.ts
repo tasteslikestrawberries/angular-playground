@@ -13,11 +13,14 @@ export class NavbarComponent implements OnInit, OnDestroy {
   isAuthenticated = false;
   private userSub?: Subscription;
 
-  show: boolean = false;
+  show = false;
   faBars = faBars;
   faTimes = faTimes;
 
-  constructor(private authService: AuthService, private router: Router) {}
+  constructor(
+    private authService: AuthService,
+    private router: Router
+  ) {}
 
   toggle = () => {
     this.show = !this.show;
@@ -29,7 +32,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    this.userSub = this.authService.user.subscribe((user) => {
+    this.userSub = this.authService.user.subscribe(user => {
       this.isAuthenticated = !user ? false : true; //we can shorten this to !!user
     });
   }

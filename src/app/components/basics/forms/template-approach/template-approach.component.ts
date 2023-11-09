@@ -4,7 +4,7 @@ import { NgForm } from '@angular/forms';
 @Component({
   selector: 'app-template-approach',
   templateUrl: './template-approach.component.html',
-  styleUrls: ['./template-approach.component.css']
+  styleUrls: ['./template-approach.component.css'],
 })
 export class TemplateApproachComponent implements OnInit {
   @ViewChild('f') signupForm?: NgForm;
@@ -31,7 +31,7 @@ export class TemplateApproachComponent implements OnInit {
     this.user.answer = this.signupForm?.value.answer;
     this.user.gender = this.signupForm?.value.gender;
 
-     //resets the form and its properties and state (like touched,dirty etc.)
+    //resets the form and its properties and state (like touched,dirty etc.)
     this.signupForm?.reset();
   }
 

@@ -16,7 +16,7 @@ export class HeaderService {
     mainTitle: '',
     title: '',
     subtitle: '',
-    isBeta: false
+    isBeta: false,
   });
 
   header$ = this.subject.asObservable();
@@ -24,6 +24,6 @@ export class HeaderService {
   constructor() {}
 
   setHeader = (header: IHeader) => {
-    this.subject.next(header)
+    this.subject.next(header);
   };
 }

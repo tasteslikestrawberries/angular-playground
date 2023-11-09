@@ -5,6 +5,6 @@ import { Directive, HostBinding } from '@angular/core';
 })
 export class Example3Directive {
   //@HostBinding showcase
-  @HostBinding('style.backgroundColor') backgroundColor: string = 'pink';
+  @HostBinding('style.backgroundColor') backgroundColor = 'pink';
   constructor() {}
 }

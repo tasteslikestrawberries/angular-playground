@@ -102,14 +102,16 @@ export class ZodTestComponent implements OnInit {
       name: z.string(),
     });
 
-    this.http.get<any>('https://randomuser.me/api').subscribe(({info, results}) => {
-      const data = {
-        age: results[0].dob.age,
-        name: results[0].name.first
-      }
-     
-      const validatedApiData = apiDataSchema.parse(data);
-      console.log(validatedApiData)
-    });
+    this.http
+      .get<any>('https://randomuser.me/api')
+      .subscribe(({ info, results }) => {
+        const data = {
+          age: results[0].dob.age,
+          name: results[0].name.first,
+        };
+
+        const validatedApiData = apiDataSchema.parse(data);
+        console.log(validatedApiData);
+      });
   }
 }

@@ -14,7 +14,7 @@ export class SecondComponent implements OnInit {
       mainTitle: 'Beauty Tricks',
       title: 'Perfumes',
       subtitle: 'Salvador Dali Perfumes',
-      isBeta: true
+      isBeta: true,
     });
   }
 }

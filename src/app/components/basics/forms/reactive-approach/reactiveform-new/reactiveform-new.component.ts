@@ -6,10 +6,9 @@ import { Subscription } from 'rxjs';
 @Component({
   selector: 'app-reactiveform-new',
   templateUrl: './reactiveform-new.component.html',
-  styleUrls: ['./reactiveform-new.component.css']
+  styleUrls: ['./reactiveform-new.component.css'],
 })
 export class ReactiveformNewComponent implements OnInit, OnDestroy {
-
   company!: ICompany;
   subscription$?: Subscription;
 
@@ -18,23 +17,26 @@ export class ReactiveformNewComponent implements OnInit, OnDestroy {
     email: ['', [Validators.required, Validators.email]],
   });
 
-  constructor(private formBuilder: UntypedFormBuilder, private apiService: ApiService) { }
+  constructor(
+    private formBuilder: UntypedFormBuilder,
+    private apiService: ApiService
+  ) {}
 
-  get f() { return this.coForm.controls; }
+  get f() {
+    return this.coForm.controls;
+  }
 
   onSubmit() {
     this.company = this.coForm.value;
     this.subscription$ = this.apiService.addCompany(this.company).subscribe({
-      error: (err) => console.warn(err)
-    })
-    this.coForm.reset()
+      error: err => console.warn(err),
+    });
+    this.coForm.reset();
   }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   ngOnDestroy() {
     this.subscription$?.unsubscribe();
   }
-
 }

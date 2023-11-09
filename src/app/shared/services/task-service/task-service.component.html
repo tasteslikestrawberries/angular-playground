@@ -9,8 +9,7 @@
           id="name"
           required
           [(ngModel)]="task.name"
-          name="name"
-        />
+          name="name" />
       </div>
 
       <div class="form-group">
@@ -20,8 +19,7 @@
           id="description"
           required
           [(ngModel)]="task.description"
-          name="description"
-        />
+          name="description" />
       </div>
 
       <button (click)="onSubmit()" class="btn btn-success">Submit</button>
@@ -44,14 +42,12 @@
         type="text"
         class="form-control"
         placeholder="Search by name"
-        [(ngModel)]="name"
-      />
+        [(ngModel)]="name" />
       <div class="input-group-append">
         <button
           class="btn btn-outline-secondary"
           type="button"
-          (click)="searchName()"
-        >
+          (click)="searchName()">
           Search
         </button>
       </div>
@@ -64,9 +60,8 @@
       <li
         class="list-group-item"
         *ngFor="let task of tasks; let i = index"
-        [class.active]="i == currentIndex"
-        (click)="setActiveTask(task, i)"
-      >
+        [class.active]="i === currentIndex"
+        (click)="setActiveTask(task, i)">
         {{ task.name }}
       </li>
     </ul>
@@ -78,11 +73,9 @@
   <div class="col-md-6">
     <div *ngIf="currentTask.id">
       <h4>Task</h4>
+      <div><strong>Name:</strong>{{ currentTask.name }}</div>
       <div>
-        <label><strong>Name:</strong></label> {{ currentTask.name }}
-      </div>
-      <div>
-        <label><strong>Description:</strong></label>
+        <strong>Description:</strong>
         {{ currentTask.description }}
       </div>
 
@@ -98,7 +91,7 @@
   </div>
 </div>
 
-<br/>
-<br/>
+<br />
+<br />
 
 <app-task-details></app-task-details>

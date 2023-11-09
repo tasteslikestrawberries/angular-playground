@@ -28,11 +28,11 @@ export class TaskDetailsComponent implements OnInit {
 
   getTask(id: string): void {
     this.taskService.get(id).subscribe(
-      (data) => {
+      data => {
         this.currentTask = data;
         console.log(data);
       },
-      (error) => {
+      error => {
         console.log(error);
       }
     );
@@ -42,13 +42,13 @@ export class TaskDetailsComponent implements OnInit {
     this.message = '';
 
     this.taskService.update(this.currentTask.id, this.currentTask).subscribe(
-      (response) => {
+      response => {
         console.log(response);
         this.message = response.message
           ? response.message
           : 'This task was updated successfully!';
       },
-      (error) => {
+      error => {
         console.log(error);
       }
     );
@@ -56,10 +56,10 @@ export class TaskDetailsComponent implements OnInit {
 
   deleteTask(): void {
     this.taskService.delete(this.currentTask.id).subscribe(
-      (response) => {
+      response => {
         console.log(response);
       },
-      (error) => {
+      error => {
         console.log(error);
       }
     );

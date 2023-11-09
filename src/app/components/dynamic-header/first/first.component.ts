@@ -13,7 +13,7 @@ export class FirstComponent implements OnInit {
       mainTitle: 'Cool Movies',
       title: 'New Movies',
       subtitle: 'Thrillers',
-      isBeta: false
+      isBeta: false,
     });
   }
 }

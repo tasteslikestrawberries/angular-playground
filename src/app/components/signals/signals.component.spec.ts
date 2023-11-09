@@ -10,7 +10,7 @@ describe('SignalsComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [SignalsComponent],
-      providers: [HttpClientModule]
+      providers: [HttpClientModule],
     });
     fixture = TestBed.createComponent(SignalsComponent);
     component = fixture.componentInstance;

@@ -34,7 +34,7 @@ export class TaskServiceComponent implements OnInit {
       },
       (error) => {
         console.log(error);
-      }
+      },
     );
   }
 
@@ -57,7 +57,7 @@ export class TaskServiceComponent implements OnInit {
       },
       (error) => {
         console.log(error);
-      }
+      },
     );
   }
 
@@ -72,7 +72,7 @@ export class TaskServiceComponent implements OnInit {
       },
       (error) => {
         console.log(error);
-      }
+      },
     );
   }
 
@@ -90,7 +90,7 @@ export class TaskServiceComponent implements OnInit {
       },
       (error) => {
         console.log(error);
-      }
+      },
     );
   }
 

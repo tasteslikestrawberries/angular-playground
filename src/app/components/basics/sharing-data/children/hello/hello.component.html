@@ -1,15 +1,12 @@
 <!--@Input> showcase-->
 <p>
   <img src="assets/img/walle.png" style="width: 50px; height: 60px" /><img />
-  Hello! I'm a child component and my parent named me: <b style="color:yellow">{{ name }}</b>
+  Hello! I'm a child component and my parent named me:
+  <b style="color: yellow">{{ name }}</b>
 
-<!--@Output showcase-->
+  <!--@Output showcase-->
   <br />
   I can also give my parent names:
-  <input type="text" id="name-input" #newName>
+  <input type="text" id="name-input" #newName />
   <button (click)="addNewName(newName.value)">Add to parent's list</button>
 </p>
-
-
-
-

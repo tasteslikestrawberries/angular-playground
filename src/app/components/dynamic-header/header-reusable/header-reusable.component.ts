@@ -13,7 +13,10 @@ export class HeaderReusableComponent implements OnInit {
   subtitle?: string;
   isBeta?: boolean;
 
-  constructor(public headerService: HeaderService, public mediaQueryService: MediaQueryService) {}
+  constructor(
+    public headerService: HeaderService,
+    public mediaQueryService: MediaQueryService
+  ) {}
 
   ngOnInit(): void {}
 }

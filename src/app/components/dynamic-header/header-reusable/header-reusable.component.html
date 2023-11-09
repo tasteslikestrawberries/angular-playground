@@ -1,5 +1,5 @@
 <div *ngIf="headerService.header$ | async as header" class="headerWrapper">
-  <p style="color: #000; font-weight:400;">I'm the header</p>
+  <p style="color: #000; font-weight: 400">I'm the header</p>
   <h1>{{ header.mainTitle }}</h1>
   <div *ngIf="mediaQueryService.smallDown">mobile version</div>
   <h2>{{ header.title }}</h2>

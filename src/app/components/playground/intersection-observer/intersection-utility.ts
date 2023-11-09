@@ -16,7 +16,7 @@ export class IntersectionUtility {
     const ioCallback: IntersectionObserverCallback = (entries, observer) => {
       for (const entry of entries) {
         if (!entry.isIntersecting) {
-          continue; 
+          continue;
         }
 
         observer.unobserve(entry.target);
@@ -46,9 +46,8 @@ export class IntersectionUtility {
       ioCallback,
       ioOptions
     );
-    for (let element of elements) {
+    for (const element of elements) {
       intersectionObserver.observe(element.nativeElement);
     }
   }
 }
-

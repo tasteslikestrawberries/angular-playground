@@ -63,7 +63,7 @@ export class ViewContainerRefComponent implements OnInit {
 
     const component = this.components[this.currentIndex];
     const viewContainerRef = this.dynamicLoader.viewContainerRef;
-    
+
     //removes the previous component view, so new one can take its place, not neccessary if all components should be displayed
     viewContainerRef.clear();
 

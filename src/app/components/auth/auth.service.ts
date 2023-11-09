@@ -22,7 +22,10 @@ export class AuthService {
   public user = new BehaviorSubject<User | null>(null);
   private tokenExpirationTimer: any;
 
-  constructor(private http: HttpClient, private router: Router) {}
+  constructor(
+    private http: HttpClient,
+    private router: Router
+  ) {}
 
   signup(email: string, password: string) {
     return this.http
@@ -53,7 +56,7 @@ export class AuthService {
         catchError(this.handleError),
         /*rxjs tap operator: utility operator that returns an observable output that is identical to 
         the source observable but performs a side effect for every emission on the source observable.*/
-        tap((resData) => {
+        tap(resData => {
           // + sign on resData.expiresIn converts the string to number, because by default Firebase API documentation, it is a string
           this.handleAuth(
             resData.email,
@@ -82,7 +85,7 @@ export class AuthService {
     );
 
     if (currentUser.token) {
-      this.user.next(currentUser); 
+      this.user.next(currentUser);
       const expirationDuration =
         new Date(userData._tokenExpirationDate).getTime() -
         new Date().getTime();
@@ -124,14 +127,14 @@ export class AuthService {
   }
 
   private handleError(errorRes: HttpErrorResponse) {
-    let errorMsg = 'An unknown error occured!'; 
+    let errorMsg = 'An unknown error occured!';
 
     if (!errorRes.error || !errorRes.error.error) {
       return throwError(errorMsg);
     }
     switch (errorRes.error.error.message) {
       //this is firebase's api common error code(https://firebase.google.com/docs/reference/rest/auth)
-      case 'EMAIL_EXISTS': 
+      case 'EMAIL_EXISTS':
         errorMsg = 'This email exists already.';
         break;
       case 'EMAIL_NOT_FOUND':

@@ -3,14 +3,14 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Task } from './task-model';
 
-const baseUrl = 'https://myapp-8f1cf-default-rtdb.europe-west1.firebasedatabase.app/tasks.json';
+const baseUrl =
+  'https://myapp-8f1cf-default-rtdb.europe-west1.firebasedatabase.app/tasks.json';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class TaskService {
-
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   getAll(): Observable<Task[]> {
     return this.http.get<Task[]>(baseUrl);

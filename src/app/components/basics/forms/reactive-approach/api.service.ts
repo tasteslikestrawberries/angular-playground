@@ -1,23 +1,24 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
-import { tap } from 'rxjs/operators'
+import { tap } from 'rxjs/operators';
 
 export interface ICompany {
-  id: string,
-  name: string,
-  email: string
+  id: string;
+  name: string;
+  email: string;
 }
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ApiService {
-  private subject$ = new BehaviorSubject<ICompany[]>([])
+  private subject$ = new BehaviorSubject<ICompany[]>([]);
   private companies: ICompany[] = [];
-  private url = 'https://nmondo-9533b-default-rtdb.europe-west1.firebasedatabase.app/companies.json';
+  private url =
+    'https://nmondo-9533b-default-rtdb.europe-west1.firebasedatabase.app/companies.json';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   refresh() {
     this.subject$.next(this.companies); // informs subscribers that new data has arrived and passes it to them
@@ -26,20 +27,22 @@ export class ApiService {
   //GET REQ
   getCompanies() {
     this.http.get<ICompany>(this.url).subscribe({
-      next: (data) => {
+      next: data => {
         if (!data) return;
-        const companies: ICompany[] = Object.entries(data).map(([id, company]) => {
-          return {
-            id: id,
-            ...company
-          };
-        });
+        const companies: ICompany[] = Object.entries(data).map(
+          ([id, company]) => {
+            return {
+              id: id,
+              ...company,
+            };
+          }
+        );
         this.companies = companies;
-        console.log(this.companies)
+        console.log(this.companies);
         this.refresh();
       },
-      error: err => console.log(err)
-    })
+      error: err => console.log(err),
+    });
   }
 
   //POST REQ
@@ -47,11 +50,10 @@ export class ApiService {
     return this.http.post<ICompany>(this.url, company).pipe(
       //TODO -ne radi- tap((company) => this.companies.push(company)),
       tap(() => this.getCompanies()) //gets the updated list of companies (with just submitted)
-    )
+    );
   }
 
   $Company() {
     return this.subject$.asObservable();
   }
-
 }

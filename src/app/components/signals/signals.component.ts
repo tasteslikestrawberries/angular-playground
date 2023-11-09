@@ -26,10 +26,10 @@ export class SignalsComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.users.update((val) => [
+    this.users.update(val => [
       { firstName: val[0].firstName + 'Test', active: false },
     ]);
-    this.users.mutate((val) => {
+    this.users.mutate(val => {
       val.push({ firstName: 'Theo', active: true });
     });
 
@@ -37,6 +37,6 @@ export class SignalsComponent implements OnInit {
   }
 
   increaseCount() {
-    this.counter.update((count) => count + 1);
+    this.counter.update(count => count + 1);
   }
 }

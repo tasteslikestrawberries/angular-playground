@@ -9,8 +9,7 @@
           class="form-control"
           id="name"
           [(ngModel)]="currentTask.name"
-          name="name"
-        />
+          name="name" />
       </div>
       <div class="form-group">
         <label for="description">Description</label>
@@ -19,10 +18,8 @@
           class="form-control"
           id="description"
           [(ngModel)]="currentTask.description"
-          name="description"
-        />
+          name="description" />
       </div>
-
     </form>
 
     <button class="badge badge-danger mr-2" (click)="deleteTask()">
@@ -32,8 +29,7 @@
     <button
       type="submit"
       class="badge badge-success mb-2"
-      (click)="updateTask()"
-    >
+      (click)="updateTask()">
       Update
     </button>
     <p>{{ message }}</p>
