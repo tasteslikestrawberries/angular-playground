@@ -18,6 +18,7 @@ import { ZodTestComponent } from './components/zod-test/zod-test.component';
 import { SignalsComponent } from './components/signals/signals.component';
 import { ControlValueAccessorComponent } from './components/control-value-accessor/control-value-accessor.component';
 import { ViewContainerRefComponent } from './components/view-container-ref/view-container-ref.component';
+import { LazyLoadingComponent } from './components/lazy-loading/lazy-loading.component';
 
 const routes: Routes = [
   { path: '', component: DataBindingComponent },
@@ -41,6 +42,7 @@ const routes: Routes = [
   { path: 'zod-test', component: ZodTestComponent },
   { path: 'controlvalueaccessor', component: ControlValueAccessorComponent },
   { path: 'signals', component: SignalsComponent },
+  { path: 'lazy-loading', component: LazyLoadingComponent },
   { path: '**', redirectTo: '' },
 ];
 

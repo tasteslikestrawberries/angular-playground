@@ -32,11 +32,13 @@
     @if (!show) {
     <fa-icon
       [icon]="faBars"
-      [ngStyle]="{ fontSize: '1.5em', marginRight: '1rem' }"></fa-icon>
+      [ngStyle]="{ fontSize: '1.5em', marginRight: '1rem' }"
+    ></fa-icon>
     } @if (show) {
     <fa-icon
       [icon]="faTimes"
-      [ngStyle]="{ fontSize: '1.8em', marginRight: '1rem' }"></fa-icon>
+      [ngStyle]="{ fontSize: '1.8em', marginRight: '1rem' }"
+    ></fa-icon>
     }
   </button>
 
@@ -111,6 +113,15 @@
           routerLinkActive="active"
           [routerLinkActiveOptions]="{ exact: true }"
           ><b>Angular Signals</b></a
+        >
+      </li>
+
+      <li>
+        <a
+          routerLink="/lazy-loading"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          ><b>Lazy loading </b></a
         >
       </li>
 
