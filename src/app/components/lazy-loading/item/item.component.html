@@ -6,13 +6,14 @@
     </div>
   </div>
   <div class="content-wrapper">
+    @if(mediaQueryService.smallDown) {
     <div class="content">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
-      pharetra interdum velit, nec accumsan justo volutpat in. Nullam feugiat
-      tristique ante vel laoreet. Ut vitae convallis ligula, a facilisis nisl.
-      Suspendisse interdum nisl sit amet faucibus suscipit. Cras fermentum
-      molestie diam vitae suscipit. Cras eget massa quam. Fusce aliquet viverra
-      urna in laoreet.
+      {{ text | shorten: 100 }}
     </div>
+    } @else {
+    <div class="content">
+      {{ text }}
+    </div>
+    }
   </div>
 </div>
