@@ -1,13 +1,9 @@
-@if(data().length) {
 <div class="wrapper">
   <div class="grid">
-    @for(item of data(); track item) { @defer (when data().length > 8; on
-    timer(2s)) {
+    @for(item of data(); track item) { @defer (on timer(2s)) {
     <app-item></app-item>
     } @placeholder {
     <app-loading-skeleton></app-loading-skeleton>
     } }
   </div>
 </div>
-
-}
